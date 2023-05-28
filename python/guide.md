@@ -1,5 +1,36 @@
-# Python
+# A Hands-On Guide to Python Programming
 
+* Written by Sarfaraz Muhammad Sajib
+
+* Table of Contents
+    - Python Basics
+    - Working with Data
+    - Object-Oriented Programming (OOP)
+    - Python Libraries and Frameworks
+    - Best Practices and Tips for Python Development
+    - Resources for Further Learning
+
+#### Importing A Module
+
+* Importing a module:
+```
+import math
+```
+
+* Importing specific names from a module:
+```
+from math import sqrt, pi
+```
+
+* Importing a module with an alias:
+```
+import numpy as np
+```
+
+* Importing all names from a module: 
+```
+from math import *
+```
 
 #### Variables and Data Types:
 
