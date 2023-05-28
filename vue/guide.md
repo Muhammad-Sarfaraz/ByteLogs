@@ -89,13 +89,13 @@ The total life cycle hooks of vue js given below:
 - destroyed
 ```
 
-##### beforeCreate
+##### beforeCreate:
 The beforeCreate hook runs at the very initialization of your component. data has not been made reactive, and events have not been set up yet.
 
 Usage
 Using the beforeCreate hook is useful when you need some sort of logic/API call that does not need to be assigned to data. Because if we were to assign something to data now, it would be lost once the state was initialized.
 
-##### created
+##### created:
 You are able to access reactive data and events that are active with the created hook. Templates and Virtual DOM have not yet been mounted or rendered.
 
 Usage
@@ -103,13 +103,13 @@ Using the created method is useful when dealing with reading/writing the reactiv
 The above are famously called as creation hooks, as opposed to mounting hooks.
 Mounting hooks are often the most used hooks. They allow you to access your component immediately before and after the first render. They do not, however, run during server-side rendering.
 
-##### beforeMount
+##### beforeMount:
 The beforeMount hook runs right before the initial render happens and after the template or render functions have been compiled.
 
 Usage
 This is the last step you should perform your API calls before it’s unnecessary late in the process because it’s right after created — they have access to the same component variables.
 
-##### mounted
+##### mounted:
 In the mounted hook, you will have full access to the reactive component, templates, and rendered DOM (via this.$el).
 
 Usage
@@ -123,13 +123,13 @@ Use updating hooks if you need to know when your component re-renders, perhaps f
 
 There are:
 
-##### beforeUpdate
+##### beforeUpdate:
 The beforeUpdate hook runs after data changes on your component and the update cycle begins, right before the DOM is patched and re-rendered.
 
 Usage
 Use beforeUpdate if you need to get the new state of any reactive data on your component before it actually gets rendered.
 
-##### updated
+##### updated:
 The updated hook runs after data changes on your component and the DOM re-renders.
 
 Usage
@@ -141,7 +141,7 @@ Destruction hooks allow you to perform actions when your component is destroyed,
 
 There are:
 
-##### beforeDestroy
+##### beforeDestroy:
 beforeDestroy is fired right before teardown. Your component will still be fully present and functional.
 
 Usage
@@ -149,7 +149,7 @@ Use beforeDestroy if you need to clean-up events or reactive subscriptions.
 
 This is the stage where you can do resource management, delete variables and clean up the component.
 
-##### destroyed
+##### destroyed:
 By the time you reach the destroyed hook, there’s practically nothing left on your component. Everything that was attached to it has been destroyed.
 
 Usage
@@ -190,8 +190,8 @@ new Vue({
 #### Components
 A component in Vue.js is a modular and reusable building block that encapsulates the logic, template, and styling of a specific part of a web application, promoting code organization and reusability.
 
-```
 // In Child
+```
 <template>
   <div>
     <h2>Welcome to the Playroom!</h2>
@@ -215,7 +215,9 @@ h2 {
 }
 </style>
 
+```
 // In parent
+```
 <template>
   <div>
     <h1>Welcome to the Music room!</h1>
@@ -236,8 +238,8 @@ export default {
 
 ##### Data passing from between child and parent.
 
-```
 // Parent
+```
 <template>
   <div>
     <h2>ParentToy</h2>
@@ -272,7 +274,9 @@ export default {
 
 #### Async Component
 
-Componet:
+Example of async componet:
+
+Child Component:
 ```
 <template>
   <div>
@@ -297,7 +301,7 @@ export default {
 </script>
 ```
 
-Root:
+Root Component:
 ```
 <template>
   <div>
@@ -355,7 +359,6 @@ export default {
 ```
 
 Child:
-
 ```
 <template>
   <div>
@@ -379,13 +382,11 @@ export default {
 
 ```
 
-
-
 #### Slot
  A slot in Vue.js is like a place where you can put different puzzle pieces to complete a picture.
 
+Root Component:
 ```
-// Root component
 <template>
   <div>
     <Board>
@@ -416,9 +417,9 @@ export default {
   }
 };
 </script>
-
-
-// Exam Component
+```
+Exam Component:
+```
 <template>
   <div>
     <h1>Welcome to the Board!</h1>
@@ -428,8 +429,9 @@ export default {
   </div>
 </template>
 
-// Item Component
-
+```
+Item Component:
+```
 <template>
   <div>
     <h2>{{ name }}</h2>
@@ -445,8 +447,8 @@ export default {
 </script>
 ```
 
+Child Component:
 ```
-// Child
 <template>
   <div>
     <h3>ChildToy</h3>
@@ -633,8 +635,6 @@ export default {
 };
 </script>
 ```
-
-
 
 * Fetch data using axios
 
@@ -892,7 +892,6 @@ const router = createRouter({
 });
 
 ```
-
 
 * On Error
 
