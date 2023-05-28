@@ -208,6 +208,74 @@ person = {"name": "John", "age": 25, "city": "New York"}
 fruits = {"apple", "banana", "orange"}
 ```
 
+#### Python Libraries and Frameworks:
+Let us see some example with python module/framework:
+* Flask
+```
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run()
+```
+
+* NumPy
+
+```
+import numpy as np
+
+# Create a NumPy array
+arr = np.array([1, 2, 3, 4, 5])
+
+# Perform array operations
+print("Original Array:", arr)
+print("Array Shape:", arr.shape)
+print("Array Size:", arr.size)
+print("Array Data Type:", arr.dtype)
+print("Array Sum:", arr.sum())
+print("Array Mean:", arr.mean())
+print("Array Max Value:", arr.max())
+print("Array Min Value:", arr.min())
+print("Array Square Root:", np.sqrt(arr))
+print("Array Squared:", np.square(arr))
+
+# Perform mathematical computations
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+print("Element-wise Sum:", np.add(a, b))
+print("Element-wise Product:", np.multiply(a, b))
+print("Dot Product:", np.dot(a, b))
+print("Cross Product:", np.cross(a, b))
+
+# Reshape an array
+c = np.array([1, 2, 3, 4, 5, 6])
+reshaped = c.reshape(2, 3)
+print("Reshaped Array:")
+print(reshaped)
+
+```
+
+#### Best Practices and Tips for Python Development:
+* Coding Style:
+    - Follow PEP 8
+    - Use Meaningful Variable and Function Names
+    - Handle Exceptions Properly
+    - Write Modular and Reusable Code
+    - Comment and Document Your Code
+
+#### Resources for Further Learning :
+* VScode Extension:
+    * Python
+    * Pylance
+    * Visual Studio IntelliCode
+    * AutoDocstring
+
 ### Total Data Types:
 1. Numeric Types:
    - int
