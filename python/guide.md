@@ -27,7 +27,7 @@ person = {"name": "Alice", "age": 30}
 
 ```
 
-#### Control flow
+#### Control flow:
 ```
 # if-elif-else statement
 x = 10
@@ -127,7 +127,7 @@ print(rectangle1.length)    # Output: 5
 print(rectangle2.area())    # Output: 24
 ```
 
-#### Type casting
+#### Type casting:
 
 Int:
 ```
@@ -147,6 +147,8 @@ num_int = 123
 num_str = str(num_int)
 ```
 
+### Advance Data Typs:
+
 #### Tupeles:
 - Tuples are typically used to store a collection of related values as a single entity.
 - Tuples are ordered and immutable sequences of elements.
@@ -164,7 +166,7 @@ person = ("John", 25, "New York")
 person = {"name": "John", "age": 25, "city": "New York"}
 ```
 
-#### Sets
+#### Sets:
 
 - Sets are unordered collections of unique elements.
 - Sets are enclosed in curly braces { } or can be created using the set() constructor.
@@ -175,7 +177,7 @@ person = {"name": "John", "age": 25, "city": "New York"}
 fruits = {"apple", "banana", "orange"}
 ```
 
-Total Data Types
+### Total Data Types:
 1. Numeric Types:
    - int
    - float
