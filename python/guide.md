@@ -1,9 +1,7 @@
 # Python
 
 
-
-
-* Variables and Data Types:
+#### Variables and Data Types:
 
 ```
 # Integer variable
@@ -29,7 +27,7 @@ person = {"name": "Alice", "age": 30}
 
 ```
 
-* Control flow
+#### Control flow
 ```
 # if-elif-else statement
 x = 10
@@ -149,7 +147,7 @@ num_int = 123
 num_str = str(num_int)
 ```
 
-### Tupeles:
+#### Tupeles:
 - Tuples are typically used to store a collection of related values as a single entity.
 - Tuples are ordered and immutable sequences of elements.
 
