@@ -1,82 +1,6 @@
 # Python
 
-Total Data Types
-1. Numeric Types:
-   - int
-   - float
-   - complex
 
-2. Sequence Types:
-   - str
-   - bytes
-   - bytearray
-   - list
-   - tuple
-   - range
-
-3. Mapping Type:
-   - dict
-
-4. Set Types:
-   - set
-   - frozenset
-
-5. Boolean Type:
-   - bool
-
-6. None Type:
-   - None
-
-7. Date and Time Types (modules):
-   - datetime
-   - time
-   - calendar
-
-8. Mathematical Functions (module):
-   - math
-
-9. Decimal Type (module):
-   - decimal
-
-10. Fraction Type (module):
-    - fractions
-
-11. Regular Expressions (module):
-    - re
-
-12. File and Directory Access (modules):
-    - os
-    - os.path
-    - glob
-
-13. Command Line Arguments (module):
-    - sys
-
-14. Console Input and Output (module):
-    - input
-    - print
-
-15. Type Functions and Type Checking:
-    - type
-    - isinstance
-
-16. Iterator Types (module):
-    - iter
-    - next
-
-17. Enumerations (module):
-    - enum
-
-18. Data Compression and Archiving (modules):
-    - zlib
-    - gzip
-    - zipfile
-
-19. Cryptographic Services (module):
-    - hashlib
-
-20. JSON Encoding and Decoding (module):
-    - json
 
 
 * Variables and Data Types:
@@ -252,3 +176,81 @@ person = {"name": "John", "age": 25, "city": "New York"}
 ```
 fruits = {"apple", "banana", "orange"}
 ```
+
+Total Data Types
+1. Numeric Types:
+   - int
+   - float
+   - complex
+
+2. Sequence Types:
+   - str
+   - bytes
+   - bytearray
+   - list
+   - tuple
+   - range
+
+3. Mapping Type:
+   - dict
+
+4. Set Types:
+   - set
+   - frozenset
+
+5. Boolean Type:
+   - bool
+
+6. None Type:
+   - None
+
+7. Date and Time Types (modules):
+   - datetime
+   - time
+   - calendar
+
+8. Mathematical Functions (module):
+   - math
+
+9. Decimal Type (module):
+   - decimal
+
+10. Fraction Type (module):
+    - fractions
+
+11. Regular Expressions (module):
+    - re
+
+12. File and Directory Access (modules):
+    - os
+    - os.path
+    - glob
+
+13. Command Line Arguments (module):
+    - sys
+
+14. Console Input and Output (module):
+    - input
+    - print
+
+15. Type Functions and Type Checking:
+    - type
+    - isinstance
+
+16. Iterator Types (module):
+    - iter
+    - next
+
+17. Enumerations (module):
+    - enum
+
+18. Data Compression and Archiving (modules):
+    - zlib
+    - gzip
+    - zipfile
+
+19. Cryptographic Services (module):
+    - hashlib
+
+20. JSON Encoding and Decoding (module):
+    - json
