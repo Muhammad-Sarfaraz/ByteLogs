@@ -4,8 +4,8 @@
 
 ###### Glimpse of first over-view of vue js app.
 - A basic cdn based vue app.
-```<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
+```
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <div id="app">
   <p>I have a {{ product }}</p>
   <p>{{ product + 's' }}</p>
