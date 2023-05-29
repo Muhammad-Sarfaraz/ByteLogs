@@ -1,1 +1,1 @@
-# A Hands-On Guide to Python Programming
+# A Hands-On Guide to MySQL
