@@ -45,3 +45,26 @@ The final group of selectors combine other selectors in order to target elements
 article > p {
 }
 ```
+
+#### Center a Image Horizontally and Vertically
+
+HTML:
+```
+<div class="container">
+  <img src="your-image.jpg" alt="Your Image" class="centered-image">
+</div>
+```
+CSS:
+```
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+}
+
+.centered-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+```
