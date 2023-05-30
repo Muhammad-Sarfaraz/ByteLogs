@@ -26,12 +26,13 @@ a[href="https://example.com"]
 ```
 
 * Pseudo-classes and pseudo-elements
-``
+```
 a:hover {
 }
 
 p::first-line {
 }
+```
 
 article :first-child {
   font-weight: bold;
