@@ -1,6 +1,14 @@
 # CSS
 
-#### Height & Width
+
+#### The !important Rule:
+
+
+!important rule, it will override ALL previous styling rules for that specific property on that element!
+
+#### Box Model:
+
+#### Height & Width:
 
 #### Border:
 
