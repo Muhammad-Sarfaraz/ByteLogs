@@ -1,9 +1,16 @@
 # CSS
 
+#### Layout:
+- Normal flow
+- The display property
+- Flexbox
+- Grid
+- Floats
+- Positioning
+- Table layout
+- Multiple-column layout
 
 #### The !important Rule:
-
-
 !important rule, it will override ALL previous styling rules for that specific property on that element!
 
 #### Box Model:
