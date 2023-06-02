@@ -1,5 +1,9 @@
 
 # Vue js
+
+#### Short:
+Vue: The power of reactive JavaScript for building dynamic user interfaces.
+
 #### What the heck it is?
 
 ###### Glimpse of first over-view of vue js app.
