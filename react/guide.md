@@ -8,4 +8,12 @@
 
 ```
 <button onClick={fire}>Fire!</button>
+
+```
+
+```
+
+
+<button onClick={fire}>Fire!</button>
+
 ```
