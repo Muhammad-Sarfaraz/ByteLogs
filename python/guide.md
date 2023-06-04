@@ -10,6 +10,43 @@
     - Best Practices and Tips for Python Development
     - Resources for Further Learning
 
+#### Print:
+
+```
+print("Hello")
+# Output: Hello
+
+print("Hello","Rar") # Comma appends with a space between each by default!
+# Output: Hello Rar
+
+print("Helloaw","Rar",sep=", ") # You can change this default though!
+# Output: Hello, Rar
+
+print("Hello\nRar") # \n is a newline character!
+''' Output:
+Hello
+Rar
+'''
+
+print("a" * 5) # You can multiply!
+# Output: aaaaa
+```
+
+#### Using %:
+```
+# % example
+
+Python = "AN_Python"
+print("%s %s %s" % ("Hi!", "I am", Python))
+# Output: Hi! I am AN_Python
+# %.<decimals>f - Floating point numbers with a fixed amount of digits to the right of the dot.
+
+# With dictionaries
+my_dict = {"Pythons":"Pythons", "are":"are", "the":"the", "best":"best! Yeah!"}
+print("%(Pythons)s %(are)s %(the)s %(best)s" % (my_dict))
+# Output: Pythons are the best! Yeah!
+```
+
 #### Importing A Module
 
 * Importing a module:
