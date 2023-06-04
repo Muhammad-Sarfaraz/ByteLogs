@@ -10,6 +10,20 @@
     - Best Practices and Tips for Python Development
     - Resources for Further Learning
 
+#### Strings:
+```
+Hello_string = "I am AN_Python, and while I can talk, I also Smile!"
+
+# Slice strings!
+Hello_string[0:4] # Returns first 4 characters! "I am"
+Hello_string[-5:] # Returns last 5 characters! "Smile!"
+Hello_string[:-5] # Returns everything UNTIL the last 5 characters!
+
+# Join strings
+Hello_string[:-5] + "Smile!"
+# Output: I am metyhlPython, and while I can talk, I also Smile!
+```
+
 #### Print:
 
 ```
