@@ -10,6 +10,27 @@
     - Best Practices and Tips for Python Development
     - Resources for Further Learning
 
+#### Exception Handling and Debugging:
+```
+# Exception handling is done mostly with try-except blocks
+try:
+    # Some code
+except <error_one>:
+    # Run this code ONLY if an exception for <error_one> is thrown
+except <error_two> as err:
+    print(err) # Print the error ONLY if <error_two> is thrown
+except:
+    # Wildcard error. Run this code ONLY if an exception unaccounted for is thrown
+    
+# You can also use else in try-except blocks!
+try:
+    # Some code
+except:
+    # Wildcard error handler
+else:
+    # Run if no errors were thrown AFTER running the code protected by the try block
+```
+
 #### Strings:
 ```
 Hello_string = "I am AN_Python, and while I can talk, I also Smile!"
