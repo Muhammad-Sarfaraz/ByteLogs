@@ -74,16 +74,15 @@ $c = $a?->foo();
 ###### Pipeline
 ```
  return (new Pipeline)->send($request)
-            ->through([
-                new EnsureOnNakedDomain,
-                new RedirectStaticAssets,
-                new EnsureVanityUrlIsNotIndexed,
-                new EnsureBinaryEncoding(),
-            ])->then(function ($request) use ($context) {
-                static::$worker->handle($request, $context);
-
-                return static::$response->response;
-            });
+    ->through([
+        new EnsureOnNakedDomain,
+        new RedirectStaticAssets,
+        new EnsureVanityUrlIsNotIndexed,
+        new EnsureBinaryEncoding(),
+    ])->then(function ($request) use ($context) {
+        static::$worker->handle($request, $context);
+        return static::$response->response;
+    });
 ```
 
 ###### Tap
@@ -102,29 +101,29 @@ return tap(new Response(
 
 ```
 if (empty($segment = substr($segment, 0, -1))) {
-                $pointer = &$pointer[];
-            }
+    $pointer = &$pointer[];
+}
 ```  
 
 
 ###### Mono Static
 ```
 static::$logger = new MonologLogger('vapor', [
-            (new StreamHandler('php://stderr'))->setFormatter(new JsonFormatter),
-        ]);
+    (new StreamHandler('php://stderr'))->setFormatter(new JsonFormatter),
+]);
 ```
 
 ###### Tap and static
 
 ```
 return tap(static::all($path, (array) $parameters), function ($variables) {
-            foreach ($variables as $key => $value) {
-                echo "Injecting secret [{$key}] into runtime.".PHP_EOL;
+    foreach ($variables as $key => $value) {
+        echo "Injecting secret [{$key}] into runtime.".PHP_EOL;
 
-                $_ENV[$key] = $value;
-                $_SERVER[$key] = $value;
-            }
-        });
+        $_ENV[$key] = $value;
+        $_SERVER[$key] = $value;
+    }
+});
 ```
 
 
