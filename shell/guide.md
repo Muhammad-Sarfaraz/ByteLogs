@@ -1,5 +1,7 @@
 # Guide:
 
+The #(sharp) and !(bang/exclamation) are collectively known as the 'SHEBANG'.
+
 ```
  #!/bin/bash
 
