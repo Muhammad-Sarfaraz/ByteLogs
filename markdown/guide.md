@@ -1,5 +1,23 @@
 # Markdown
 
+#### Link:
+* External:
+  ```
+  [MIT License](LICENSE).
+  ```
+ * internal :
+ ```
+ - [Introduction](#introduction)
+ ```
+
+
+
+#### Serial:
+  "*" or "-"
+  ```
+  * Foo
+  * Bar
+  ```
 
 #### Heading:
 
