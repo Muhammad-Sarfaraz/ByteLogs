@@ -113,6 +113,10 @@ created() {
 
 ```
 
+#### Map:
+
+
+
 #### Create Logger:
 ```
 import Vuex from 'vuex'
