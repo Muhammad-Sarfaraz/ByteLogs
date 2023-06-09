@@ -84,6 +84,34 @@ Getter are like computed property, which is built in vux.
 * Mutation : 
   - Do not do async in mutation.
   - Mutation directly mutate our state
+* Action:
+   - Action can do async job.
+   - we can commit a mutation from action.
+
+* Step:
+  - Define the action.
+  - call the mutator by commiting.
+  - update the state from mutator
+  - Flow [dispatch->action->mutator->state]
+
+```
+actions:{
+init({context}){
+  fetch(http:localhost:3000/lists).the((res)=> res.json()).then(lists => {
+    commit('loadLists',lists);
+  }
+}
+}
+
+// Now dispatch the action
+store.dispatch('init');
+
+// of Inside component to dispatch the action:
+created() {
+      this.$store.dispatch('init')
+    },
+
+```
 
 #### Create Logger:
 ```
