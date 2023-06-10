@@ -118,7 +118,7 @@ Map in vuex are like alias, there is some alias for getters,state and mutations.
 
 **Import** ``` import {mapState,mapMutations,mapGetters} from 'vuex' ```
 
-###### MapState:
+###### Map State:
 ```
 
 // Inside the store vuex:
@@ -144,6 +144,49 @@ Map in vuex are like alias, there is some alias for getters,state and mutations.
 <h3>Map State : {{ customState }}</h3>
 ```
 
+#### Map Mutations
+```
+// Inside the methods.
+methods: {
+        foo(){
+            alert('All Ok!');
+        },
+        ...mapMutations([
+            'action'
+        ])
+    },
+    
+// Custom named mutations:
+...mapMutations({
+      customAction: 'action'
+    })
+    
+// Inside the template:
+<button @click="action('Execute')" >Fire Action</button>     
+
+// Before: 
+<button @click="$store.commit('action','Execute')" >Fire Action</button>  
+// After: 
+<button @click="action('Execute')" >Fire Action</button>     
+```
+
+#### Map Getters:
+```
+// Inside the computed property:
+ computed:{
+        ...mapGetters([
+            'mapGetters' // Name o f your getter
+        ])
+    },
+    
+// Inside the template:
+ <h3>Map Getters : {{ mapGetters }}</h3>
+ 
+ // Custom named getter:
+  ...mapGetters({
+      customGetter: 'mapGetters' // Name of your getter
+    })
+```
 
 #### Create Logger:
 ```
