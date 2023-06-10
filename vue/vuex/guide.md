@@ -114,7 +114,35 @@ created() {
 ```
 
 #### Map:
+Map in vuex are like alias, there is some alias for getters,state and mutations.
 
+**Import** ``` import {mapState,mapMutations,mapGetters} from 'vuex' ```
+
+###### MapState:
+```
+
+// Inside the store vuex:
+ state: {
+    mapState:"Yes, this is a mapState",
+}
+// Inside the computed property:
+ computed:{
+ ...mapState([
+            'mapState' // Name of the state in the Vuex,
+        ]),
+ }
+ 
+ // Call it in the template:
+ // Before: $store.state.mapState
+ // After : mapState
+<h3>Map State : {{ mapState }}</h3>
+
+// For Custom named state:
+...mapState({
+      customState: 'mapState'
+    })
+<h3>Map State : {{ customState }}</h3>
+```
 
 
 #### Create Logger:
