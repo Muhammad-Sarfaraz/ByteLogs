@@ -31,5 +31,5 @@ Each language folder contains separate Markdown files with explanations, code sa
 Contributions to ByteLogs are welcome! If you would like to add or improve the existing language notes, feel free to fork the repository and submit a pull request. Please follow the established folder structure and keep the notes organized and concise.
 
 ## License
-
+Author: Sarfaraz Muhammad Sajib,
 The content of this repository is licensed under the [MIT License](LICENSE).

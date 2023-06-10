@@ -1,11 +1,10 @@
 # Hands on Note for Vuex
 
 #### Magic method:
-```
-$store
-```
+``` $store or this.$store ``` You can access the Vuex store instance and perform operations such as retrieving state, dispatching actions, or committing mutations within your Vue component.
 
-#### Skeleton:
+#### Vuex skeleton:
+A basic Vuex skeleton for managing state in Vue.js applications using the centralized store pattern.
 ```
 import Vue from 'vue'
 import Vuex from 'vuex'
@@ -28,6 +27,7 @@ export default new Vuex.Store({
 ```
 
 #### Use state in component:
+Render a dynamic list of items from Vuex state in a Vue.js component using v-for directive.
 ```
 <li v-for="(list, index) in $store.state.lists" :key="index">
             <a href="#">
@@ -36,13 +36,16 @@ export default new Vuex.Store({
         </li>
 ```
 
-#### Update state:
-* Using functionality stand point:
+#### Managing State:
+Update the Vuex store's state with new data or values using appropriate mutations or actions
+* Using functionality stand-point:
+
 ```
 $store.state.select = list.id;
 ```
 
 * Using Mutation and Commit:
+
 ```
 // Inside the store:
 state: {
@@ -96,20 +99,17 @@ Getter are like computed property, which is built in vux.
 
 ```
 actions:{
-init({context}){
-  fetch(http:localhost:3000/lists).the((res)=> res.json()).then(lists => {
-    commit('loadLists',lists);
-  }
-}
+    init({context}){
+      fetch(http:localhost:3000/lists).the((res)=> res.json()).then(lists => {
+        commit('loadLists',lists);
+      }
+    }
 }
 
 // Now dispatch the action
-store.dispatch('init');
-
-// of Inside component to dispatch the action:
 created() {
-      this.$store.dispatch('init')
-    },
+  this.$store.dispatch('init')
+},
 
 ```
 
@@ -118,9 +118,9 @@ Map in vuex are like alias, there is some alias for getters,state and mutations.
 
 **Import** ``` import {mapState,mapMutations,mapGetters} from 'vuex' ```
 
-###### Map State:
+###### Map state:
+Vuex mapState provides a convenient way to map Vuex state properties to local component computed properties.
 ```
-
 // Inside the store vuex:
  state: {
     mapState:"Yes, this is a mapState",
@@ -145,6 +145,7 @@ Map in vuex are like alias, there is some alias for getters,state and mutations.
 ```
 
 #### Map Mutations
+Vuex mapMutations simplifies the mapping of Vuex mutations to local component methods for easier state mutation.
 ```
 // Inside the methods.
 methods: {
@@ -171,6 +172,7 @@ methods: {
 ```
 
 #### Map Getters:
+Vuex mapGetters facilitates the mapping of Vuex getters to local component computed properties for accessing and using derived state values.
 ```
 // Inside the computed property:
  computed:{
@@ -188,6 +190,33 @@ methods: {
     })
 ```
 
+#### Modular way of Vuex:
+- store
+  - index.js
+  - modules
+    - appbar.js
+
+###### Step:
+- Create the module of store.
+- Use namespace true in module.
+- Import it in the ``` store/index.js ```.
+- Then, register it in module of ```index.js```
+- use it via ``` Namespace ```
+- To access, one property of ```appbar.js``` you can write 
+``` $store.state.appbar.title ``` or
+```
+computed:{
+  ...mapState([appbar]);
+  ...mapState('appbar',[title]);
+},
+updateTitle() {
+  this.$store.commit('appbar/setTitle', this.title);
+},
+getTitle(){
+   this.$store.dispatch("appbar/getTitle");
+}
+```
+
 #### Create Logger:
 ```
 import Vuex from 'vuex'
@@ -200,13 +229,6 @@ import Vuex from 'vuex'
 :class="[active ? 'bg=success' : 'bg-danger']"
 ```
 
-
-
-
-
-
-
-
-
-
-
+#### Reference:
+[Module](https://github.com/Muhammad-Sarfaraz/vuex/blob/main/src/store/modules/about.js)
+[Vue](https://github.com/Muhammad-Sarfaraz/vuex/blob/main/src/views/AboutView.vue)
