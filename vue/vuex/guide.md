@@ -195,8 +195,11 @@ import Vuex from 'vuex'
 
 #### Dynamic class:
 ```
+// Conditional:
 :class="{active: $store.state.select == list.id}"
+:class="[active ? 'bg=success' : 'bg-danger']"
 ```
+
 
 
 
