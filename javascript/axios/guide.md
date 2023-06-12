@@ -4,7 +4,7 @@
 ```npm install axios --save```
 
 #### Axios Interceptors:
-
+You can intercept requests or responses before they are handled by then or catch.
 
 #### Head:
 ```
