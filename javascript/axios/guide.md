@@ -1,6 +1,6 @@
 # Hands on Note for Axios
 
-#### Foreach
+#### Foreach through:
 ```
 // Iterate over an array in the JSON data
     jsonData.emails.forEach(function (email) {
