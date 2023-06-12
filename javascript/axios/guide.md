@@ -52,6 +52,18 @@ api.get('/users')
 
 ```
 
+###### Retry:
+```
+// Create an instance of Axios
+const api = axios.create({
+  baseURL: 'https://api.example.com',
+  // Set the maximum number of retries
+  retry: {
+    retries: 3
+  }
+});
+```
+
 #### Head:
 ```
 let res = await axios.head('http://google.com');
