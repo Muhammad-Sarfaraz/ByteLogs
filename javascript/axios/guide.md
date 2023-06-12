@@ -3,6 +3,9 @@
 #### Installation:
 ```npm install axios --save```
 
+#### Axios Interceptors:
+
+
 #### Head:
 ```
 let res = await axios.head('http://google.com');
