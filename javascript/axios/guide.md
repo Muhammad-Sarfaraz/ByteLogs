@@ -1,5 +1,13 @@
 # Hands on Note for Axios
 
+#### Foreach
+```
+// Iterate over an array in the JSON data
+    jsonData.emails.forEach(function (email) {
+      console.log('Email:', email);
+    });
+```
+
 #### Installation:
 ```npm install axios --save```
 
