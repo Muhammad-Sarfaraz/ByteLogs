@@ -3,6 +3,10 @@
 #### Installation:
 ```npm install axios --save```
 
+#### Head:
+```
+let res = await axios.head('http://google.com');
+```
 
 #### Skeleton:
 ```
