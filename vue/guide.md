@@ -388,6 +388,7 @@ export default {
 
 #### Slot
  A slot in Vue.js is like a place where you can put different puzzle pieces to complete a picture.
+ You can write style in slot indiviually but affect will show on the child.
 
 Root Component:
 ```
