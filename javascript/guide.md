@@ -1,5 +1,21 @@
 # Hands on Note for Javascript
 
+#### The Array Loop Hole:
+```
+types() {
+  const types = [];
+  if (Object.keys(this.designationTypes).length > 0) {
+    this.designationTypes.forEach(function (type) {
+      types.push({
+        name: type.name,
+        value: type.value,
+      });
+    });
+  }
+  return types;
+},
+```
+
 #### Networking:
 
 ###### xhr :
