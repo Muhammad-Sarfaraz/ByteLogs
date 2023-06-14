@@ -2,11 +2,18 @@
 
 #### Util:
 
+###### Scroll To Top:
+```
+ scrollTop(x = 0, y = 0) {
+      window.scrollTo(x, y)
+},
+```
+
 ###### Breadcrum Format [routePate -> Route Path]:
 ```
 // Make pascal to breadcrumb format.
 breadcrumbFormat(str) {
-return str.replace(/([A-Z])/g, ' $1').trim();
+      return str.replace(/([A-Z])/g, ' $1').trim();
 },
 ```
 
