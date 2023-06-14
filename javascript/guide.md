@@ -1,6 +1,24 @@
 # Hands on Note for Javascript
 
+#### Util:
+###### Ucfirst:
+```
+// Alternative of php's ucfirst.
+ucfirst(str) {
+      if (typeof str !== 'string' || str.length === 0) {
+          return str;
+      }
+
+      return str.charAt(0).toUpperCase() + str.slice(1);
+},
+
+```
+
+
 #### The Array Loop Hole:
+
+
+###### Push:
 ```
 types() {
   const types = [];
