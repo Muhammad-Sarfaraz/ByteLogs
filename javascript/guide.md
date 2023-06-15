@@ -2,6 +2,15 @@
 
 #### Util:
 
+###### Array to String
+```
+arrayToString(value) {
+  var string = Object.entries(value);
+  var arrayToString = string.map((entry) => entry[1]).join(",");
+  return arrayToString;
+},
+```
+
 ###### Scroll To Top:
 ```
  scrollTop(x = 0, y = 0) {
