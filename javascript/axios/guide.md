@@ -78,6 +78,24 @@ let res = await axios.head('http://google.com');
 ```
 
 #### Skeleton:
+###### Get:
+```
+axios
+    .get('/api/meta', {
+        params: {
+            url: encodeURI(this.node.attrs.href),
+        },
+    })
+    .then((response) => {
+        const data = response.data
+        console.log(data)
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+```
+
+###### Post:
 ```
 axios
           .post('url', {
