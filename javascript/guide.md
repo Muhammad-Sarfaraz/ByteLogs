@@ -1,6 +1,6 @@
 # Hands on Note for Javascript
 
-#### Util:
+#### Util Function:
 
 ###### Array to String
 ```
