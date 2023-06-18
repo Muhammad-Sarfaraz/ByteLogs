@@ -2,7 +2,7 @@
 
 #### Util Function:
 
-###### Array to String
+###### Array to String:
 ```
 arrayToString(value) {
   var string = Object.entries(value);
