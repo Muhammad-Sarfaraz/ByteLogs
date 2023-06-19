@@ -129,6 +129,48 @@ return tap(static::all($path, (array) $parameters), function ($variables) {
 });
 ```
 
+#### Working with json:
+```
+// Load the contents of the JSON files
+    $districtOldData = json_decode(File::get(database_path('districtOld.json')), true,512, JSON_UNESCAPED_UNICODE);
+    $districtNewData = json_decode(File::get(database_path('districtNew.json')), true, 512, JSON_UNESCAPED_UNICODE);
+    $thanasData = json_decode(File::get(database_path('thanas.json')), true, 512, JSON_UNESCAPED_UNICODE);
+
+    $thanas = [];
+
+    // Process each district from districtOld.json
+    foreach ($districtOldData as $oldDistrict) {
+        $oldDistrictName = $oldDistrict['name'];
+
+        // Search for the district with the same name in districtNew.json and retrieve its ID
+        $matchingDistrictNew = collect($districtNewData)->firstWhere('name', $oldDistrictName);
+
+        $districtNewId = $matchingDistrictNew ? $matchingDistrictNew['id'] : null;
+
+        $districtbanglaName = $matchingDistrictNew ? $matchingDistrictNew['bn_name'] : null;
+
+        $data = [];
+        // Replace the corresponding district ID in thanas.json
+        foreach ($thanasData as &$thana) {
+
+            if ($thana['district_id'] == $oldDistrict['id']) {
+
+
+                //dd([$oldDistrictName, $districtbanglaName], $thana['district_id'] == $oldDistrict['id'], $thana['district_id'] , $districtNewId);
+                $thana['district_id'] = $districtNewId;
+                 $data['newId'] = $districtNewId;
+                $thanas[] = $thana;
+            }else{
+                //dd($thana['district_id'] , $oldDistrict['id'],$thana, $oldDistrict, $districtbanglaName, $districtNewId);
+            }
+        }
+    }
+    // Save the modified thanas.json file
+    File::put(database_path('thanas-update.json'), json_encode($thanas, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+
+    return "District ID replacement for all districts completed successfully.";
+```
+
 
 
 
