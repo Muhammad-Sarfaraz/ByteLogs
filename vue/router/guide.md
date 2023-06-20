@@ -1,5 +1,17 @@
 # Hands on Note for Router
 
+#### Util:
+###### Get current route name:
+```
+{{ currentRouteName }}
+
+computed: {
+  currentRouteName() {
+    return this.$route.name;
+  },
+},
+```
+
 #### Installation:
 ``` npm install vue-router@4 ```
 
