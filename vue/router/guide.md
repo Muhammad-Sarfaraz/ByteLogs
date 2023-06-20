@@ -1,6 +1,9 @@
 # Hands on Note for Router
 
 #### Utility:
+
+Push to a url, route-name
+
 ###### Get current route name:
 ```
 {{ currentRouteName }}
