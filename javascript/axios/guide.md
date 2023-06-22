@@ -1,5 +1,10 @@
 # Hands on Note for Axios
 
+#### Get Param:
+```
+this.$route.params.id
+```
+
 #### Foreach through:
 ```
 // Iterate over an array in the JSON data
