@@ -17,7 +17,7 @@ import (
 )
 ```
 
-#### Wait Group
+#### Wait Group:
 ```
 import "sync"
 
