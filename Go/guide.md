@@ -7,7 +7,7 @@ str := "Hello"
 
 ```
 
-### Packages
+### Packages:
 ```
 import "fmt"
 import "math/rand"
