@@ -190,6 +190,13 @@ new Vue({
 });
 ```
 
+#### Data:
+```
+  data: () => ({
+    order: JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'),
+  }),
+```
+
 
 #### Components
 A component in Vue.js is a modular and reusable building block that encapsulates the logic, template, and styling of a specific part of a web application, promoting code organization and reusability.
