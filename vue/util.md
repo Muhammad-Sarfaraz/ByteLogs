@@ -16,3 +16,13 @@ removeItem(id) {
  this.data.length.splice(id, 1);
 },
 ```
+
+#### Validation:
+* Remove validation:
+* ```
+  "data.is_former"(current, old) {
+      if (current !== old) {
+        this.validation.reset(); <----
+      }
+    },
+  ```
