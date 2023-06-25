@@ -1,3 +1,13 @@
+
+
+
+
+###### Object Length:
+```
+Object.keys(check).length;
+```
+
+
 #### Add More:
 ```
 // Formula 01:
