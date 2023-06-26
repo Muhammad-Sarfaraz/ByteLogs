@@ -1,4 +1,9 @@
+#### Util:
 
+###### Current year:
+```
+const year = new Date().toISOString().slice(0, 4);
+```
 
 
 
