@@ -13,7 +13,7 @@ Object.keys(check).length;
 ```
 
 
-#### Add More:
+###### Add More:
 ```
 // Formula 01:
 
@@ -32,7 +32,7 @@ removeItem(id) {
 },
 ```
 
-#### Validation:
+###### Validation:
 * Remove validation:
 * ```
   "data.is_former"(current, old) {
