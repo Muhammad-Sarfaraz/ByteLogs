@@ -1,5 +1,11 @@
 #### Util:
 
+###### The $
+```
+$root = The main app.js or index.js where vue is initiate!
+
+``
+
 ###### Current year:
 ```
 const year = new Date().toISOString().slice(0, 4);
