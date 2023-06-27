@@ -1,6 +1,7 @@
 #### Util:
 
 ###### Use of window:
+window.variableName means that the variable is being declared at the global scope.
 ```
 window.baseurl = "/";
 ```
