@@ -1,5 +1,10 @@
 #### Util:
 
+###### Use of window:
+```
+window.baseurl = "/";
+```
+
 ###### The $
 ```
 $root = The main app.js or index.js where vue is initiate!
