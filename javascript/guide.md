@@ -38,6 +38,12 @@ Object.freeze(obj);
   "Abraham Khan".length;
   ```
 
+#### Template Literals:
+```
+var name="John Khan"
+const greeting = `Hello, my name is ${name}!
+```
+
 #### Module:
 
 ###### Export:
