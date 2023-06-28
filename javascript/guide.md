@@ -44,6 +44,67 @@ var name="John Khan"
 const greeting = `Hello, my name is ${name}!
 ```
 
+#### Array:
+
+###### Declaration and Initialization:
+An array can be declared and initialized using square brackets ([]) and can contain any type of values, including other arrays.
+Example: ``` let numbers = [1, 2, 3, 4];```
+
+###### Accessing Array Elements:
+Array elements can be accessed using zero-based indexing. The index of the first element is 0.
+Example: ``` let firstElement = numbers[0];
+Array Length:```
+
+###### The length property of an array returns the number of elements in the array.
+Example: ```let length = numbers.length;```
+
+###### Modifying Array Elements:
+Array elements can be modified by assigning new values to specific indices.
+Example: ```numbers[2] = 5;```
+
+###### Array Methods:
+* push(): Adds one or more elements to the end of an array.
+* pop(): Removes and returns the last element of an array.
+* shift(): Removes and returns the first element of an array.
+* unshift(): Adds one or more elements to the beginning of an array.
+* splice(): Modifies an array by adding, removing, or replacing elements.
+* concat(): Joins two or more arrays and returns a new array.
+* slice(): Returns a shallow copy of a portion of an array.
+* forEach(): Executes a provided function once for each array element.
+* map(): Creates a new array by performing a function on each array element.
+* filter(): Creates a new array with elements that pass a provided condition.
+* find(): Returns the first element in an array that satisfies a provided condition.
+* sort(): Sorts the elements of an array in place.
+* reverse(): Reverses the order of elements in an array.
+Many more methods are available for arrays in JavaScript.
+
+###### Array Iteration:
+Arrays can be iterated over using various looping constructs like for, for...of, or array methods like forEach(), map(), etc.
+Example using forEach():
+```
+numbers.forEach(function(element) {
+  console.log(element);
+});
+```
+###### Multidimensional Arrays:
+Arrays in JavaScript can contain other arrays, allowing the creation of multidimensional arrays.
+Example: ``` let matrix = [[1, 2], [3, 4], [5, 6]]; ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #### Module:
 
 ###### Export:
