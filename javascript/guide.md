@@ -1,5 +1,25 @@
 # Hands on Note for Javascript
 
+#### Data-Types: 
+There are 7 data-types as of ECMAScript 2020.
+| Data Types  | Examples                                                              |
+| ----------- | --------------------------------------------------------------------- |
+| `undefined` | A variable that has not been assigned a value is of type `undefined`. |
+| `null`      | no value.                                                             |
+| `string`    | `'a', 'aa', 'aaa', 'Hello!', '11 cats'`                               |
+| `number`    | `12, -1, 0.4`                                                         |
+| `boolean`   | `true, false`                                                         |
+| `object`    | A collection of properties.                                           |
+| `symbol`    | Represents a unique identifier.                                       |
+
+####  ES6 var, let and const:
+* Unlike var, let throws an error if you declare the same variable twice.
+* Variables declared with const are read-only and cannot be reassigned.
+* Objects (including arrays and functions) assigned to a variable using const are still mutable and only prevents the reassignment of the variable identifier.
+
+
+
+
 #### Module:
 
 ###### Export:
