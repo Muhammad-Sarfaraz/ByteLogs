@@ -19,17 +19,27 @@ export {score, time};
 ```
 
 ###### Import:
+* Type 01: Import multiple function:
 ```
-// Type 01:
 import {score,time} from "./script/top.js";
+```
+* Type 02: Only import the default function:
 
-// Type 02:
+ ```
 import score from "./script/bar.js";
+```
+* Type 03: Import every public function from module:
 
-// Use case:
+```
+import * as board from './score';
+```
+
+* Use case:
+```
 alert(score,time);
 alert(score());
 ```
+
 
 #### ES5:
 
