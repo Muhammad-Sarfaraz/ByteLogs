@@ -18,7 +18,15 @@ There are 7 data-types as of ECMAScript 2020.
 * Objects (including arrays and functions) assigned to a variable using const are still mutable and only prevents the reassignment of the variable identifier.
 
 
+* Object freeze:
+```
+let obj = {
+  name: "john Abraham Khan",
+age: "40",
+};
 
+Object.freeze(obj);
+```
 
 #### Module:
 
@@ -181,7 +189,7 @@ fetch(url, {
     // Handle any errors that occurred during the request
     console.error('Error:', error);
   });
-```
+``` 
 
 ###### Get:
 ```
