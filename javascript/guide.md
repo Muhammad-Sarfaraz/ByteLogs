@@ -1,7 +1,31 @@
 # Hands on Note for Javascript
 
+#### Module:
 
-#### ES%:
+###### Export:
+```
+// Type 01:
+const score = function(){
+    return 100;
+}
+
+export default score;
+
+// Type 02:
+const score = 100;
+const time = 40s;
+
+export {score, time};
+```
+
+###### Import:
+```
+
+```
+
+#### ES5:
+
+#### ES6:
 
 #### Util Function:
 
