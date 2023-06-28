@@ -28,6 +28,16 @@ age: "40",
 Object.freeze(obj);
 ```
 
+#### String:
+* Concatenation:
+  ```
+  var str = "One. " + "Two.";
+  ```
+* Length of a string:
+   ```
+  "Abraham Khan".length;
+  ```
+
 #### Module:
 
 ###### Export:
