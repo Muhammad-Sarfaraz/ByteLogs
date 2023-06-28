@@ -20,7 +20,15 @@ export {score, time};
 
 ###### Import:
 ```
+// Type 01:
+import {score,time} from "./script/top.js";
 
+// Type 02:
+import score from "./script/bar.js";
+
+// Use case:
+alert(score,time);
+alert(score());
 ```
 
 #### ES5:
