@@ -171,7 +171,73 @@ const sum = count.reduce((oldValue,newValue) => oldValue+newValue); // 60
   let modifiedNames = JSON.parse(JSON.stringify(names)); 
 ```
 
+* Objects for Lookups:
+```
+let name = {
+  1:"ABdul",
+  2:"Karim",
+}
+console.log(name[value];
+```
 
+* Test Object Properties:
+ ```
+var myObj = {
+  top: "hat",
+  bottom: "pants",
+};
+
+myObj.hasOwnProperty("top"); // true
+myObj.hasOwnProperty("middle"); // false
+  ```
+
+* Accessing Nested Objects:
+
+```
+var ourStorage = {
+  desk: {
+    drawer: "stapler",
+  },
+  cabinet: {
+    "top drawer": {
+      folder1: "a file",
+      folder2: "secrets",
+    },
+    "bottom drawer": "soda",
+  },
+};
+
+ourStorage.cabinet["top drawer"].folder2; // "secrets"
+ourStorage.desk.drawer; // "stapler"
+```
+
+* ES6 Destructuring:
+```
+// destructure the object in a function argument itself.
+const profileUpdate = (profileData) => {
+  const { name, age, nationality, location } = profileData;
+  // do something with these variables
+};
+
+// this can also be done in-place:
+const profileUpdate = ({ name, age, nationality, location }) => {
+  /* do something with these fields */
+};
+```
+
+* ES6 for-of:
+```
+for (let value of myArray) {
+  console.log(value);
+}
+```
+
+* Immediately Invoked Function Expression or IIFE
+```
+(function() {
+  console.log("Hello! I am a magic car!");
+})();
+```
 
 #### Module:
 
