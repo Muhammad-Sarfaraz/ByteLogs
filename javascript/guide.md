@@ -91,9 +91,74 @@ Arrays in JavaScript can contain other arrays, allowing the creation of multidim
 Example: ``` let matrix = [[1, 2], [3, 4], [5, 6]]; ```
 
 
+#### Delete a Apecific Item:
+* Using splice():
+```
+let array = [1, 2, 3, 4, 5];
+array.splice(indexToDelete, 1); // (Index,number of element to delete)
+```
+* Using filter():
+If it is true (condition) then it will add that item into new array:
 
+```
+let array = [
+     { id: 1, name: 'Hasan' },
+    { id: 2, name: 'Abdul' },
+    { id: 3, name: 'Karim' },
+];
+const specificId = 1;
+let filter = array.filter(item => item.id === specificId); // result only a single item will be new array.
+```
 
+###### Using map():
 
+```
+var watchList = [
+  {
+    Title: "Inception",
+    imdbRating: "8.8",
+    Type: "movie",
+  },
+  {
+    Title: "Interstellar",
+    imdbRating: "8.6",
+    Type: "movie",
+  },
+  {
+    Title: "The Dark Knight",
+    imdbRating: "9.0",
+    Type: "movie",
+  },
+  {
+    Title: "Batman Begins",
+    imdbRating: "7.9",
+    Type: "movie",
+  },
+];
+
+const rating = watchList.map(function (movie) {
+  return { title: movie.Title, rating: movie.imdbRating };
+});
+/* [ { title: 'Inception', rating: '8.8' }, 
+  { title: 'Interstellar', rating: '8.6' }, 
+  { title: 'The Dark Knight', rating: '9.0' }, 
+  { title: 'Batman Begins', rating: '7.9' } ]  */
+
+// or...
+const rating = watchList.map((movie) => ({
+  title: movie.Title,
+  rating: movie.imdbRating,
+}));
+/* [ { title: 'Inception', rating: '8.8' }, 
+  { title: 'Interstellar', rating: '8.6' }, 
+  { title: 'The Dark Knight', rating: '9.0' }, 
+  { title: 'Batman Begins', rating: '7.9' } ]  */
+  
+```
+
+* filter() vs map():
+The purpose of the map() method is to create a new array by transforming each element of the original array based on a provided function.
+Map creates a new array by transforming every element in an array individually. filter creates a new array by removing elements that don't belong.
 
 
 
