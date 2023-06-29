@@ -160,13 +160,16 @@ const rating = watchList.map((movie) => ({
 The purpose of the map() method is to create a new array by transforming each element of the original array based on a provided function.
 Map creates a new array by transforming every element in an array individually. filter creates a new array by removing elements that don't belong.
 
+* Using reduce():
+```
+const count = [10,20,30];
+const sum = count.reduce((oldValue,newValue) => oldValue+newValue); // 60
 
-
-
-
-
-
-
+```
+* Copy a object or array to another variable:
+```
+  let modifiedNames = JSON.parse(JSON.stringify(names)); 
+```
 
 
 
