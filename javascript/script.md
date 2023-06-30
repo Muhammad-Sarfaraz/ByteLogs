@@ -1,5 +1,5 @@
 # Script:
-```
+
 const score = function(){
     return 100;
 }
@@ -76,6 +76,32 @@ if (indexOfAbdul !== -1) {
     names.splice(indexOfAbdul, 1);
 }
 
+// Chain way to call All of these:
+
+const students = [
+    { name: "Nick", grade: 10 },
+    { name: "John", grade: 15 },
+    { name: "Julia", grade: 19 },
+    { name: "Nathalie", grade: 9 },
+  ];
+
+  
+  const aboveTenSum = students
+  .map(student => student.grade) 
+  .filter(grade => grade >= 10) 
+  .reduce((prev, next) => prev + next, 0); 
+
+console.log("chain way to call:",aboveTenSum);
+
+// Generator:
+function * downToOne(n) {
+    for (let i = n; i > 0; --i) {
+      yield i;
+    }
+  }
+  
+  console.log("Generator:",[...downToOne(5)]) // [ 5, 4, 3, 2, 1 ]
+
 let array = [
     { id: 1, name: 'Hasan' },
     { id: 2, name: 'Abdul' },
@@ -88,4 +114,3 @@ let array = [
   console.log(filter);
 
 export default score;
-```
