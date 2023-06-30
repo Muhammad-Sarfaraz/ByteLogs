@@ -171,6 +171,16 @@ const sum = count.reduce((oldValue,newValue) => oldValue+newValue); // 60
   let modifiedNames = JSON.parse(JSON.stringify(names)); 
 ```
 
+* Using find():
+It immediately returns the value of that element (that satisfies the condition) if found. Otherwise, returns undefined.
+```
+const greaterThanZero = numbers.find(function(n) {
+  return n > 0;
+});
+console.log(greaterThanZero);
+```
+
+
 * Objects for Lookups:
 ```
 let name = {
@@ -238,6 +248,37 @@ for (let value of myArray) {
   console.log("Hello! I am a magic car!");
 })();
 ```
+
+* Spread operator "..."
+The spread operator ... has been introduced with ES2015 and is used to expand elements of an iterable (like an array) into places where multiple elements can fit.
+```
+const arr1 = ["a", "b", "c"];
+const arr2 = [...arr1, "d", "e", "f"]; // ["a", "b", "c", "d", "e", "f"]
+
+function myFunc(x, y, ...params) {
+  console.log(x);
+  console.log(y);
+  console.log(params)
+}
+
+myFunc("a", "b", "c", "d", "e", "f")
+```
+
+* Object properties spreading:
+```
+const myObj = { x: 1, y: 2, a: 3, b: 4 };
+const { x, y, ...z } = myObj; // object destructuring here
+console.log(x); // 1
+```
+* Object property shorthand:
+```
+const x = 10;
+const myObj = { x };
+console.log(myObj.x) // 10
+```
+
+#### Scope
+The context in which values and expressions are "visible," or can be referenced. If a variable or other expression is not "in the current scope," then it is unavailable for use.
 
 #### Module:
 
