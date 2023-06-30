@@ -276,6 +276,13 @@ const x = 10;
 const myObj = { x };
 console.log(myObj.x) // 10
 ```
+* Using push():
+arr1.push(...arr2) // Adds arr2 items to end of array
+arr1.unshift(...arr2) //Adds arr2 items to beginning of array
+
+* using math in array:
+let numbers = [9, 4, 7, 1];
+Math.min(...numbers); // 1
 
 #### Scope
 The context in which values and expressions are "visible," or can be referenced. If a variable or other expression is not "in the current scope," then it is unavailable for use.
