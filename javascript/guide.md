@@ -287,6 +287,15 @@ Math.min(...numbers); // 1
 #### Scope
 The context in which values and expressions are "visible," or can be referenced. If a variable or other expression is not "in the current scope," then it is unavailable for use.
 
+#### Localstorage:
+LocalStorage is synchronous,localStorage is a type of web storage that allows JavaScript sites and apps to store and access data right in the browser with no expiration date.
+* setItem(key, value) – store key/value pair. 
+* getItem(key) – get the value by key. 
+* removeItem(key) – remove the key with its value.
+* clear() – delete everything. 
+* key(index) – get the key on a given position. 
+* length – the number of stored items. 
+
 #### Module:
 
 ###### Export:
