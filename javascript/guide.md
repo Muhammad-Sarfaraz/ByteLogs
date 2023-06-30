@@ -336,6 +336,25 @@ alert(score,time);
 alert(score());
 ```
 
+#### Async-Await:
+Async and Await are extensions of promises.
+Async: Async functions enable us to write promise based code as if it were synchronous, but without blocking the execution thread.
+```
+async function firstAsync() {
+  return 23;
+}
+
+firstAsync().then(alert); // 23
+```
+
+Await: The await operator is used to wait for a Promise to complete.
+```
+async function firstAsync() {
+  const data = await getNames();
+}
+
+firstAsync();
+```
 
 #### ES5:
 
