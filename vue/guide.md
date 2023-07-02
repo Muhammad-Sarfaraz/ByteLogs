@@ -395,13 +395,13 @@ export default {
 
 #### Slot
  A slot in Vue.js is like a place where you can put different puzzle pieces to complete a picture.
- You can write style in slot indiviually but affect will show on the child.
+ You can write style in slot indiviually but affect will show on the child. More, please see the [AuraVue]
 
-Root Component:
+Root Component: [Content]
 ```
 <template>
   <div>
-    <Board>
+    <Exam>
       <template v-slot:ct>
         <Item name="Bangla"></Item>
         <Item name="English"></Item>
@@ -414,12 +414,12 @@ Root Component:
         <Item name="Bangla"></Item>
         <Item name="English"></Item>
       </template>
-    </Board>
+    </Exam>
   </div>
 </template>
 
 <script>
-import Board from './Board.vue';
+import Exam from './Exam.vue';
 import Item from './Item.vue';
 
 export default {
@@ -430,7 +430,7 @@ export default {
 };
 </script>
 ```
-Exam Component:
+Exam Component: [Master Layout]
 ```
 <template>
   <div>
