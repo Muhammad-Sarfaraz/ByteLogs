@@ -1,3 +1,7 @@
+<p align="center">
+    <img height="250px" width="250px" src="https://i.ibb.co/dPXcLRL/Screenshot-2023-07-02-230712.png">
+</p>
+
 # ByteLogs
 
 ByteLogs is a repository for storing and organizing language notes. It provides a collection of resources and examples for various programming languages.
