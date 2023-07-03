@@ -1,5 +1,5 @@
 <p align="center">
-    <img height="250px" width="250px" src="https://i.ibb.co/dPXcLRL/Screenshot-2023-07-02-230712.png">
+    <img height="250px" width="250px" src="https://i.ibb.co/WF7DTwL/DALL-E-2023-07-03-21-10-49-A-logo-Aura-hand-digitam-drewan-removebg-preview.png">
 </p>
 
 # ByteLogs
