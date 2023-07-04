@@ -1083,3 +1083,11 @@ export default {
 };
 </script>
 ```
+
+#### Advance Topic:
+###### Custom Directives
+###### Composables
+###### Plugins
+
+
+
