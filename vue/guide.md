@@ -1088,6 +1088,6 @@ export default {
 ###### Custom Directives
 ###### Composables
 ###### Plugins
-
+Plugins are self-contained code that usually add app-level functionality to Vue.
 
 
