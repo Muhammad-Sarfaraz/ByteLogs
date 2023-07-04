@@ -1090,4 +1090,25 @@ export default {
 ###### Plugins
 Plugins are self-contained code that usually add app-level functionality to Vue.
 
+* Step 01 :  create it:
+```
+export const world = {
+    install(app) {
+      app.config.globalProperties.$world = {
+        execute() {
+          return "Hello World!"; 
+        },
+      };
+    },
+  };
+```
+* Step 02 : Register it:
+```
+const app = createApp(App)
+app.use(world);
+```
 
+* Execute it:
+ ```
+this.$world.execute()
+  ```
