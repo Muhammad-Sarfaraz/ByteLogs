@@ -21,6 +21,11 @@ export const scroll = {
 
 ```
 
+* Register in vue global, then
+```
+this.$scroll.execute('scrollToDivId')
+```
+
 
 #### The Compound Data Object:
 Suppose, You have to get data of 3/4 models, what will you do ? you will call one by one , but cost time and resources. Instead just 
