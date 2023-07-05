@@ -1,4 +1,13 @@
 # Script:
+
+
+###### Slice a array into N:
+```
+
+```
+
+
+
 ```
 const score = function(){
     return 100;
