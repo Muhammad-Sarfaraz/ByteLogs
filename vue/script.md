@@ -1,5 +1,27 @@
 # Script
 
+#### Global Scroll:
+* First, create the plugin:
+```
+export const scroll = {
+    install(app) {
+        app.config.globalProperties.$scroll = {
+            execute(selector) {
+                var container = document.querySelector(`#${selector}`);
+                console.log(container);
+                if (container) {
+                    container.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            },
+        };
+    },
+};
+
+```
+
+
 #### The Compound Data Object:
 Suppose, You have to get data of 3/4 models, what will you do ? you will call one by one , but cost time and resources. Instead just 
 make a single api call and get all the data which you are looking for!
