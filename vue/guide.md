@@ -1163,3 +1163,12 @@ Vue offers two built-in components that can help work with transitions and anima
 </style>
 ```
 
+###### Keep-Alive
+```
+It is used to store your cache of your component. When switching tab you will lose data, instead of losing those data,
+you can use Keep Alive.
+<KeepAlive>
+  <component :is="activeComponent" />
+</KeepAlive>
+```
+
