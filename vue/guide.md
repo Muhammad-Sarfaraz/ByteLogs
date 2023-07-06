@@ -1176,4 +1176,36 @@ you can use Keep Alive.
 <Teleport> is a built-in component that allows us to "teleport" a part of a component's template into a DOM node that exists outside the DOM hierarchy of that component.
 Solves your modal binding issues.
 
+###### Suspense
+<suspense> handles asynchronous components.
+```
+<template>
+  <suspense>
+    <template v-slot:default>
+      <component :is="componentName"></component>
+    </template>
+    <template v-slot:fallback>
+      <p>Loading...</p>
+    </template>
+  </suspense>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      componentName: ''
+    };
+  },
+  created() {
+    // Simulating an asynchronous component loading
+    setTimeout(() => {
+      this.componentName = 'YourComponentName';
+    }, 2000);
+  }
+};
+</script>
+
+```
+
 
