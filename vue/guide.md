@@ -1086,7 +1086,6 @@ export default {
 
 #### Advance Topic:
 ###### Custom Directives
-Custom Directives
 In addition to the default set of directives shipped in core (like v-model or v-show), Vue also allows you to register your own custom directives.
 
 * Example 001:
@@ -1114,6 +1113,8 @@ app.directive('color', (el, binding) => {
 
 
 ###### Composables
+In the context of Vue applications, a "composable" is a function that leverages Vue's Composition API to encapsulate and reuse stateful logic.
+
 ###### Plugins
 Plugins are self-contained code that usually add app-level functionality to Vue.
 
