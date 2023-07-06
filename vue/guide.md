@@ -1140,3 +1140,26 @@ app.use(world);
  ```
 this.$world.execute()
   ```
+
+###### Transition
+Vue offers two built-in components that can help work with transitions and animations in response to changing state:
+```
+<button @click="show = !show">Toggle</button>
+<Transition>
+  <p v-if="show">hello</p>
+</Transition>
+
+<style>
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>
+```
+
