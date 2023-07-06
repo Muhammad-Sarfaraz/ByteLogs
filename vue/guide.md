@@ -1086,6 +1086,33 @@ export default {
 
 #### Advance Topic:
 ###### Custom Directives
+Custom Directives
+In addition to the default set of directives shipped in core (like v-model or v-show), Vue also allows you to register your own custom directives.
+
+* Example 001:
+```
+const focus = {
+  mounted: (el) => el.focus()
+}
+
+export default {
+  directives: {
+    focus
+  }
+}
+
+<input v-focus />
+```
+* Example 002:
+```
+app.directive('color', (el, binding) => {
+  // this will be called for both `mounted` and `updated`
+  el.style.color = binding.value
+})
+<div v-color="color"></div>
+```
+
+
 ###### Composables
 ###### Plugins
 Plugins are self-contained code that usually add app-level functionality to Vue.
