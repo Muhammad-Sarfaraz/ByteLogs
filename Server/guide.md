@@ -18,3 +18,11 @@ chown user:group file_name // Change the ownership of a file or directory.
 su // Root permission.
 nano file_name // Edit a file.
 ```
+
+#### Networking:
+```
+traceroute google.com  // Trace the route to google.com
+wget https://example.com/file.zip // Download a file from a web server
+sudo systemctl restart httpd // Restart apache.
+sudo systemctl restart mysqld // Restart MySql.
+```
