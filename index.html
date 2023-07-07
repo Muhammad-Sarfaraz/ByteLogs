@@ -1,1 +1,68 @@
-All Ok!
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Markdown Previewer</title>
+    <style>
+        /* Example CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#preview-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <textarea id="markdown-input" placeholder="Enter your Markdown content"></textarea>
+    <div id="preview-container"></div>
+
+    <script>
+       // Function to render Markdown content
+async function renderMarkdown(markdownContent) {
+    const response = await fetch('https://api.github.com/markdown', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            text: markdownContent,
+            mode: 'markdown'
+        })
+    });
+    const htmlContent = await response.text();
+    return htmlContent;
+}
+
+// Function to update the Markdown preview
+async function updatePreview() {
+    const markdownInput = document.getElementById('markdown-input');
+    const previewContainer = document.getElementById('preview-container');
+
+    const markdownContent = markdownInput.value;
+    const htmlContent = await renderMarkdown(markdownContent);
+
+    previewContainer.innerHTML = htmlContent;
+}
+
+// Update the preview when input changes
+const markdownInput = document.getElementById('markdown-input');
+markdownInput.addEventListener('input', updatePreview);
+
+// Initial preview update
+updatePreview();
+
+    </script>
+</body>
+</html>
