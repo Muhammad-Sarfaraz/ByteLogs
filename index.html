@@ -1,28 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Markdown Preview</title>
-  <style>
-    /* Add your custom CSS styles here */
-  </style>
-</head>
-<body>
-  <div id="preview-container"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
-  <script>
-    // Fetch Markdown content and convert to HTML
-    fetch('https://muhammad-sarfaraz.github.io/ByteLogs/vue/guide.md')
-      .then(response => response.text())
-      .then(markdown => {
-        const converter = new showdown.Converter();
-        converter.setFlavor('github');
-        const htmlContent = converter.makeHtml(markdown);
-        document.getElementById('preview-container').innerHTML = htmlContent;
-      })
-      .catch(error => {
-        console.error('Error fetching Markdown:', error);
-      });
-  </script>
+<head>
+    <title>Markdown Preview</title>
+    <style>
+        body {
+            background-color: #f6f8fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        #preview-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+        }
+        
+        #preview-container h1,
+        #preview-container h2,
+        #preview-container h3,
+        #preview-container h4,
+        #preview-container h5,
+        #preview-container h6 {
+            margin-top: 0;
+        }
+        
+        #preview-container a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        
+        #preview-container code {
+            background-color: #f6f8fa;
+            border-radius: 4px;
+            padding: 2px 4px;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preview-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+    <script>
+        // Fetch Markdown content and convert to HTML
+        fetch('https://muhammad-sarfaraz.github.io/ByteLogs/vue/guide.md')
+            .then(response => response.text())
+            .then(markdown => {
+                const converter = new showdown.Converter();
+                converter.setFlavor('github');
+                const htmlContent = converter.makeHtml(markdown);
+                document.getElementById('preview-container').innerHTML = htmlContent;
+            })
+            .catch(error => {
+                console.error('Error fetching Markdown:', error);
+            });
+    </script>
 </body>
+
 </html>
