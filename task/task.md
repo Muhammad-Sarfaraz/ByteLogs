@@ -8,3 +8,4 @@
 * Js,PHP,GO others a  content in bytelogs. [running]
 * Create smm panel or any micro panel. [running]
 * Code Bank which will be script.md a pattern. [running]
+* Build the website for bytelogs preview. [running]
