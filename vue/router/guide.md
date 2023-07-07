@@ -4,7 +4,7 @@
 
 Push to a url, route-name
 
-###### Get current route name:
+###### Get Current Route Name:
 ```
 {{ currentRouteName }}
 
@@ -66,13 +66,13 @@ export default router
 
 ```
 
-#### Router link:
+#### Router Link:
 Note how instead of using regular a tags, we use a custom component router-link to create links.
 
 #### Router view:
 router-view will display the component that corresponds to the URL. You can put it anywhere to adapt it to your layout
 
-#### Dynamic router push:
+#### Dynamic Router Push:
 
 ```
 this.$router.push({

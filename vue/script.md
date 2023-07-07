@@ -1,7 +1,9 @@
 # Script
 
 #### Global Scroll:
+
 * First, create the plugin:
+
 ```
 export const scroll = {
     install(app) {
@@ -22,14 +24,16 @@ export const scroll = {
 ```
 
 * Register in vue global, then
+
 ```
 this.$scroll.execute('scrollToDivId')
 ```
 
-
 #### The Compound Data Object:
+
 Suppose, You have to get data of 3/4 models, what will you do ? you will call one by one , but cost time and resources. Instead just 
 make a single api call and get all the data which you are looking for!
+
 ```
 // Laravel backend:
 Route::get('support/get-models', function (Request $request) {

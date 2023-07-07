@@ -1,13 +1,15 @@
-
 # Vue js
 
 #### Short:
+
 Vue: The power of reactive JavaScript for building dynamic user interfaces.
 
 #### What the heck it is?
 
 ###### Glimpse of first over-view of vue js app.
-- A basic cdn based vue app.
+
+* A basic cdn based vue app.
+
 ```
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <div id="app">
@@ -32,9 +34,11 @@ Vue: The power of reactive JavaScript for building dynamic user interfaces.
 ```
 
 #### Option API vs Composition API
+
 The Vue.js framework provides two approaches for organizing and managing component logic: the Options API and the Composition API.
 
 * Option API
+
 ```
 export default {
   data() {
@@ -49,12 +53,13 @@ export default {
   }
 };
 ```
-- The Options API is the traditional and simpler approach used in earlier versions of Vue.js.
-- It involves defining a component using an options object that contains various properties and methods.
-- The component options include data, computed, methods, watch, and others, allowing you to structure and manage component behavior.
 
+* The Options API is the traditional and simpler approach used in earlier versions of Vue.js.
+* It involves defining a component using an options object that contains various properties and methods.
+* The component options include data, computed, methods, watch, and others, allowing you to structure and manage component behavior.
 
 * Composition API
+
 ```
 import { reactive, computed, watch } from 'vue';
 
@@ -75,9 +80,10 @@ export default {
   }
 };
 ```
-- The Composition API is a newer approach introduced in Vue 3 that provides more flexibility and reusability for managing component logic.
-- It allows you to organize code based on logical concerns rather than options objects.
-- It involves using functions and reactive utilities to create reusable logic and composition functions.
+
+* The Composition API is a newer approach introduced in Vue 3 that provides more flexibility and reusability for managing component logic.
+* It allows you to organize code based on logical concerns rather than options objects.
+* It involves using functions and reactive utilities to create reusable logic and composition functions.
 
 #### Life Cycle Hooks
 
@@ -94,12 +100,14 @@ The total life cycle hooks of vue js given below:
 ```
 
 ##### beforeCreate:
+
 The beforeCreate hook runs at the very initialization of your component. data has not been made reactive, and events have not been set up yet.
 
 Usage
 Using the beforeCreate hook is useful when you need some sort of logic/API call that does not need to be assigned to data. Because if we were to assign something to data now, it would be lost once the state was initialized.
 
 ##### created:
+
 You are able to access reactive data and events that are active with the created hook. Templates and Virtual DOM have not yet been mounted or rendered.
 
 Usage
@@ -108,12 +116,14 @@ The above are famously called as creation hooks, as opposed to mounting hooks.
 Mounting hooks are often the most used hooks. They allow you to access your component immediately before and after the first render. They do not, however, run during server-side rendering.
 
 ##### beforeMount:
+
 The beforeMount hook runs right before the initial render happens and after the template or render functions have been compiled.
 
 Usage
 This is the last step you should perform your API calls before it’s unnecessary late in the process because it’s right after created — they have access to the same component variables.
 
 ##### mounted:
+
 In the mounted hook, you will have full access to the reactive component, templates, and rendered DOM (via this.$el).
 
 Usage
@@ -128,12 +138,14 @@ Use updating hooks if you need to know when your component re-renders, perhaps f
 There are:
 
 ##### beforeUpdate:
+
 The beforeUpdate hook runs after data changes on your component and the update cycle begins, right before the DOM is patched and re-rendered.
 
 Usage
 Use beforeUpdate if you need to get the new state of any reactive data on your component before it actually gets rendered.
 
 ##### updated:
+
 The updated hook runs after data changes on your component and the DOM re-renders.
 
 Usage
@@ -146,6 +158,7 @@ Destruction hooks allow you to perform actions when your component is destroyed,
 There are:
 
 ##### beforeDestroy:
+
 beforeDestroy is fired right before teardown. Your component will still be fully present and functional.
 
 Usage
@@ -154,12 +167,14 @@ Use beforeDestroy if you need to clean-up events or reactive subscriptions.
 This is the stage where you can do resource management, delete variables and clean up the component.
 
 ##### destroyed:
+
 By the time you reach the destroyed hook, there’s practically nothing left on your component. Everything that was attached to it has been destroyed.
 
 Usage
 Use destroyed if you need do any last-minute cleanup or inform a remote server that the component was destroyed
 
 #### Template Refs
+
 In Vue.js, when you're building a web page, you can think of it as a big box full of different things, just like your toy box. Sometimes, you want to interact with a specific part of the web page, like a button or a picture. That's where template refs come in!
 
 ```
@@ -191,17 +206,19 @@ new Vue({
 ```
 
 #### Data:
+
 ```
   data: () => ({
     order: JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'),
   }),
 ```
 
-
 #### Components
+
 A component in Vue.js is a modular and reusable building block that encapsulates the logic, template, and styling of a specific part of a web application, promoting code organization and reusability.
 
 // In Child
+
 ```
 <template>
   <div>
@@ -227,7 +244,9 @@ h2 {
 </style>
 
 ```
+
 // In parent
+
 ```
 <template>
   <div>
@@ -250,6 +269,7 @@ export default {
 ##### Data passing from between child and parent.
 
 // Parent
+
 ```
 <template>
   <div>
@@ -288,6 +308,7 @@ export default {
 Example of async componet:
 
 Child Component:
+
 ```
 <template>
   <div>
@@ -313,6 +334,7 @@ export default {
 ```
 
 Root Component:
+
 ```
 <template>
   <div>
@@ -336,9 +358,11 @@ export default {
 ```
 
 #### Provide / Inject
+
 The provide and inject options in Vue.js allow you to share data or methods between components in a parent-child relationship without explicitly passing props
 
 Parent:
+
 ```
 <template>
   <div>
@@ -370,6 +394,7 @@ export default {
 ```
 
 Child:
+
 ```
 <template>
   <div>
@@ -394,10 +419,12 @@ export default {
 ```
 
 #### Slot
+
  A slot in Vue.js is like a place where you can put different puzzle pieces to complete a picture.
  You can write style in slot indiviually but affect will show on the child. More, please see the [AuraVue]
 
 Root Component: [Content]
+
 ```
 <template>
   <div>
@@ -430,7 +457,9 @@ export default {
 };
 </script>
 ```
+
 Exam Component: [Master Layout]
+
 ```
 <template>
   <div>
@@ -442,7 +471,9 @@ Exam Component: [Master Layout]
 </template>
 
 ```
+
 Item Component:
+
 ```
 <template>
   <div>
@@ -460,6 +491,7 @@ export default {
 ```
 
 Child Component:
+
 ```
 <template>
   <div>
@@ -489,6 +521,7 @@ export default {
 ```
 
 #### Watchers
+
 Watch on reactive property changes: It will run whenever the reactive property of cart changes.
 
 ```
@@ -507,7 +540,6 @@ data(){
   },
 ```
 
-
 #### Directives
 
 ```
@@ -515,6 +547,7 @@ data(){
 <p v-else-if="onSale">...</p>
 <p v-else>...</p>
 ```
+
 
 
 ```
@@ -539,6 +572,7 @@ v.model.trim="..." // Strips whitespace
 ```
 
 * Access position
+
 ```
 <li v-for="(item, index) in items">...</li>
 ```
@@ -612,6 +646,7 @@ export default {
 ```
 
 * Post data using javascript fetch
+
 ```
 <template>
   <div>
@@ -719,19 +754,20 @@ export default {
 ```
 
 #### Form Data
+
 FormData is a JavaScript object used to collect and manage form data for easy submission.
 
 * Using the data property:
-  - You store the form data directly in the component's data property as separate variables or objects.
-  - You can easily access, manipulate, and validate the form data within the component's methods.
-  - This approach gives you full control over the form data and allows you to customize its handling according to your needs.
+  + You store the form data directly in the component's data property as separate variables or objects.
+  + You can easily access, manipulate, and validate the form data within the component's methods.
+  + This approach gives you full control over the form data and allows you to customize its handling according to your needs.
 
 * Using FormData:
 
-- FormData is a built-in JavaScript object specifically designed to handle form data.
-- It provides a convenient way to collect form field values and construct a payload for sending as a request.
-- FormData is useful when dealing with more complex forms, such as those with file uploads or when you need to send data in a specific format.
-- It simplifies the process of handling and sending form data, especially in scenarios where the form structure or data requirements are more specialized.
+* FormData is a built-in JavaScript object specifically designed to handle form data.
+* It provides a convenient way to collect form field values and construct a payload for sending as a request.
+* FormData is useful when dealing with more complex forms, such as those with file uploads or when you need to send data in a specific format.
+* It simplifies the process of handling and sending form data, especially in scenarios where the form structure or data requirements are more specialized.
 
 * Submit form without axios/ajax
 
@@ -914,6 +950,7 @@ router.onError(error => {
 ```
 
 * History mode
+
 ```
 const router = createRouter({
   history: createWebHistory(),
@@ -968,6 +1005,7 @@ const routes = [
 
 * Route Navigation Guards:
 There are several types of guards available, such as beforeEach, beforeEnter, beforeLeave, beforeRouteUpdate, and more.
+
 ```
 router.beforeEach((to, from, next) => {
   // Perform some logic before navigating to the next route
@@ -980,19 +1018,22 @@ router.beforeEach((to, from, next) => {
 ```
 
 ## VueX
+
 Vuex is a state management library for Vue.js that helps manage the application state in a centralized manner, providing easy access and modification of state across components.
-A simple overview given below,
+A simple overview given below, 
 
 Key Concepts in Vuex:
 
-- State: The single source of truth for the application's data.
-- Mutations: Functions that modify the state synchronously.
-- Actions: Functions that can perform asynchronous operations and commit mutations.
-- Getters: Computed properties that derive values from the state.
+* State: The single source of truth for the application's data.
+* Mutations: Functions that modify the state synchronously.
+* Actions: Functions that can perform asynchronous operations and commit mutations.
+* Getters: Computed properties that derive values from the state.
 
 * Accessing the State:
-- Use $store.state to access the state in your components.
-- Example: ``` this.$store.state.counter ```
+* Use $store.state to access the state in your components.
+* Example: ``` this.$store.state.counter 
+
+```
 
 * Committing Mutations:
 - Mutations are functions that modify the state.
@@ -1000,9 +1041,11 @@ Key Concepts in Vuex:
 - Example: ``` this.$store.commit('increment') ```
 
 * Dispatching Actions:
-- Actions are functions that can perform asynchronous operations and commit mutations.
-- Use dispatch to invoke actions.
-- Example: ``` this.$store.dispatch('fetchData') ```
+* Actions are functions that can perform asynchronous operations and commit mutations.
+* Use dispatch to invoke actions.
+* Example: ``` this.$store.dispatch('fetchData') 
+
+```
 
 * Using Getters:
 
@@ -1011,6 +1054,7 @@ Key Concepts in Vuex:
 - Example: ``` this.$store.getters.getFormattedData ```
 
 store.js
+
 ```
 import { createStore } from 'vuex';
 
@@ -1045,6 +1089,7 @@ export default store;
 ```
 
 Registration
+
 ```
 import { createApp } from 'vue';
 import App from './App.vue';
@@ -1056,6 +1101,7 @@ app.mount('#app');
 ```
 
 Accessing the Store in Components:
+
 ```
 <template>
   <div>
@@ -1085,10 +1131,12 @@ export default {
 ```
 
 #### Advance Topic:
+
 ###### Custom Directives
 In addition to the default set of directives shipped in core (like v-model or v-show), Vue also allows you to register your own custom directives.
 
 * Example 001:
+
 ```
 const focus = {
   mounted: (el) => el.focus()
@@ -1102,7 +1150,9 @@ export default {
 
 <input v-focus />
 ```
+
 * Example 002:
+
 ```
 app.directive('color', (el, binding) => {
   // this will be called for both `mounted` and `updated`
@@ -1111,14 +1161,16 @@ app.directive('color', (el, binding) => {
 <div v-color="color"></div>
 ```
 
-
 ###### Composables
+
 In the context of Vue applications, a "composable" is a function that leverages Vue's Composition API to encapsulate and reuse stateful logic.
 
 ###### Plugins
+
 Plugins are self-contained code that usually add app-level functionality to Vue.
 
 * Step 01 :  create it:
+
 ```
 export const world = {
     install(app) {
@@ -1130,19 +1182,25 @@ export const world = {
     },
   };
 ```
+
 * Step 02 : Register it:
+
 ```
 const app = createApp(App)
 app.use(world);
 ```
 
 * Execute it:
- ```
+ 
+
+```
 this.$world.execute()
   ```
 
 ###### Transition
+
 Vue offers two built-in components that can help work with transitions and animations in response to changing state:
+
 ```
 <button @click="show = !show">Toggle</button>
 <Transition>
@@ -1150,7 +1208,7 @@ Vue offers two built-in components that can help work with transitions and anima
 </Transition>
 
 <style>
-/* we will explain what these classes do next! */
+/ * we will explain what these classes do next! * /
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;
@@ -1164,6 +1222,7 @@ Vue offers two built-in components that can help work with transitions and anima
 ```
 
 ###### Keep-Alive
+
 ```
 It is used to store your cache of your component. When switching tab you will lose data, instead of losing those data,
 you can use Keep Alive.
@@ -1173,11 +1232,14 @@ you can use Keep Alive.
 ```
 
 ###### Teleport
+
 <Teleport> is a built-in component that allows us to "teleport" a part of a component's template into a DOM node that exists outside the DOM hierarchy of that component.
 Solves your modal binding issues.
 
 ###### Suspense
+
 <suspense> handles asynchronous components.
+
 ```
 <template>
   <suspense>
@@ -1207,5 +1269,3 @@ export default {
 </script>
 
 ```
-
-
