@@ -1,7 +1,10 @@
 # A Hands-On Guide to MySQL
 
 #### Select:
-
+```
+SELECT * FROM users;
+SELECT first_name, last_name FROM users;
+```
 #### Join:
 
 ##### Math:
