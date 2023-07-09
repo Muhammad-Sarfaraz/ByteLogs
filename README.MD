@@ -27,6 +27,7 @@ The repository currently includes notes for the following programming languages:
 - Vue
 - React
 - Mysql
+- Go
 
 Each language folder contains separate Markdown files with explanations, code samples, and tips specific to that language.
 
