@@ -1,5 +1,10 @@
 # A Hands-On Guide to MySQL
 
+#### In:
+```
+SELECT * FROM users WHERE dept IN ('design', 'sales');
+```
+
 #### Select:
 ```
 SELECT * FROM users;
