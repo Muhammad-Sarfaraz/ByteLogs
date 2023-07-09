@@ -8,6 +8,8 @@
 
 #### Indexing:
 
+#### Selecting titles with % and _ in them:
+
 ##### Data Types:
 ```
 # The common ones are
