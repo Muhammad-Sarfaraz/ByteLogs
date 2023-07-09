@@ -1,5 +1,11 @@
 # A Hands-On Guide to MySQL
 
+#### Create & Remove Index:
+```
+CREATE INDEX LIndex On users(location);
+DROP INDEX LIndex ON users;
+```
+
 #### In:
 ```
 SELECT * FROM users WHERE dept IN ('design', 'sales');
