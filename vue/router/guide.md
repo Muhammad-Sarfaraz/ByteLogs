@@ -1,5 +1,18 @@
 # Hands on Note for Router
 
+#### Navigation Guards
+Global Before Guards
+* You can register global before guards using router.beforeEach:
+```
+const router = createRouter({ ... })
+
+router.beforeEach((to, from) => {
+  // ...
+  // explicitly return false to cancel the navigation
+  return false
+})
+```
+
 #### Different History modes
 * Hash Mode
 The hash history mode is created with ``` createWebHashHistory() ```
