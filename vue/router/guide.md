@@ -1,5 +1,11 @@
 # Hands on Note for Router
 
+#### Alias
+An alias of / as /home means when the user visits /home, the URL remains /home, but it will be matched as if the user is visiting /
+```
+const routes = [{ path: '/', component: Homepage, alias: '/home' }]
+```
+
 #### Named Views
 Sometimes you need to display multiple views at the same time instead of nesting them
 ```
