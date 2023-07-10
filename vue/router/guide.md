@@ -1,5 +1,15 @@
 # Hands on Note for Router
 
+#### Different History modes
+* Hash Mode
+The hash history mode is created with ``` createWebHashHistory() ```
+
+* HTML5 Mode
+The HTML5 mode is created with ``` createWebHistory() ``` and is the recommended mode:
+
+* Memory mode
+It is created with createMemoryHistory() and requires you to push the initial navigation after calling ```  app.use(router) ```
+
 #### Alias
 An alias of / as /home means when the user visits /home, the URL remains /home, but it will be matched as if the user is visiting /
 ```
