@@ -1,5 +1,13 @@
 # Hands on Note for Router
 
+#### Named Views
+Sometimes you need to display multiple views at the same time instead of nesting them
+```
+<router-view class="view left-sidebar" name="LeftSidebar"></router-view>
+<router-view class="view main-content"></router-view>
+<router-view class="view right-sidebar" name="RightSidebar"></router-view>
+```
+
 #### Utility:
 
 #### hasRoute:
