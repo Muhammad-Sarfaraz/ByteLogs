@@ -2,6 +2,13 @@
 
 #### Utility:
 
+#### hasRoute:
+Checks if a route with a given name exists
+```
+router.hasRoute(ROUTE_NAME);
+```
+
+
 Push to a url, route-name
 
 ###### Get Current Route Name:
