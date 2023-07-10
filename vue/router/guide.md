@@ -1,5 +1,12 @@
 # Hands on Note for Router
 
+#### Global After Hooks
+You can also register global after hooks, however unlike guards, these hooks do not get a next function and cannot affect the navigation:
+```
+router.afterEach((to, from) => {
+  sendToAnalytics(to.fullPath)
+})
+```
 #### Navigation Guards
 Global Before Guards
 * You can register global before guards using router.beforeEach:
