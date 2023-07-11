@@ -80,7 +80,7 @@ router.hasRoute(ROUTE_NAME);
 ```
 
 
-Push to a url, route-name
+#### Push to a url, route-name
 
 ###### Get Current Route Name:
 ```
