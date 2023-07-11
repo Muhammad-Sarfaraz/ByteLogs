@@ -1,5 +1,15 @@
 # Hands on Note for Router
 
+#### Current Route Name
+```
+computed: {
+  currentRouteName() {
+    return this.$route.name;
+  },
+},
+
+ {{ currentRouteName }}
+```
 
 #### Route Meta Fields
 Sometimes, you might want to attach arbitrary information to routes like： transition names, or roles to control who can access the route, etc. 
