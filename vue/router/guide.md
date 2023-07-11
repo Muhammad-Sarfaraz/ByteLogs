@@ -11,6 +11,15 @@ computed: {
  {{ currentRouteName }}
 ```
 
+#### Watch on Route
+```
+computed: {
+  $route(newRoute, lastRoute) {
+    console.log(newRoute, lastRoute);
+  },
+},
+```
+
 #### Route Meta Fields
 Sometimes, you might want to attach arbitrary information to routes like： transition names, or roles to control who can access the route, etc. 
 
