@@ -22,10 +22,10 @@ computed: {
 },
 ```
 
-#### Route Meta Fields
+#### Pass Meta Fields via Route
 Sometimes, you might want to attach arbitrary information to routes like： transition names, or roles to control who can access the route, etc. 
 
-#### Global After Hooks
+#### Hooks: Global After Hooks
 You can also register global after hooks, however unlike guards, these hooks do not get a next function and cannot affect the navigation:
 ```
 router.afterEach((to, from) => {
