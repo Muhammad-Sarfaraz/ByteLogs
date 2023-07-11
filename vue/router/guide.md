@@ -45,7 +45,7 @@ router.beforeEach((to, from) => {
 })
 ```
 
-#### Types ofRoutings Mechanism
+#### Types of Routing Mechanism
 
 #### Different History modes
 * Hash Mode
@@ -57,13 +57,13 @@ The HTML5 mode is created with ``` createWebHistory() ``` and is the recommended
 * Memory mode
 It is created with createMemoryHistory() and requires you to push the initial navigation after calling ```  app.use(router) ```
 
-#### Alias
+#### Route Alias
 An alias of / as /home means when the user visits /home, the URL remains /home, but it will be matched as if the user is visiting /
 ```
 const routes = [{ path: '/', component: Homepage, alias: '/home' }]
 ```
 
-#### Named Views
+#### Named Views Routing
 Sometimes you need to display multiple views at the same time instead of nesting them
 ```
 <router-view class="view left-sidebar" name="LeftSidebar"></router-view>
