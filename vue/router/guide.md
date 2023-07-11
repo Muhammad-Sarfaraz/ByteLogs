@@ -45,6 +45,8 @@ router.beforeEach((to, from) => {
 })
 ```
 
+#### Types ofRoutings Mechanism
+
 #### Different History modes
 * Hash Mode
 The hash history mode is created with ``` createWebHashHistory() ```
