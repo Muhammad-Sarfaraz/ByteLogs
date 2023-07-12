@@ -1,5 +1,21 @@
 # A Hands-On Guide to React
 
+
+#### Use Effect Hook
+ 
+
+```
+(() => {
+    const connection = createConnection(roomId);
+    connection.connect();
+    return () => connection.disconnect();
+  }, [
+]);
+```
+
+
+
+
 #### State Hook
 
 ```
