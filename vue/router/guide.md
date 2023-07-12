@@ -1,6 +1,11 @@
 # Hands on Note for Vue Router
 
-
+#### Select Router Link
+```
+const element = document.querySelector(
+  `[data-route="${ROUTE_NAME}"]` 
+);
+```
 
 #### Current Route Name
 ```
