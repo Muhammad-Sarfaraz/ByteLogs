@@ -1,6 +1,12 @@
 # A Hands-On Guide to React
 
 
+#### Generating Ids
+```
+const id = useId()
+```
+
+
 #### Use Effect Hook
  
 
