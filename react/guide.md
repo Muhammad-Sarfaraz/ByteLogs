@@ -1,5 +1,15 @@
 # A Hands-On Guide to React
 
+#### A Basic File Attach
+```
+return (
+  <img
+    className="avatar"
+    src={user.imageUrl}
+  />
+);
+```
+
 #### CRUD:
 - Delete
 ```
