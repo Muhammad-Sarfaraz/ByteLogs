@@ -1,5 +1,43 @@
 # Script
 
+####  Manually Active Link:
+```
+
+<router-link>:class="
+currentActiveRoute == root_menu.route_name
+  ? 'router-link-active active'
+  : ''
+"</router-link>
+
+data() {
+return {
+  currentActiveRoute: "",
+};
+},
+
+watch: {
+    $route(newRoute, lastRoute) {
+      this.isActiveRoute(this.currentRouteName);
+    },
+  },
+// Methods
+methods:{
+isActiveRoute(routeName) {
+  const parts = routeName.split(".");
+  let extractedName = parts[0];
+  const makeActivableRoute = (extractedName += ".index");
+
+  const element = document.querySelector(
+    `[data-route="${makeActivableRoute}"]`
+  );
+
+  if (element) {
+    this.currentActiveRoute = makeActivableRoute;
+  }
+},
+}
+```
+
 #### Global Scroll:
 
 * First, create the plugin:
