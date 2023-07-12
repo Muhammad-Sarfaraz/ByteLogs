@@ -1,5 +1,10 @@
 # A Hands-On Guide to React
 
+#### useDefferedValue
+```
+const deferredValue = useDeferredValue(value)
+```
+
 
 #### Generating Ids
 ```
