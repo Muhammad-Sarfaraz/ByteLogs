@@ -1,6 +1,12 @@
 # A Hands-On Guide to React
 
-#### A Basic File Attach
+#### State Hook
+
+```
+const [index, setIndex] = useState(0);
+```
+
+#### A File Attach
 ```
 return (
   <img
