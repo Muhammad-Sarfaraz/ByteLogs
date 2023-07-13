@@ -1,5 +1,6 @@
 
-
+# Service Container:
+A service container is a dependency injection container used to manage and resolve dependencies in an application.
 
 ```
 <?php
