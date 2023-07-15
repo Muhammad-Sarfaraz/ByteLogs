@@ -1,5 +1,5 @@
 # Templating 
-
+A template is a predefined structure that serves as a blueprint for generating consistent and reusable content, separating presentation from logic and allowing for dynamic data insertion.
 
 ```php
 class TemplateEngine {
