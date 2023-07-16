@@ -125,7 +125,7 @@ created() {
 
 Map in vuex are like alias, there is some alias for getters, state and mutations.
 
- **Import** ``` import {mapState, mapMutations, mapGetters} from 'vuex' 
+ ***Import*** ``` import {mapState, mapMutations, mapGetters} from 'vuex' ```
 
 ```
 
