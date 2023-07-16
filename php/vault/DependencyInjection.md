@@ -3,7 +3,7 @@
 Dependency injection is a design pattern that allows objects to receive their dependencies from external sources rather than creating them internally.
 
 Code Example:
-```
+```php
 class Dependency {
     public function doSomething() {
         return "Doing something!";
