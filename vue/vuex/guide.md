@@ -1,10 +1,10 @@
 # Hands on Note for Vuex
 
-#### Magic method:
+#### Magic Method:
 
 `` ` $store or this.$store ` `` You can access the Vuex store instance and perform operations such as retrieving state, dispatching actions, or committing mutations within your Vue component.
 
-#### Vuex skeleton:
+#### Vuex Skeleton:
 
 A basic Vuex skeleton for managing state in Vue.js applications using the centralized store pattern.
 
