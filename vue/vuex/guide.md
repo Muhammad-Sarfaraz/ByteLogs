@@ -230,7 +230,7 @@ Vuex mapGetters facilitates the mapping of Vuex getters to local component compu
   - modules
     - appbar.js
 
-###### Step:
+###### Step for Implementation:
 
 - Create the module of store.
 - Use namespace true in module.
