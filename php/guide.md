@@ -1,7 +1,7 @@
 # PHP Hands On Note
 
 #### Design Pattern:
-###### Service:
+###### Service Pattern:
 
 #### Function default parameter value:
 ```
