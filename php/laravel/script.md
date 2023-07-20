@@ -1,5 +1,9 @@
 # Script
 
+#### Get route prefix:
+```
+return request()->route()->getPrefix();
+```
 
 #### Remove global scopes from model:
 ```php
