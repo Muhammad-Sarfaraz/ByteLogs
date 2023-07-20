@@ -1,5 +1,17 @@
 # Script
 
+
+#### Remove global scopes from model:
+```php
+User::withoutGlobalScope(AgeScope::class)->get();
+
+return Hospital::withoutGlobalScope('first')->where([
+    'emergency' => $semver->major,
+    'icu' => $semver->minor,
+    'general' => $semver->patch,
+])->firstOrFail();
+```
+
 #### Check query time:
 ```
 $start = microtime(true);
