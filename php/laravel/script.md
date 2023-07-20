@@ -1,7 +1,15 @@
 # Script
 
-#### Get route prefix:
+
+#### Laravel cache:
+```php
+$versions = Cache::remember('laravel-versions', 3600, function () {
+    return Hospital::orderBy('major', 'desc')->orderBy('minor', 'desc')->get();
+});
 ```
+
+#### Get route prefix:
+```php
 return request()->route()->getPrefix();
 ```
 
