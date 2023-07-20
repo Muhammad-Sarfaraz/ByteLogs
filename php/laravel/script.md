@@ -1,5 +1,33 @@
 # Script
 
+#### Invoable class:
+
+```php
+
+// Example 01:
+$path = (new HospitalAction)($path);
+
+
+class HospitalAction{
+
+ public function __invoke($path)
+ {
+   return $path;
+ }
+}
+
+// Example 02:
+
+Route::get('hospital',HospitalController::class)->name('hospital.path');
+
+class HospitalController{
+
+ public function __invoke($path)
+ {
+   return $path;
+ }
+}
+```
 
 #### Laravel cache:
 ```php
