@@ -8,7 +8,7 @@ htmx is a library that allows you to access modern browser features directly fro
 <a href="/blog">Blog</a>
 ```
 
-```
+```javascript
 <button hx-post="/clicked"
     hx-trigger="click"
     hx-target="#parent-div"
@@ -26,4 +26,9 @@ hx-post	Issues a POST request to the given URL
 hx-put	Issues a PUT request to the given URL
 hx-patch	Issues a PATCH request to the given URL
 hx-delete	Issues a DELETE request to the given URL
+```
+
+#### Debugging
+```javascript
+htmx.logAll();
 ```
