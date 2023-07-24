@@ -1,5 +1,15 @@
 # Hands on Guide on Linux Server
 
+#### Find anything
+```
+
+```
+
+#### Glances
+```
+gances
+```
+
 #### Basic Command:
 
 ```
