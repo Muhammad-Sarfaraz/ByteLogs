@@ -1,8 +1,17 @@
 # Script
 
-####  Manually Active Link:
+#### Multiple Async Request:
+```javascript
+async submit() {
+   const request1 = '...';
+   const request2 = '...';
+   const response1 = await fetch(request1).then(response => response.data)
+   const response2 = await fetch(request2).then(response => response.data)
+}
 ```
 
+####  Manually Active Link:
+```javascript
 <router-link>:class="
 currentActiveRoute == root_menu.route_name
   ? 'router-link-active active'
@@ -42,7 +51,7 @@ isActiveRoute(routeName) {
 
 * First, create the plugin:
 
-```
+```javascript
 export const scroll = {
     install(app) {
         app.config.globalProperties.$scroll = {
@@ -63,7 +72,7 @@ export const scroll = {
 
 * Register in vue global, then
 
-```
+```javascript
 this.$scroll.execute('scrollToDivId')
 ```
 
