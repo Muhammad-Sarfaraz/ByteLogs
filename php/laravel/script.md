@@ -1,5 +1,42 @@
 # Script
 
+#### Filters [Search with thousand Parameter]:
+```app/Filters/Employee/EmployeeSearchFilter.php```
+```php
+
+<?php
+
+namespace App\Filters\Employee;
+use Closure;
+
+class EmployeeSearchFilter
+{
+    public function handle($query, Closure $next )
+    {
+        if (!empty(request('name'))) {
+            $query->whereLike('name', request('name'));
+        }
+        return $next($query);
+    }
+}
+```
+```In model```
+```php
+public function scopeFilter($query, EmployeeSearchFilter $filters)
+{
+	return $filters->handle($query, function ($query) {
+	    return $query;
+	});
+}
+```
+``` In controller ```
+```php
+$query = Employee::query()
+    ->with(['rank', 'organization', 'employeeType'])
+    ->filter(new EmployeeSearchFilter())
+    ->get();
+```
+
 #### Multiple unique input validation:
 ```php
 
