@@ -40,7 +40,6 @@ class HospitalAction{
 }
 
 // Example 02:
-
 Route::get('hospital',HospitalController::class)->name('hospital.path');
 
 class HospitalController{
@@ -76,7 +75,7 @@ return Hospital::withoutGlobalScope('first')->where([
 ```
 
 #### Check query time:
-```
+```php
 $start = microtime(true);
 $data['members'] = $member->paginate(intval(config('app.PAGINATE_LIMIT')))
     ->appends(request()->query());
