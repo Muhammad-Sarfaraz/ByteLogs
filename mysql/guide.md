@@ -1,5 +1,26 @@
 # A Hands-On Guide to MySQL
 
+
+#### Show Database:
+```mysql
+SHOW DATABASES;
+```
+
+#### Show Database Structure:
+```mysql
+describe units;
+```
+
+#### Show tables:
+```
+show tables;
+```
+
+#### Select a db :
+```mysql
+use DATABASE_NAME;
+```
+
 #### Create & Remove Index:
 ```
 CREATE INDEX LIndex On users(location);
