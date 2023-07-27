@@ -38,9 +38,8 @@ $query = Employee::query()
 ```
 
 #### Multiple unique input validation:
+``` AppServiceProvider.php ```
 ```php
-
-// AppServiceProvider.php
 use Illuminate\Support\Facades\Validator;
 
 Validator::extend('unique_combination', function ($attribute, $value, $parameters, $validator) {
@@ -62,9 +61,8 @@ request()->validate([
 
 #### Invoable class:
 
+``` Example-01 ```
 ```php
-
-// Example 01:
 $path = (new HospitalAction)($path);
 
 
@@ -75,8 +73,10 @@ class HospitalAction{
    return $path;
  }
 }
+```
 
-// Example 02:
+``` Example-02 ```
+```
 Route::get('hospital',HospitalController::class)->name('hospital.path');
 
 class HospitalController{
