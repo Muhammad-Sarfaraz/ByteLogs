@@ -30,7 +30,7 @@ function myFunction(string|int|array $param): string|int|array
 ```
 
 #### Nullable type:
-```
+```php
 function foo($param)
 {
     return $param;
