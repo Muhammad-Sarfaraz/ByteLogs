@@ -17,6 +17,15 @@
 | 9   | [**SSH**](#ssh)                                                         |
 | 10  | [**Vi/Vim-commands**](#vi/vim-commands)                                 |
 
+
+### Modify a file:
+```
+nano filename.txt
+```
+``` to save ctrl+s ```
+``` to exit ctrl+x ```
+``` to paste rightclick on mouse ```
+
 ### User Information
 
 1. **who** It is used to get information about currently logged in user on to system. If you don't provide any option or arguments, the command displays the following information for each logged-in user.
