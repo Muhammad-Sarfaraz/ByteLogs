@@ -1,5 +1,8 @@
 # Custom Laravel Vue Pagination
 
+``` Documentation ```
+[Laravel Vue Pagination](https://laravel-vue-pagination.org/)
+
 ```Vue```
 
 ```js
