@@ -1,3 +1,3 @@
-# Git
+# Git Notes
 
 #### Hook management
