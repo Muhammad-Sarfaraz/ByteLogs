@@ -1,5 +1,11 @@
 # Script:
 
+#### Find the max value in any column
+```js
+const highestStep = this.histories.reduce((maxStep, item) => {
+  return item.step > maxStep ? item.step : maxStep;
+}, 0);
+```
 
 ###### Slice a array into N:
 ```
