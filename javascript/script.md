@@ -13,7 +13,7 @@ const array = [1,2,3,5,6];
 const slicedArray = array.slice(0, n); // [1,2,3]
 ```
 
-```
+```js
 const score = function(){
     return 100;
 }
