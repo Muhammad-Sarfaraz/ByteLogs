@@ -1,5 +1,10 @@
 # Script
 
+#### Current Date:
+```js
+date: new Date().toLocaleDateString("en-GB").split("/").join("-"), // 10-08-2023
+```
+
 #### Multiple Async Request:
 ```javascript
 async submit() {
