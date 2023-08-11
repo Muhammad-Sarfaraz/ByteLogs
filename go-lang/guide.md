@@ -1,4 +1,4 @@
-# Hands on Note for Go Lang
+# Hands on Note for Go-Lang
 
 # Setup
 
