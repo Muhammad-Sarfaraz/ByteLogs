@@ -1,6 +1,8 @@
 # PHP Hands On Note
 
 #### Design Pattern:
+
+
 ###### Service Pattern:
 
 #### Function default parameter value:
@@ -64,7 +66,7 @@ $c = $a?->foo();
 ```
 
 
-#### Everyday:
+#### Everyday Use Case:
 
 ###### IF/ELSE
 
