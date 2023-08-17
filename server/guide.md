@@ -1,5 +1,10 @@
 # Hands on Guide on Linux Server
 
+#### Copy Anythig
+```bash
+cp /home/doe/folder_name/august/invoice.blade.php .
+```
+
 
 #### Laravel on CentOs
 ```bash
