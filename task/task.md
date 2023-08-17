@@ -19,3 +19,10 @@
 * SAAS?? 
 * ICU Lagbe Post blog
 * PDF in Browser Dom
+
+  Package Idea
+  * Application Health Monitor [Link,Security,Seo,Format] etc
+  * Auto Site Map
+  * Directives
+  * Auth
+  * 
