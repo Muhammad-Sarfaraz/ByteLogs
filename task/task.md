@@ -22,7 +22,7 @@
 
   Package Idea
   * Application Health Monitor [Link,Security,Seo,Format] etc
-  * Auto Site Map
+  * Auto Site Map [Running]
   * Directives
   * Auth
   * Markdown 
