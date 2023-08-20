@@ -1,5 +1,32 @@
 # Script
 
+#### Custom Way to Inject File in Request Instance
+```php
+$remoteUrl = url('/') . '/public/storage/' . $rawImage;
+
+// Download remote file contents
+$fileContents = file_get_contents($remoteUrl);
+
+// Create a temporary file
+$tmpFile = tmpfile();
+fwrite($tmpFile,
+    $fileContents
+);
+
+// Get file info
+$tmpFileInfo = stream_get_meta_data($tmpFile);
+
+// Create an UploadedFile instance
+$uploadedFile = new UploadedFile(
+    $tmpFileInfo['uri'],           // Path to the temporary file
+    basename($remoteUrl),          // Original file name
+    mime_content_type($tmpFileInfo['uri']), // MIME type
+    filesize($tmpFileInfo['uri']), // File size
+    UPLOAD_ERR_OK,                 // Error code (UPLOAD_ERR_OK indicates no error)
+    true                           // Test mode (true to keep the file after the request)
+);
+```
+
 #### Filters [Search with thousand Parameter]:
 ```app/Filters/Employee/EmployeeSearchFilter.php```
 ```php
