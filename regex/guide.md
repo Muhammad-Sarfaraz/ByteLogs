@@ -9,6 +9,11 @@ Replace With: "district_id" => $1
 Output: 40
 ```
 
+#### Short Smaller Character
+```
+"^[a-z0-9_\-]+$"
+```
+
 ###### Replace the line:
 ```
 Ex:"id" => 1,
