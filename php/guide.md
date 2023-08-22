@@ -1,5 +1,13 @@
 # PHP Hands On Note
 
+#### Named Argument
+```php
+setcookie(
+    name: 'test',
+    expires: time() + 60 * 60 * 2,
+);
+```
+
 #### Json
 
 #### Design Pattern:
