@@ -20,3 +20,8 @@ Ex:"id" => 1,
 ^\s*"id"\s*=>\s*\d+.*$
 Output: you define
 ```
+
+#### Only Allow [abcdf]
+```
+^[abcdf]+$
+```
