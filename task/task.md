@@ -23,6 +23,6 @@
   Package Idea
   * Application Health Monitor [Link,Security,Seo,Format] etc
   * Auto Site Map [Running]
-  * Directives
-  * Auth
+  * Directives [Done][Fine-Tune]
+  * Auth [Done][Fine-Tune]
   * Markdown 
