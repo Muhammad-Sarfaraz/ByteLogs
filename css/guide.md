@@ -1,4 +1,4 @@
-# CSS
+# Note on CSS
 
 #### Layout:
 - Normal flow
