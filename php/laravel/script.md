@@ -1,5 +1,19 @@
 # Script
 
+#### Show Empty Image & Make Sure Image Exist
+```php
+public function getPhotoAttribute($value)
+{
+	$defaultImage = url('/public/images/profile.webp');
+	
+	if (! empty($value) && Storage::exists($value)) {
+	    return url('/public/storage/'.$value);
+	}
+	
+	return $defaultImage;
+}
+```
+
 #### Custom Way to Inject File in Request Instance
 ```php
 $remoteUrl = url('/') . '/public/storage/' . $rawImage;
