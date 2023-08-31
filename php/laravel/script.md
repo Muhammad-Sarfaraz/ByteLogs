@@ -1,5 +1,22 @@
 # Script
 
+#### Get Count of Child RowS
+```PHP
+ $query = Album::query()->withCount(['photos','videos'])->oldest();
+
+// Access it via.
+$count = $album->photos_count;
+
+// Closure
+$album = Album::withCount([
+    'photos', 
+    'videos as videos_count' => function (Builder $query) {
+        $query->where('status', 'published');
+    }
+])->get();
+
+```
+
 #### Show Empty Image & Make Sure Image Exist
 ```php
 public function getPhotoAttribute($value)
