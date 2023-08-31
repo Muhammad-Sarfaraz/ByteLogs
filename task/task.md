@@ -25,6 +25,7 @@
   * Auto Site Map [Running]
   * Directives [ Initial ]
   * Auth [Intial ]
-  * Markdown 
+  * Markdown
+  * Spotlight Laravel ***
 
 
