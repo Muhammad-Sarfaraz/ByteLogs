@@ -1,4 +1,4 @@
-# Turbo Js
+# Turbo Js Notes
 
 ##### Don't cache javascript:
 ```javascript
