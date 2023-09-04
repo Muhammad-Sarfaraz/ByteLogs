@@ -27,5 +27,6 @@
   * Auth [Intial ]
   * Markdown
   * Spotlight Laravel ***
+  * Robot.txt package [https://github.com/mguinea/laravel-robots]
 
 
