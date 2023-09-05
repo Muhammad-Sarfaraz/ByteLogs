@@ -28,5 +28,6 @@
   * Markdown
   * Spotlight Laravel ***
   * Robot.txt package [https://github.com/mguinea/laravel-robots]
+  * https://github.com/smastrom/notivue
 
 
