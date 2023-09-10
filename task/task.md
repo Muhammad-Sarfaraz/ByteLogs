@@ -1,6 +1,9 @@
 # List of Tasks:
 
+
 * Niche 1 Year Target
+
+*  <object width="100%" height="100%" :data="data?.url"></object>
 
 * Compund data structure for API endpoint. [complete]
 * Invoice Generator Package.
