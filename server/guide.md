@@ -12,7 +12,9 @@ chown -R apache.apache /var/www/laravel
 chmod -R 755 /var/www/laravel
 chmod -R 755 /var/www/laravel/storage
 //SELinux enabled systems also run the below command to allow writing on the storage directory.
-chcon -R -t httpd_sys_rw_content_t /var/www/laravel/storage
+chcon -R -t httpd_sys_rw_content_t /var/www/laravel/storage // Must use this.
+chcon -R -t httpd_sys_rw_content_t /var/www/html/ng-journal/bootstrap // Must use this.
+
 ```
 
 #### Find anything
