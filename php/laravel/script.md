@@ -1,6 +1,19 @@
 # Script
 
-#### Get Count of Child RowS
+#### PHP Label Go-To
+```php
+$counter = 1;
+
+beginning: // Label
+echo "Counter: $counter\n";
+$counter++;
+
+if ($counter <= 5) {
+    goto beginning; // Jump back to the 'beginning' label
+}
+```
+
+#### Get Count of Child Rows
 ```PHP
  $query = Album::query()->withCount(['photos','videos'])->oldest();
 
