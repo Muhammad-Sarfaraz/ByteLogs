@@ -15,7 +15,9 @@ if ($counter <= 5) {
 
 #### Get Count of Child Rows
 ```PHP
- $query = Album::query()->withCount(['photos','videos'])->oldest();
+use Illuminate\Database\Eloquent\Builder;
+
+$query = Album::query()->withCount(['photos','videos'])->oldest();
 
 // Access it via.
 $count = $album->photos_count;
