@@ -5,6 +5,7 @@
 - Facade
 
 ## Builder
+The builder pattern is a design pattern designed to provide a flexible solution to various object creation problems in object-oriented programming.
 
 ```SMSBuilder.php```
 ```php
