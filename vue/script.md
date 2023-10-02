@@ -1,5 +1,20 @@
 # Script
 
+#### Is Last Index
+```js
+isLastItem(data, index) {
+   if (data) {
+     if (Array.isArray(data)) {
+       return index === data.length - 1;
+     } else if (typeof data === "object") {
+       const keys = Object.keys(data);
+       return index === keys.length - 1;
+     }
+   }
+   return false;
+},
+```
+
 #### Current Date:
 ```js
 date: new Date().toLocaleDateString("en-GB").split("/").join("-"), // 10-08-2023
@@ -86,7 +101,7 @@ this.$scroll.execute('scrollToDivId')
 Suppose, You have to get data of 3/4 models, what will you do ? you will call one by one , but cost time and resources. Instead just 
 make a single api call and get all the data which you are looking for!
 
-```
+```php
 // Laravel backend:
 Route::get('support/get-models', function (Request $request) {
   $data = [];
@@ -104,6 +119,8 @@ Route::get('support/get-models', function (Request $request) {
   return response()->json($data);
 });
 
+```
+```js
 // In crud.js
 getModelsData(names){
   const data = axios.get('support/get-models',{
