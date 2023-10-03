@@ -1,5 +1,28 @@
 # Script
 
+#### Same File Doesn't Select after Closing
+
+You have to clear the input, that's the solutions.
+
+```html
+<input class="d-none" type="file" id="file" accept=".doc,.docx,.pdf"
+    ref="file_uploader" @click="resetFileUploader" @change="onFileChange" />
+```
+```js
+onFileChange(e) {
+   const file = e.target.files[0];
+   this.data.file_path = file;
+   this.data.file_name = file.name;
+},
+resetFileUploader() {
+  this.$refs.file_uploader.value = '';
+},
+clearFile() {
+   this.data.file_path = "";
+   this.data.file_name = "";
+},
+```
+
 #### Is Last Index
 ```js
 isLastItem(data, index) {
