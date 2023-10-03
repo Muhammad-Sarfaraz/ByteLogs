@@ -1,5 +1,35 @@
 # Script
 
+#### On Change Search
+```html
+<input type="text" placeholder="Search here" v-model="searchQuery" />
+<template v-for="(user, index) in filteredUsers" :key="index">
+<li :class="selected_user == user.id ? 'active' : ''">
+  <button class="Person" @click.prevent="setSelectedUserAttribute(user.id)">
+    <img :src="user?.thumb_two" alt="1" />
+    <span>{{ user?.given_name }}</span>
+  </button>
+</li>
+</template>
+```
+```js
+data(){
+return{
+    users: {},
+     searchQuery:"",
+    }
+},
+computed: {
+    filteredUsers() {
+        const query = this.searchQuery.toLowerCase().trim();
+        if (!query) {
+          return this.users; // If the query is empty, return all users
+        }
+        return this.users.filter(user => user.given_name.toLowerCase().includes(query));
+    },
+},
+```
+
 #### Same File Doesn't Select after Closing
 
 You have to clear the input, that's the solutions.
