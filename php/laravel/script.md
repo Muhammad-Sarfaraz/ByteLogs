@@ -1,5 +1,32 @@
 # Script
 
+#### Query of Database Example
+```php
+// Raw SQL
+$sql = "
+    SELECT COUNT(DISTINCT author_id) as count
+    FROM conversations
+    WHERE is_seen_by_admin IS NULL;
+";
+
+$results = DB::select($sql);
+$count = $results[0]->count;
+
+// Query Builder.
+$query = DB::table('conversations')
+    ->select(DB::raw('COUNT(DISTINCT author_id) as count'))
+    ->whereNull('is_seen_by_admin')
+    ->get();
+
+$count = $query[0]->count;
+
+// Eloquent
+return Conversation::query()
+    ->distinct('author_id')
+    ->where('is_seen_by_admin', null)
+    ->count();
+```
+
 #### PHP Label Go-To
 ```php
 $counter = 1;
