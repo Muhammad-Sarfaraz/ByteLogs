@@ -173,6 +173,7 @@ Route::get('support/get-models', function (Request $request) {
 });
 
 ```
+- Traditional
 ```js
 // In crud.js
 getModelsData(names){
@@ -192,3 +193,37 @@ this.getModelsData("Event,Calendar").then((res)=>{
 }
 
 ```
+- Alternative
+
+```compound.js```
+```js
+export const compound = {
+    install(app) {
+        app.config.globalProperties.$compound = {
+            execute(names) {
+                 const data = axios.get('support/get-models', {
+                     params: {
+                         data: names,
+                     }
+                 });
+                 return data;
+            },
+        };
+    },
+};
+
+// Register in app.js.
+import {
+    compound
+} from './plugin/api/compound'
+app.use(compound)
+
+// Execute it
+this.$compound
+  .execute("Member,SessionYear,Division,Designation")
+  .then((res) => {
+  console.log(res.data)
+});
+
+```
+
