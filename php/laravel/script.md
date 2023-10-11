@@ -1,5 +1,18 @@
 # Script
 
+#### Mail
+
+- ENV
+```
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=465 // For local
+MAIL_USERNAME=example@gmail.com
+MAIL_PASSWORD="app password" // It will be available at "https://myaccount.google.com/apppasswords?rapt=AEjHL4PHjcvdK_iZyMtNjFbNPMmnlZZo-3fpgNEY7xfTRIK9lVKLKjmXKM-PNjW6ZrFOgO3lXot_eb64lQTiglYn2umBLrhSWg", You need two-step enable first, then generate password.
+MAIL_ENCRYPTION=tls
+MAIL_FROM=example@gmail.com
+```
+
 #### Query of Database Example
 ```php
 // Raw SQL
