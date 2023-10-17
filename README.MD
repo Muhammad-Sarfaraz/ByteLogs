@@ -16,7 +16,7 @@ ByteLogs is a repository for storing and organizing language notes. It provides 
 
 ## Introduction
 
-ByteLogs is a compilation of language-specific notes, code snippets, and examples to help developers learn and reference different programming languages. Whether you're a beginner or an experienced programmer, you'll find resources to support your learning journey.
+ByteLogs is a compilation of language-specific notes, code snippets, and examples to help developers learn and reference different programming languages. Whether you're a beginner or an experienced programmer, you'll find resources to support your learning journey. Best of Luck
 
 ## Languages / Framework / Libray
 
