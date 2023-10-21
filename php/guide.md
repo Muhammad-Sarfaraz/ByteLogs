@@ -104,12 +104,12 @@ $c = $a?->foo();
 
 ```
 return tap(new Response(
-            $content,
-            $response->headers->all(),
-            $response->getStatusCode()
-        ), static function () {
-            static::$response = null;
-        });
+    $content,
+    $response->headers->all(),
+    $response->getStatusCode()
+), static function () {
+    static::$response = null;
+});
 ```
 
 ###### Use Pointer
