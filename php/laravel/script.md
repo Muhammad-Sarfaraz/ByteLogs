@@ -1,5 +1,30 @@
 # Script
 
+#### Get available month wise data
+```php
+ $monthlyCounts = JournalUser::select(
+	DB::raw('MONTH(created_at) as month'),
+	DB::raw('COUNT(*) as count')
+	)
+	->groupBy('month')
+	->orderBy('month')
+	->get();
+
+$data = new Collection();
+
+foreach ($monthlyCounts as $count) {
+	$data->push([
+	    'month' => Carbon::createFromDate(null, $count->month, 1)->format('F'),
+	    'count' => $count->count,
+	]);
+}
+
+return $result = [
+	'months' => $data->pluck('month')->all(),
+	'data' => $data->pluck('count')->all(),
+];
+```
+
 #### Mail
 
 - ENV
