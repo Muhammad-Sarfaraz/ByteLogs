@@ -8,6 +8,9 @@ cp /home/doe/folder_name/august/invoice.blade.php .
 
 #### Laravel on CentOs
 ```bash
+
+chmod u+x setup.sh
+
 chown -R apache.apache /var/www/laravel
 chmod -R 755 /var/www/laravel
 chmod -R 755 /var/www/laravel/storage
