@@ -1,5 +1,20 @@
 # Script
 
+#### Json Key/Value
+```php
+// Set Value...
+$data = ['value' => "Foo Bar"];
+$jsonData = json_encode($data);
+$filePath = public_path('tmp.json');
+file_put_contents($filePath, $jsonData);
+
+// Get Value...      
+$jsonString = file_get_contents(public_path('tmp.json'));
+$data = json_decode($jsonString);
+$value = $data->value;
+```
+
+
 #### Get available month wise data
 ```php
  $monthlyCounts = JournalUser::select(
