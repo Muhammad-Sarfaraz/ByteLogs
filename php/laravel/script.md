@@ -1,6 +1,13 @@
 # Script
 
-### Throw laravel exception
+#### Tap
+```php
+return tap("Foo", function (&$value) {
+	$value = ucfirst($value .= "bar");
+});
+```
+
+#### Throw laravel exception
 ```php
 throw new \Exception('Testing exception handling.');
 ```
