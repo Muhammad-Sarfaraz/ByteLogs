@@ -1,5 +1,18 @@
 # Script
 
+#### Store larvel exception with url and method.
+```php
+protected function context(): array
+{
+	return tap(parent::context(), function (&$context) {
+	    $context = collect($context)->merge([
+		'method' => request()->getMethod(),
+		'url' => request()->url(),
+	    ])->all();
+	});
+}
+```
+
 #### Json Key/Value
 ```php
 // Set Value...
