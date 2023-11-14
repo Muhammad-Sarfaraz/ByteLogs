@@ -1,5 +1,10 @@
 # Script
 
+### Throw laravel exception
+```php
+throw new \Exception('Testing exception handling.');
+```
+
 #### Store larvel exception with url and method.
 ```php
 protected function context(): array
