@@ -1,5 +1,16 @@
 # Script
 
+#### With default value in model relation
+```php
+public function parent()
+{
+	return $this->belongsTo(Category::class)->oldest('sorting')->withDefault([
+	    'title' => 'N/A',
+	]);
+}
+```
+
+
 #### Tap
 ```php
 return tap("Foo", function (&$value) {
