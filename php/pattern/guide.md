@@ -5,8 +5,18 @@
 - Facade
 - Transfomer
 
+## Types
+* Behavioral
+    * Foobar
+* Creational
+    * Builder
+    * Singleton
+* Structural
+    * Facade
+
 ## Transfomer
 Basically a transformer is simple design pattern which is used to transfer a object or data in differents format. That's all, In laravel it is called Resources.
+The Transformer Pattern doesn't fall neatly into the classic categories of creational, structural, or behavioral patterns
 ```php
 <?php
 
