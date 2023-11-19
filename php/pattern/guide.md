@@ -14,13 +14,20 @@
     * Singleton
 * Structural
     * Facade
+
+
+
  
 
 ## When to Use What
 * Repository => Manages the data access logic and abstracts the underlying database interactions. [business logic]
 * Service => Contains application-specific business logic that doesn't belong in models or controllers. [data access logic]
 * Builder => Useful for multiple complex step. [multiple step]
+* Facade => Acccess class methods without creating instance. [Access method without instance]
 
+
+## Facade
+In Laravel, a facade provides a static interface to an underlying class, allowing you to access its methods without creating an instance.
 
 ## Repository
 * When to use:
