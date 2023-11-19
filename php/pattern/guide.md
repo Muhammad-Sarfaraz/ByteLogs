@@ -19,7 +19,7 @@
 ## When to Use What
 * Repository => Manages the data access logic and abstracts the underlying database interactions. [business logic]
 * Service => Contains application-specific business logic that doesn't belong in models or controllers. [data access logic]
-
+* Builder => Useful for multiple complex step. [multiple step]
 
 
 ## Repository
@@ -148,7 +148,15 @@ class UserTransformer implements Transformer
 ```
 
 ## Builder
-The builder pattern is a design pattern designed to provide a flexible solution to various object creation problems in object-oriented programming.
+
+* When to use:
+When the construction of an object involves multiple steps and configurations.
+When you want to create different representations of an object without exposing its internal structure.
+Ideal for building complex objects with many optional components.
+
+* When not to use::
+When the construction of the object is straightforward and doesn't involve complex logic or multiple steps.
+For simple objects with a small number of parameters, where a constructor with optional parameters or setter methods might be sufficient.
 
 ```SMSBuilder.php```
 ```php
