@@ -15,6 +15,67 @@
 * Structural
     * Facade
  
+
+## When to Use What
+* Repository => Manages the data access logic and abstracts the underlying database interactions. [business logic]
+* Service => Contains application-specific business logic that doesn't belong in models or controllers. [data access logic]
+
+
+
+## Repository
+* When to use:
+Use the Repository Pattern when you want to abstract database operations (CRUD) and queries away from your controllers and models.
+Use it for better testability by allowing you to mock or substitute data sources during testing.
+Use it when you want to switch between different database implementations without affecting the rest of your application.
+
+* When not to use:
+Avoid using the Repository Pattern for simple CRUD operations if it doesn't add significant value to your application's architecture.
+
+``` ExampleRepositoryInterface  ```
+```php
+namespace App\Repositories;
+
+interface ExampleRepositoryInterface
+{
+    public function getAll();
+    public function getById($id);
+    public function create(array $data);
+    public function update($id, array $data);
+    public function delete($id);
+}
+```
+
+``` ExampleController ```
+```php
+namespace App\Http\Controllers;
+
+use App\Repositories\ExampleRepositoryInterface;
+
+class ExampleController extends Controller
+{
+    protected $exampleRepository;
+
+    public function __construct(ExampleRepositoryInterface $exampleRepository)
+    {
+        $this->exampleRepository = $exampleRepository;
+    }
+}
+```
+
+``` ExampleRepository ```
+```php
+namespace App\Repositories;
+
+use App\Models\Example;
+
+class ExampleRepository implements ExampleRepositoryInterface
+{
+    // Implement the methods defined in the interface
+
+    // ...
+}
+```
+ 
 ## Service
 
 * When to use:
