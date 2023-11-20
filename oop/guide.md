@@ -1,6 +1,14 @@
 # OOP
 
-Method Overloading:
+#### Multiple Inheritance:
+Supported in c++,ruby,python.
+
+#### Mutiple Interface
+Supported in PHP,python,ruby
+
+
+
+#### Method Overloading:
 You cannot overload PHP function. But Java,C#,Python etc support.
 ```java
 public class Example {
@@ -14,7 +22,7 @@ public class Example {
 }
 ```
 
-Method Overriding:
+#### Method Overriding:
 ```php
 class A{
     public function abs(){
