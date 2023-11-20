@@ -1,5 +1,15 @@
 # OOP
 
+#### Data binding
+
+Data binding is a programming concept that establishes a connection between the application's user interface (UI) and the underlying data model. 
+* One-way Data Binding.
+* Two-way Data Binding
+
+#### Compile time vs Runtime
+
+Compile time is when the code is translated into machine code, and errors are checked. Run time is when the compiled code is executed, and the actual processing happens.
+
 #### Multiple Inheritance:
 Supported in c++,ruby,python.
 
