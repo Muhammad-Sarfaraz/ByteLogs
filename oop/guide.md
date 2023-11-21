@@ -1,5 +1,24 @@
 # OOP
 
+#### Fundamental
+
+* Polymorphism
+* Inheritance
+* Encapsulation 
+* Abstraction
+
+
+#### Deisgn Principle
+* SOLID
+    * Single Responsibility Principle (SRP)
+    * Open/Closed Principle (OCP)
+    * Liscov Substitution Principle (LSP)
+    * Interface Segregation Principle (ISP)
+       
+* YAGNI [You ain't gonna need it]
+* KISS [Keep it simple, Stupid!]
+* DRY [Don’t Repeat Yourself]
+
 
 #### Interface
 
