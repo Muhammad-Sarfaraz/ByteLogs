@@ -1,5 +1,39 @@
 # OOP
 
+
+#### Interface
+
+* Type hint
+* Must enforce
+
+An interface serves as a contract, and using it for type hinting helps enforce that only objects implementing that contract can be passed to a method. 
+This improves code clarity and helps prevent runtime errors related to incorrect parameter types.
+
+```php
+
+interface Foo {
+    public function bob();
+}
+
+class ConcreteFoo implements Foo {
+    public function bob() {
+        return "Hello, I'm Bob!";
+    }
+}
+
+class Bar {
+    public function echo(Foo $bob) {
+        return $bob;
+    }
+}
+
+$barInstance = new Bar();
+$concreteFooInstance = new ConcreteFoo();
+$result = $barInstance->echo($concreteFooInstance);
+echo $result->bob(); // Output: Hello, I'm Bob!
+
+```
+
 #### Data binding
 
 Data binding is a programming concept that establishes a connection between the application's user interface (UI) and the underlying data model. 
