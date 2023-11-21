@@ -7,6 +7,13 @@
 * Encapsulation 
 * Abstraction
 
+#### Abstraction
+* Abstraction (Concept): In the broader sense of object-oriented programming, abstraction refers to the idea of simplifying complex systems by modeling classes based on the essential properties and behaviors they share. It involves focusing on the important aspects while hiding the unnecessary details.
+
+* Abstraction (Method): The use of abstract classes or interfaces in programming languages is a way to achieve abstraction. These abstract classes or interfaces define a common set of methods that concrete classes must implement. They provide a blueprint for classes without specifying the exact implementation.
+
+You can achive abstraction via both Interface and Abstraction.
+
 #### Encapsulation
 Encapsulation is like having a special piggy bank. The money (or data) inside is hidden, and there are small slots (methods) on the piggy bank to add money, take some out, and check how much is inside.
 
