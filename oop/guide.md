@@ -183,6 +183,89 @@ echo "Final balance: $savingsAccount->getBalance\n";
 ?>
 ```
 
+#### Constants
+Class constants can be useful if you need to define some constant data within a class.
+```php
+<?php
+class BANK {
+  const BANK_NAME = "FOO BAR BANK";
+}
+
+echo Goodbye::BANK_NAME;
+?>
+```
+
+#### Access Modifier
+* Public: Accessible from outside the class, suitable for properties and methods meant for external use.
+* Protected: Accessible within the class and its subclasses, useful for encapsulating implementation details within a class hierarchy.
+* Private: Accessible only within the class, ideal for hiding implementation details and preventing external access.
+
+#### Constructor / Desctructor
+
+* Constructor:
+    * Purpose: Initializes object state during creation.
+    * Benefit: Sets up default values and performs necessary setup.
+    * Use Case: Setting initial properties, establishing connections.
+
+* Destructor:
+    * Purpose: Performs cleanup before object destruction.
+    * Benefit: Releases resources and performs finalization tasks.
+    * Use Case: Closing connections, freeing memory, final logging.
+
+```php
+<?php
+
+class BankAccount {
+    private $accountNumber;
+    private $balance;
+
+    // Constructor
+    public function __construct($accountNumber, $initialBalance) {
+        $this->accountNumber = $accountNumber;
+        $this->balance = $initialBalance;
+        echo "Account created. Account Number: $this->accountNumber, Initial Balance: $this->balance\n";
+    }
+
+    // Destructor
+    public function __destruct() {
+        echo "Account closed. Account Number: $this->accountNumber, Final Balance: $this->balance\n";
+    }
+
+    public function deposit($amount) {
+        $this->balance += $amount;
+        echo "Deposit: $amount, New Balance: $this->balance\n";
+    }
+
+    public function withdraw($amount) {
+        if ($this->balance >= $amount) {
+            $this->balance -= $amount;
+            echo "Withdraw: $amount, New Balance: $this->balance\n";
+        } else {
+            echo "Insufficient funds! Cannot withdraw $amount\n";
+        }
+    }
+
+    public function getBalance() {
+        return $this->balance;
+    }
+}
+
+// Creating an instance of BankAccount calls the constructor
+$account = new BankAccount("123456", 1000);
+
+// Performing transactions
+$account->deposit(500);
+$account->withdraw(200);
+
+// Getting the final balance
+echo "Final Balance: $" . $account->getBalance() . "\n";
+
+// Destroying the object calls the destructor
+unset($account);
+
+?>
+```
+
 #### Trait
 A trait in PHP is a way to group functionality in a fine-grained and consistent way, allowing classes to reuse methods in a composition-like manner. The primary benefit is achieving code reuse without the need for inheritance. [Basically php does'nt support multiple inheritance, to solve this issue use trait]
 
