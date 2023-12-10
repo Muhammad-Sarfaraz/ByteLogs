@@ -374,6 +374,7 @@ Supported in PHP,python,ruby
 
 
 #### Method Overloading:
+[Compile Time]
 You cannot overload PHP function. But Java,C#,Python etc support.
 ```java
 public class Example {
@@ -388,6 +389,7 @@ public class Example {
 ```
 
 #### Method Overriding:
+[Ridding]->[Run Time]
 ```php
 class A{
     public function abs(){
