@@ -4,8 +4,104 @@
 
 * Polymorphism
 * Inheritance
-* Encapsulation 
 * Abstraction
+* Encapsulation 
+
+
+#### Polymorphism
+
+Polymorphism is like having a universal remote for different devices. In programming, it lets different classes share common methods, making code more adaptable and easier to manage.
+```php
+<?php
+
+class Account {
+    protected $balance;
+
+    public function __construct($initialBalance) {
+        $this->balance = $initialBalance;
+    }
+
+    public function calculateInterest() {
+        return 0; // Default implementation
+    }
+}
+
+class SavingsAccount extends Account {
+    public function calculateInterest() {
+        return $this->balance * 0.02;
+    }
+}
+
+class LoanAccount extends Account {
+    public function calculateInterest() {
+        return $this->balance * 0.05;
+    }
+}
+
+function displayInterest(Account $account) {
+    echo "Interest: $" . $account->calculateInterest() . "\n";
+}
+
+$savingsAccount = new SavingsAccount(1000);
+$loanAccount = new LoanAccount(5000);
+
+displayInterest($savingsAccount); // Calls calculateInterest() in SavingsAccount
+displayInterest($loanAccount);    // Calls calculateInterest() in LoanAccount
+
+?>
+```
+
+#### Inheritance
+
+Inheritance in programming is like building on what you already have. It allows a new piece of code to reuse or extend the features of an existing code, making development more efficient and organized.
+
+```php
+<?php
+
+class Account {
+    protected $balance;
+
+    public function __construct($initialBalance) {
+        $this->balance = $initialBalance;
+    }
+
+    public function withdraw($amount) {
+        $this->balance -= $amount;
+        echo "Withdraw: $amount, Balance: $this->balance\n";
+    }
+
+    public function deposit($amount) {
+        $this->balance += $amount;
+        echo "Deposit: $amount, Balance: $this->balance\n";
+    }
+
+    public function getBalance() {
+        return $this->balance;
+    }
+}
+
+class CheckingAccount extends Account {
+    private $overdraftLimit;
+
+    public function __construct($initialBalance, $overdraftLimit) {
+        parent::__construct($initialBalance);
+        $this->overdraftLimit = $overdraftLimit;
+    }
+
+    public function withdraw($amount) {
+        $this->balance -= $amount;
+        echo "Withdraw: $amount, Balance: $this->balance\n";
+    }
+}
+
+$checkingAccount = new CheckingAccount(100, 50);
+$checkingAccount->deposit(50);
+$checkingAccount->withdraw(30);
+
+echo "Final balance: " . $checkingAccount->getBalance() . "\n";
+
+?>
+```
 
 #### Abstraction
 * Abstraction (Concept): In the broader sense of object-oriented programming, abstraction refers to the idea of simplifying complex systems by modeling classes based on the essential properties and behaviors they share. It involves focusing on the important aspects while hiding the unnecessary details.
