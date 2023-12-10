@@ -1,11 +1,12 @@
 # OOP
 
 #### Fundamental
-
+[PIEA]
 * Polymorphism
 * Inheritance
+* Encapsulation
 * Abstraction
-* Encapsulation 
+
 
 
 #### Polymorphism
@@ -102,6 +103,36 @@ echo "Final balance: " . $checkingAccount->getBalance() . "\n";
 
 ?>
 ```
+#### Encapsulation
+Encapsulation is like having a special piggy bank. The money (or data) inside is hidden, and there are small slots (methods) on the piggy bank to add money, take some out, and check how much is inside.
+
+```php
+class PiggyBank {
+    private $money;
+
+    public function addMoney($amount) {
+        $this->money += $amount;
+    }
+
+    public function takeOutMoney($amount) {
+        if ($amount <= $this->money) {
+            $this->money -= $amount;
+        } else {
+            echo "Oops! Not enough money!";
+        }
+    }
+
+    public function checkMoney() {
+        return $this->money;
+    }
+}
+
+// Usage
+$piggyBank = new PiggyBank();
+$piggyBank->addMoney(5);
+$piggyBank->takeOutMoney(2);
+echo "Money inside: " . $piggyBank->checkMoney();
+```
 
 #### Abstraction
 * Abstraction (Concept): In the broader sense of object-oriented programming, abstraction refers to the idea of simplifying complex systems by modeling classes based on the essential properties and behaviors they share. It involves focusing on the important aspects while hiding the unnecessary details.
@@ -152,36 +183,7 @@ echo "Final balance: $savingsAccount->getBalance\n";
 ?>
 ```
 
-#### Encapsulation
-Encapsulation is like having a special piggy bank. The money (or data) inside is hidden, and there are small slots (methods) on the piggy bank to add money, take some out, and check how much is inside.
 
-```php
-class PiggyBank {
-    private $money;
-
-    public function addMoney($amount) {
-        $this->money += $amount;
-    }
-
-    public function takeOutMoney($amount) {
-        if ($amount <= $this->money) {
-            $this->money -= $amount;
-        } else {
-            echo "Oops! Not enough money!";
-        }
-    }
-
-    public function checkMoney() {
-        return $this->money;
-    }
-}
-
-// Usage
-$piggyBank = new PiggyBank();
-$piggyBank->addMoney(5);
-$piggyBank->takeOutMoney(2);
-echo "Money inside: " . $piggyBank->checkMoney();
-```
 
 
 #### Deisgn Principle
