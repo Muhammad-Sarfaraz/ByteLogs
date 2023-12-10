@@ -12,7 +12,49 @@
 
 * Abstraction (Method): The use of abstract classes or interfaces in programming languages is a way to achieve abstraction. These abstract classes or interfaces define a common set of methods that concrete classes must implement. They provide a blueprint for classes without specifying the exact implementation.
 
-You can achive abstraction via both Interface and Abstraction.
+You can achive abstraction via both Interface and Abstraction. [Basically you hide sensitive information]
+
+```php
+<?php
+
+abstract class Account {
+    protected $balance;
+
+    public function __construct($initialBalance) {
+        $this->balance = $initialBalance;
+    }
+
+    abstract public function withdraw($amount);
+    abstract public function deposit($amount);
+    public function getBalance() {
+        return $this->balance;
+    }
+}
+
+class SavingsAccount extends Account {
+    public function withdraw($amount) {
+        if ($this->balance >= $amount) {
+            $this->balance -= $amount;
+            echo "Withdraw: $amount, Balance: $this->balance\n";
+        } else {
+            echo "Insufficient funds! Cannot withdraw $amount\n";
+        }
+    }
+
+    public function deposit($amount) {
+        $this->balance += $amount;
+        echo "Deposit: $amount, Balance: $this->balance\n";
+    }
+}
+
+$savingsAccount = new SavingsAccount(100);
+$savingsAccount->deposit(50);
+$savingsAccount->withdraw(30);
+
+echo "Final balance: $savingsAccount->getBalance\n";
+
+?>
+```
 
 #### Encapsulation
 Encapsulation is like having a special piggy bank. The money (or data) inside is hidden, and there are small slots (methods) on the piggy bank to add money, take some out, and check how much is inside.
