@@ -234,6 +234,68 @@ $anotherObject->sayGreetings();
 ?>
 ```
 
+#### Chaining
+* Static
+```php
+<?php
+
+class MyClass {
+    private static $value;
+
+    public static function setValue($newValue) {
+        self::$value = $newValue;
+        return new self();
+    }
+
+    public static function getValue() {
+        return self::$value;
+    }
+
+    public static function incrementValue() {
+        self::$value++;
+        return new self();
+    }
+}
+
+// Static method chaining
+$result = MyClass::setValue(10)->incrementValue()->getValue();
+
+echo "Result: $result\n"; // Output: Result: 11
+
+?>
+```
+
+* Non-Static
+```php
+<?php
+
+class MyClass {
+    private $value;
+
+    public function setValue($newValue) {
+        $this->value = $newValue;
+        return $this; // Return the modified object
+    }
+
+    public function getValue() {
+        return $this->value;
+    }
+
+    public function incrementValue() {
+        $this->value++;
+        return $this; // Return the modified object
+    }
+}
+
+// Non-static method chaining
+$instance = new MyClass();
+$result = $instance->setValue(10)->incrementValue()->getValue();
+
+echo "Result: $result\n"; // Output: Result: 11
+
+?>
+```
+
 #### Constants
 Class constants can be useful if you need to define some constant data within a class.
 ```php
