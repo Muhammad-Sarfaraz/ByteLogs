@@ -183,6 +183,57 @@ echo "Final balance: $savingsAccount->getBalance\n";
 ?>
 ```
 
+#### Namespaces
+Namespaces in PHP prevent naming conflicts, organize code, and enhance modularity by providing a structured way to encapsulate and categorize related classes and functions.
+
+``` MyClass.php ```
+```php
+<?php
+
+namespace MyNamespace;
+
+class MyClass {
+    public function sayHello() {
+        echo "Hello from MyClass!\n";
+    }
+}
+
+?>
+```
+
+``` AnotherClass.php ```
+```php
+<?php
+
+namespace MyNamespace;
+
+class AnotherClass {
+    public function sayGreetings() {
+        echo "Greetings from AnotherClass!\n";
+    }
+}
+
+?>
+```
+
+``` main.php ```
+```php
+<?php
+
+require_once 'MyClass.php';
+require_once 'AnotherClass.php';
+
+// Create an instance of MyClass
+$myObject = new MyNamespace\MyClass();
+$myObject->sayHello();
+
+// Create an instance of AnotherClass
+$anotherObject = new MyNamespace\AnotherClass();
+$anotherObject->sayGreetings();
+
+?>
+```
+
 #### Constants
 Class constants can be useful if you need to define some constant data within a class.
 ```php
