@@ -183,8 +183,49 @@ echo "Final balance: $savingsAccount->getBalance\n";
 ?>
 ```
 
+#### Trait
+A trait in PHP is a way to group functionality in a fine-grained and consistent way, allowing classes to reuse methods in a composition-like manner. The primary benefit is achieving code reuse without the need for inheritance. [Basically php does'nt support multiple inheritance, to solve this issue use trait]
 
+```php
+<?php
 
+// Define a trait with common transaction methods
+trait Transaction {
+    public function deposit($amount) {
+        $this->balance += $amount;
+        echo "Deposit: $amount, Balance: $this->balance\n";
+    }
+
+    public function withdraw($amount) {
+        if ($this->balance >= $amount) {
+            $this->balance -= $amount;
+            echo "Withdraw: $amount, Balance: $this->balance\n";
+        } else {
+            echo "Insufficient funds! Cannot withdraw $amount\n";
+        }
+    }
+}
+
+// Use the trait in a bank account class
+class BankAccount {
+    use Transaction;
+
+    private $balance;
+
+    public function __construct($initialBalance) {
+        $this->balance = $initialBalance;
+    }
+
+    public function getBalance() {
+        return $this->balance;
+    }
+}
+
+// Create an instance and perform transactions
+$account = new BankAccount(1000);
+$account->deposit(500);
+$account->withdraw(200);
+```
 
 #### Deisgn Principle
 * SOLID
