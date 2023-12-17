@@ -8,72 +8,7 @@ setcookie(
 );
 ```
 
-#### Brief About Json In PHP
 
-* JsonSerializable
-```php
-<?php
-class User implements JsonSerializable {
-    private $username;
-    private $email;
-
-    public function __construct($username, $email) {
-        $this->username = $username;
-        $this->email = $email;
-    }
-
-    public function jsonSerialize() {
-        return ['username' => $this->username];
-    } 
-}
-
-$user = new User('john_doe', 'john@example.com');
-echo json_encode($user);  // Output: {"username":"john_doe"}
-
-```
-
-* json_encode()
-```php
-$obj = new stdClass();
-$obj->id = 1;
-$obj->age = 30;
-$obj->city = 'New York';
-
-$jsonString = json_encode($obj);
-
-echo $jsonString;
-
-// PHP Array
-$personArray = array(
-    'name' => 'John',
-    'age' => 30,
-    'city' => 'New York'
-);
-
-// Encode PHP array into a JSON string
-$jsonString = json_encode($personArray);
-
-// Output JSON string
-echo $jsonString;
-```
-
-* json_decode()
-```php
-<?php
-// JSON string
-$jsonString = '{"id":1,"country_id":30,"city":"New York"}';
-
-// Decode JSON string into a PHP object
-$data = json_decode($jsonString);
-
-// Accessing properties
-echo "Id: " . $data->id . "<br>";
-echo "Country Id: " . $data->country_id . "<br>";
-echo "City: " . $data->city . "<br>";
-
-$data = json_decode($jsonString,true); // Associative array
-echo "<br>"."City: " . $data['city'] . "<br>";
-```
 
 #### Function default parameter value:
 ```
@@ -199,6 +134,73 @@ return tap(static::all($path, (array) $parameters), function ($variables) {
         $_SERVER[$key] = $value;
     }
 });
+```
+
+#### Brief About Json In PHP
+
+* JsonSerializable
+```php
+<?php
+class User implements JsonSerializable {
+    private $username;
+    private $email;
+
+    public function __construct($username, $email) {
+        $this->username = $username;
+        $this->email = $email;
+    }
+
+    public function jsonSerialize() {
+        return ['username' => $this->username];
+    } 
+}
+
+$user = new User('john_doe', 'john@example.com');
+echo json_encode($user);  // Output: {"username":"john_doe"}
+
+```
+
+* json_encode()
+```php
+$obj = new stdClass();
+$obj->id = 1;
+$obj->age = 30;
+$obj->city = 'New York';
+
+$jsonString = json_encode($obj);
+
+echo $jsonString;
+
+// PHP Array
+$personArray = array(
+    'name' => 'John',
+    'age' => 30,
+    'city' => 'New York'
+);
+
+// Encode PHP array into a JSON string
+$jsonString = json_encode($personArray);
+
+// Output JSON string
+echo $jsonString;
+```
+
+* json_decode()
+```php
+<?php
+// JSON string
+$jsonString = '{"id":1,"country_id":30,"city":"New York"}';
+
+// Decode JSON string into a PHP object
+$data = json_decode($jsonString);
+
+// Accessing properties
+echo "Id: " . $data->id . "<br>";
+echo "Country Id: " . $data->country_id . "<br>";
+echo "City: " . $data->city . "<br>";
+
+$data = json_decode($jsonString,true); // Associative array
+echo "<br>"."City: " . $data['city'] . "<br>";
 ```
 
 #### Working with json:
