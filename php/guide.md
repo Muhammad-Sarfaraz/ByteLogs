@@ -204,7 +204,7 @@ echo "<br>"."City: " . $data['city'] . "<br>";
 ```
 
 #### Working with json:
-```
+```php
 // Load the contents of the JSON files
     $districtOldData = json_decode(File::get(database_path('districtOld.json')), true,512, JSON_UNESCAPED_UNICODE);
     $districtNewData = json_decode(File::get(database_path('districtNew.json')), true, 512, JSON_UNESCAPED_UNICODE);
