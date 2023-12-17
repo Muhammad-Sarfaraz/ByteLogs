@@ -9,11 +9,24 @@ setcookie(
 ```
 
 #### Json
+* json_encode()
+* json_decode()
+```php
+<?php
+// JSON string
+$jsonString = '{"id":1,"country_id":30,"city":"New York"}';
 
-#### Design Pattern:
+// Decode JSON string into a PHP object
+$data = json_decode($jsonString);
 
+// Accessing properties
+echo "Id: " . $data->id . "<br>";
+echo "Country Id: " . $data->country_id . "<br>";
+echo "City: " . $data->city . "<br>";
 
-###### Service Pattern:
+$data = json_decode($jsonString,true); // Associative array
+echo "<br>"."City: " . $data['city'] . "<br>";
+```
 
 #### Function default parameter value:
 ```
