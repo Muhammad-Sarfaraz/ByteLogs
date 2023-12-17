@@ -11,7 +11,7 @@ setcookie(
 
 
 #### Function default parameter value:
-```
+```php
 function foo($param = 'foo')
 {
     return $param;
@@ -20,7 +20,7 @@ $a = foo();
 ```
 
 #### Grouped use statement:
-```
+```php
 use Symfony\Component\HttpKernel\{
     Controller\ControllerResolverInterface,
     Exception\NotFoundHttpException,
@@ -29,7 +29,7 @@ use Symfony\Component\HttpKernel\{
 ```
 
 #### Union type:
-```
+```php
 function myFunction(string|int|array $param): string|int|array
 {
     return $param;
@@ -48,21 +48,21 @@ $a = foo(null);
 
 
 #### Elvis operator
-```
+```php
 $a = null;
 $b = $a ?: 'fallback';
 ```
 
 
 #### Short colusure:
-```
+```php
 fn foo($bar) => $bar + 1;
 ```
 
 
 
 #### Nullsafe operator:
-```
+```php
 $a = null;
 $b = $a?->foo;
 // $b = null
@@ -75,14 +75,14 @@ $c = $a?->foo();
 
 ###### IF/ELSE
 
-```
+```php
  $content = $response instanceof BinaryFileResponse
             ? $response->getFile()->getContent()
             : $response->getContent();
 ```
 
 ###### Pipeline
-```
+```php
  return (new Pipeline)->send($request)
     ->through([
         new EnsureOnNakedDomain,
@@ -97,7 +97,7 @@ $c = $a?->foo();
 
 ###### Tap
 
-```
+```php
 return tap(new Response(
     $content,
     $response->headers->all(),
@@ -109,7 +109,7 @@ return tap(new Response(
 
 ###### Use Pointer
 
-```
+```php
 if (empty($segment = substr($segment, 0, -1))) {
     $pointer = &$pointer[];
 }
@@ -117,7 +117,7 @@ if (empty($segment = substr($segment, 0, -1))) {
 
 
 ###### Mono Static
-```
+```php
 static::$logger = new MonologLogger('vapor', [
     (new StreamHandler('php://stderr'))->setFormatter(new JsonFormatter),
 ]);
@@ -125,7 +125,7 @@ static::$logger = new MonologLogger('vapor', [
 
 ###### Tap and static
 
-```
+```php
 return tap(static::all($path, (array) $parameters), function ($variables) {
     foreach ($variables as $key => $value) {
         echo "Injecting secret [{$key}] into runtime.".PHP_EOL;
