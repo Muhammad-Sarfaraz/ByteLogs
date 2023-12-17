@@ -24,7 +24,7 @@ class User implements JsonSerializable {
 
     public function jsonSerialize() {
         return ['username' => $this->username];
-    }
+    } 
 }
 
 $user = new User('john_doe', 'john@example.com');
