@@ -1,5 +1,22 @@
 # Hands on Note for Axios
 
+#### Download using blob
+```js
+axios
+  .get(`${this.$root.baseurl}/customer/invoice-pdf/${id}`, {
+    responseType: "blob",
+  })
+  .then((response) => {
+    const blob = new Blob([response.data], { type: "application/pdf" });
+
+    const link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.download = `${this.data.order_no}.pdf`;
+    link.click();
+  });
+```
+
+
 #### Get Param:
 ```
 this.$route.params.id
