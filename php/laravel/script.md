@@ -290,7 +290,7 @@ class HospitalAction{
 ```
 
 ``` Example-02 ```
-```
+```php
 Route::get('hospital',HospitalController::class)->name('hospital.path');
 
 class HospitalController{
