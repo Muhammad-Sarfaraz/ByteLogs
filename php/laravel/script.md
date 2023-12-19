@@ -1,5 +1,20 @@
 # Script
 
+#### DI Authenticated User
+```php
+private $admin;
+
+public function __construct()
+{
+	$this->middleware('auth');
+	$this->middleware(function ($request, $next) {
+	    $this->admin = Auth::user();
+	    return $next($request);
+	});
+}
+```
+
+
 #### With default value in model relation
 ```php
 public function parent()
