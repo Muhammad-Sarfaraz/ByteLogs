@@ -1,5 +1,15 @@
 # Script
 
+#### Format using Pint before Commit
+add this, ``` .git/hooks/precommit ```
+```sh
+#!/bin/sh
+files=$(git diff --cached --name-only --diff-filter=ACM -- '*.php');
+vendor/bin/pint $files
+
+git add .
+```
+
 #### DI Authenticated User
 ```php
 private $admin;
