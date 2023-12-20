@@ -11,7 +11,7 @@ try {
     if (config('app.debug')) {
 	throw $e;
     } else {
-	 // Code Here...
+     // Code Here...
     }
 }
 ```
