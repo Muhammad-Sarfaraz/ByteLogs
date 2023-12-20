@@ -1,5 +1,21 @@
 # Script
 
+
+#### Example of Try & Catch
+
+``` Debug / Custom Message ```
+```php
+try {
+    // Code Here...
+} catch (Exception $e) {
+    if (config('app.debug')) {
+	throw $e;
+    } else {
+	 // Code Here...
+    }
+}
+```
+
 #### Format using Pint before Commit
 add this, ``` .git/hooks/precommit ```
 ```sh
