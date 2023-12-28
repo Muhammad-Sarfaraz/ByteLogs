@@ -10,7 +10,7 @@ Vue: The power of reactive JavaScript for building dynamic user interfaces.
 
 * A basic cdn based vue app.
 
-```
+```vue
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <div id="app">
   <p>I have a {{ product }}</p>
@@ -39,7 +39,7 @@ The Vue.js framework provides two approaches for organizing and managing compone
 
 * Option API
 
-```
+```js
 export default {
   data() {
     return {
@@ -60,7 +60,7 @@ export default {
 
 * Composition API
 
-```
+```js
 import { reactive, computed, watch } from 'vue';
 
 export default {
@@ -177,7 +177,7 @@ Use destroyed if you need do any last-minute cleanup or inform a remote server t
 
 In Vue.js, when you're building a web page, you can think of it as a big box full of different things, just like your toy box. Sometimes, you want to interact with a specific part of the web page, like a button or a picture. That's where template refs come in!
 
-```
+```vue
 <div id="app">
   <h1>Counter: {{ counter }}</h1>
   <button @click="increment">Increment</button>
@@ -217,9 +217,9 @@ new Vue({
 
 A component in Vue.js is a modular and reusable building block that encapsulates the logic, template, and styling of a specific part of a web application, promoting code organization and reusability.
 
-// In Child
+``` child ```
 
-```
+```vue
 <template>
   <div>
     <h2>Welcome to the Playroom!</h2>
@@ -245,9 +245,9 @@ h2 {
 
 ```
 
-// In parent
+``` parent ```
 
-```
+```vue
 <template>
   <div>
     <h1>Welcome to the Music room!</h1>
@@ -268,9 +268,9 @@ export default {
 
 ##### Data passing from between child and parent.
 
-// Parent
+``` parent ```
 
-```
+```vue
 <template>
   <div>
     <h2>ParentToy</h2>
@@ -309,7 +309,7 @@ Example of async componet:
 
 Child Component:
 
-```
+```vue
 <template>
   <div>
     <h2>{{ message }}</h2>
@@ -335,7 +335,7 @@ export default {
 
 Root Component:
 
-```
+```vue
 <template>
   <div>
     <async-component></async-component>
@@ -363,7 +363,7 @@ The provide and inject options in Vue.js allow you to share data or methods betw
 
 Parent:
 
-```
+```vue
 <template>
   <div>
     <child-component></child-component>
@@ -395,7 +395,7 @@ export default {
 
 Child:
 
-```
+```vue
 <template>
   <div>
     <p>{{ sharedMessage }}</p>
@@ -425,7 +425,7 @@ export default {
 
 Root Component: [Content]
 
-```
+```vue
 <template>
   <div>
     <Exam>
@@ -460,7 +460,7 @@ export default {
 
 Exam Component: [Master Layout]
 
-```
+```vue
 <template>
   <div>
     <h1>Welcome to the Board!</h1>
@@ -474,7 +474,7 @@ Exam Component: [Master Layout]
 
 Item Component:
 
-```
+```vue
 <template>
   <div>
     <h2>{{ name }}</h2>
@@ -492,7 +492,7 @@ export default {
 
 Child Component:
 
-```
+```vue
 <template>
   <div>
     <h3>ChildToy</h3>
@@ -524,7 +524,7 @@ export default {
 
 Watch on reactive property changes: It will run whenever the reactive property of cart changes.
 
-```
+```vue
 data(){
     return{
         cart:[],
@@ -550,13 +550,13 @@ data(){
 
 
 
-```
+```vue
 <p v-show="showProductDetails">...</p>
 ```
 
 #### Data binding
 
-```
+```vue
 <input v-model="firstName">
 v.model.lazy="..." // Syncs input after change event
 v.model.number="..." // Always returns a number
@@ -565,7 +565,7 @@ v.model.trim="..." // Strips whitespace
 
 #### List rendering
 
-```
+```vue
 <li v-for="item in items" :key="item.id">
   {{ item }}
 </li>
@@ -573,13 +573,13 @@ v.model.trim="..." // Strips whitespace
 
 * Access position
 
-```
+```vue
 <li v-for="(item, index) in items">...</li>
 ```
 
 * Iterate 
 
-```
+```vue
 <li v-for="value in object">...</li>
 <li v-for="(value, index) in object">...</li>
 <li v-for="(value, name, index) in object">...</li>
@@ -587,20 +587,20 @@ v.model.trim="..." // Strips whitespace
 
 * In component
 
-```
+```vue
 <cart-product v-for="item in products" :product="item" :key="item.id">
 ```
 
 * Binding
 
-```
+```vue
 <a v-bind:href="url">...</a>
 <a :href="url">...</a> // Shorthand
 ```
 
 #### Actions/Events
 
-```
+```vue
 <button v-on:click="addToCart">...</button>
 <button @click="addToCart">...</button> // Shorthand
 <button @click="addToCart(product)">...</button>
@@ -612,7 +612,7 @@ v.model.trim="..." // Strips whitespace
 
 * Fetch data using javascript fetch
 
-```
+```vue
 <template>
   <div>
     <button @click="fetchData">Fetch Data</button>
@@ -647,7 +647,7 @@ export default {
 
 * Post data using javascript fetch
 
-```
+```vue
 <template>
   <div>
     <button @click="postData">Post Data</button>
@@ -685,7 +685,7 @@ export default {
 
 * Fetch data using axios
 
-```
+```vue
 <template>
   <div>
     <button @click="fetchData">Fetch Data</button>
@@ -721,7 +721,7 @@ export default {
 
 * Post data using axios
 
-```
+```vue
 <template>
   <div>
     <button @click="postData">Post Data</button>
@@ -771,7 +771,7 @@ FormData is a JavaScript object used to collect and manage form data for easy su
 
 * Submit form without axios/ajax
 
-```
+```vue
 <template>
   <div>
     <form @submit="submitForm">
@@ -825,7 +825,7 @@ export default {
 
 * Using axios
 
-```
+```vue
 <template>
   <div>
     <form @submit="submitForm">
@@ -886,7 +886,7 @@ export default {
 
 * A simple example
 
-```
+```vue
 <script>
 import Home from './Home.vue'
 import About from './About.vue'
@@ -926,7 +926,7 @@ export default {
 
 * Scroll behaviour
 
-```
+```vue
 const router = createRouter({
   history: createWebHistory(),
   routes,
@@ -961,7 +961,7 @@ const router = createRouter({
 
 * Go to a specific page
 
-```
+```vue
 export default {
   methods: {
     goToAboutPage() {
@@ -995,7 +995,7 @@ const routes = [
 
 * Router view
 
-```
+```vue
 <template>
   <div id="app">
     <router-view></router-view>
@@ -1055,7 +1055,7 @@ Key Concepts in Vuex:
 
 store.js
 
-```
+```vue
 import { createStore } from 'vuex';
 
 const store = createStore({
@@ -1090,7 +1090,7 @@ export default store;
 
 Registration
 
-```
+```vue
 import { createApp } from 'vue';
 import App from './App.vue';
 import store from './store';
@@ -1137,7 +1137,7 @@ In addition to the default set of directives shipped in core (like v-model or v-
 
 * Example 001:
 
-```
+```vue
 const focus = {
   mounted: (el) => el.focus()
 }
@@ -1171,7 +1171,7 @@ Plugins are self-contained code that usually add app-level functionality to Vue.
 
 * Step 01 :  create it:
 
-```
+```vue
 export const world = {
     install(app) {
       app.config.globalProperties.$world = {
@@ -1201,7 +1201,7 @@ this.$world.execute()
 
 Vue offers two built-in components that can help work with transitions and animations in response to changing state:
 
-```
+```vue
 <button @click="show = !show">Toggle</button>
 <Transition>
   <p v-if="show">hello</p>
@@ -1240,7 +1240,7 @@ Solves your modal binding issues.
 
 <suspense> handles asynchronous components.
 
-```
+```vue
 <template>
   <suspense>
     <template v-slot:default>
