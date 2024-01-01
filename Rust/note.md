@@ -7,6 +7,37 @@ cargo build #compile and check
 cargo run #compile(if-not) and run the binary program
 ```
 
+#### Variable
+*by default, variable is immutable. make it mutable by ``` mut ```
+```rs
+let mut x = 5;
+const MAX_POINTS: u32 = 1000_00;
+```
+
+#### Ownership rules
+Each value Rust has a variable that’s called its owner.
+There can be only one owner at a time.
+When the owner goes out of scope, the value will be dropped.
+
+#### Memory and Allocation
+memory must be created and destroyed simultaneously. because there is no garbage collector; doing this is very hard. allocate and free
+rust is automatically returned once the variable goes out of scope. Calls drop function.
+
+####  Clone
+```rs
+let s2  = s1.clone()
+```
+
+#### The placeholder ( _ )
+In this Rust code, it checks if the value inside some_u8_value is equal to 3 using a match statement. If true, it prints 'three'; otherwise, it does nothing.
+```rs
+let some_u8_value = Some(3u8);
+
+match some_u8_value {
+    Some(3) => println!("three"),
+    _ => (),
+}
+```
 
 #### Return types
 ```rs
