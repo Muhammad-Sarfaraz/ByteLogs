@@ -188,6 +188,281 @@ let contains_world = greeting.contains("World");
 let replaced_greeting = greeting.replace("World", "Universe");
 ```
 
+#### File
+``` Example of file handling ```
+```rs
+use std::fs::{File, read_to_string, write};
+
+fn main() {
+    // File path
+    let file_path = "example.txt";
+
+    // Write to a file
+    write_to_file(file_path, "Hello, Rust!").expect("Failed to write to file.");
+
+    // Read from a file
+    let content = read_from_file(file_path).expect("Failed to read from file.");
+    println!("Content of the file: {}", content);
+
+    // Check if the file exists
+    if file_exists(file_path) {
+        println!("The file exists.");
+    } else {
+        println!("The file does not exist.");
+    }
+}
+
+fn write_to_file(file_path: &str, content: &str) -> std::io::Result<()> {
+    let mut file = File::create(file_path)?;
+    file.write_all(content.as_bytes())?;
+    Ok(())
+}
+
+fn read_from_file(file_path: &str) -> std::io::Result<String> {
+    read_to_string(file_path)
+}
+
+fn file_exists(file_path: &str) -> bool {
+    File::open(file_path).is_ok()
+}
+
+```
+
+``` file handling ```
+```rs
+use std::env;
+use std::fs::{File, OpenOptions};
+use std::io::{Read, Write};
+
+#[derive(Debug, serde::Deserialize, serde::Serialize)]
+struct Person {
+    name: String,
+    age: u32,
+}
+
+fn main() {
+    let args: Vec<String> = env::args().collect();
+
+    if args.len() < 2 {
+        println!("Usage: cargo run <operation> [arguments]");
+        return;
+    }
+
+    let operation = &args[1];
+
+    match operation.as_str() {
+        "add" => add_person(&args[2..]),
+        "read" => read_file(),
+        "delete" => delete_file(),
+        _ => println!("Invalid operation. Valid operations: add, read, delete"),
+    }
+}
+
+fn add_person(args: &[String]) {
+    if args.len() != 2 {
+        println!("Usage: cargo run add <name,age>");
+        return;
+    }
+
+    let file_path = "data.json";
+
+    let person = parse_person(args[1].as_str());
+    let mut people = read_people(file_path);
+
+    people.push(person);
+
+    write_people(file_path, &people);
+}
+
+fn read_file() {
+    let file_path = "data.json";
+    let people = read_people(file_path);
+
+    for person in people {
+        println!("{:?}", person);
+    }
+}
+
+fn delete_file() {
+    let file_path = "data.json";
+
+    match File::open(file_path) {
+        Ok(_) => {
+            if std::fs::remove_file(file_path).is_ok() {
+                println!("File deleted successfully.");
+            } else {
+                println!("Failed to delete the file.");
+            }
+        }
+        Err(_) => println!("File not found."),
+    }
+}
+
+fn read_people(file_path: &str) -> Vec<Person> {
+    match File::open(file_path) {
+        Ok(mut file) => {
+            let mut content = String::new();
+            file.read_to_string(&mut content).expect("Failed to read file content.");
+
+            match serde_json::from_str::<Vec<Person>>(&content) {
+                Ok(people) => people,
+                Err(_) => {
+                    println!("Error parsing JSON. Returning an empty list.");
+                    Vec::new()
+                }
+            }
+        }
+        Err(_) => {
+            println!("File not found. Returning an empty list.");
+            Vec::new()
+        }
+    }
+}
+
+fn write_people(file_path: &str, people: &Vec<Person>) {
+    let mut file = OpenOptions::new()
+        .write(true)
+        .truncate(true)
+        .create(true)
+        .open(file_path)
+        .expect("Failed to open file for writing.");
+
+    let json_data = serde_json::to_string_pretty(&people).expect("Failed to serialize to JSON.");
+    file.write_all(json_data.as_bytes())
+        .expect("Failed to write to file.");
+}
+
+fn parse_person(input: &str) -> Person {
+    let parts: Vec<&str> = input.split(',').collect();
+    let name = parts[0].trim().to_string();
+    let age = parts[1].trim().parse().expect("Invalid age value.");
+
+    Person { name, age }
+}
+
+```
+
+```
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+```
+
+
+``` Web API Handling ```
+```rs
+use reqwest::Client;
+use serde::Deserialize;
+use tokio::time::Duration;
+
+#[derive(Debug, Deserialize)]
+struct Post {
+    userId: u32,
+    id: u32,
+    title: String,
+    body: String,
+}
+
+async fn get_data() -> Result<(), reqwest::Error> {
+    let url = "https://jsonplaceholder.typicode.com/posts/1";
+    let response = reqwest::get(url).await?;
+    
+    // Deserialize the response JSON into a Post struct
+    let post: Post = response.json().await?;
+    
+    println!("GET Data: {:?}", post);
+    Ok(())
+}
+
+async fn post_data() -> Result<(), reqwest::Error> {
+    let url = "https://jsonplaceholder.typicode.com/posts";
+    
+    // Create a new Post struct for the POST request
+    let new_post = Post {
+        userId: 1,
+        id: 101,
+        title: String::from("New Post"),
+        body: String::from("This is the body of the new post."),
+    };
+
+    // Make a POST request with the serialized JSON of the new post
+    let client = Client::new();
+    let response = client.post(url).json(&new_post).send().await?;
+
+    // Deserialize the response JSON into a Post struct
+    let created_post: Post = response.json().await?;
+
+    println!("POST Data: {:?}", created_post);
+    Ok(())
+}
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    // Make asynchronous GET request
+    get_data().await?;
+
+    // Introduce a delay (simulating some other work)
+    tokio::time::sleep(Duration::from_secs(2)).await;
+
+    // Make asynchronous POST request
+    post_data().await?;
+
+    Ok(())
+}
+
+```
+[dependencies]
+reqwest = "0.11"
+tokio = { version = "1", features = ["full"] }
+
+
+#### Box
+
+In Rust, a Box is a smart pointer that is used for heap allocation. It allows you to allocate memory on the heap rather than the stack and is particularly useful when you have data whose size can only be determined at runtime or when you need to transfer ownership of data to a new owner.
+```rs
+// Creating a box containing an integer
+let boxed_number: Box<i32> = Box::new(42);
+
+// Creating a box containing a string
+let boxed_string: Box<String> = Box::new(String::from("Hello, Box!"));
+
+```
+
+#### Error handling
+```rs
+fn divide(a: f64, b: f64) -> Result<f64, &'static str> {
+    if b == 0.0 {
+        Err("Cannot divide by zero!")
+    } else {
+        Ok(a / b)
+    }
+}
+
+fn main() {
+    let result_ok = divide(10.0, 2.0);
+    let result_err = divide(5.0, 0.0);
+
+    let option_ok = result_ok.ok();
+    let option_err = result_err.err();
+
+    match option_ok {
+        Some(value) => println!("Result: {}", value),
+        None => println!("No result"),
+    }
+
+    match option_err {
+        Some(error) => println!("Error: {}", error),
+        None => println!("No error"),
+    }
+}
+
+```
+
+``` ```
+```rs
+
+```
+
 ``` ```
 ```rs
 
@@ -197,14 +472,7 @@ let replaced_greeting = greeting.replace("World", "Universe");
 ```rs
 
 ```
-``` ```
-```rs
 
-```
-``` ```
-```rs
-
-```
 ``` ```
 ```rs
 
