@@ -458,28 +458,195 @@ fn main() {
 
 ```
 
-``` ```
+#### Import handling
+
+- use: Brings items into scope.
+- mod: Defines modules for organizing code.
+- crate: Refers to the root of the current crate.
 ```rs
+
 
 ```
 
-``` ```
+#### Data types
+``` hashMap ```
 ```rs
+use std::collections::HashMap;
+
+fn main() {
+    // Creating a HashMap with keys and values of type String
+    let mut my_map = HashMap::new();
+
+    // Inserting key-value pairs into the HashMap
+    my_map.insert("name", "Alice");
+    my_map.insert("age", "30");
+    my_map.insert("city", "Wonderland");
+
+    // Accessing values using keys
+    if let Some(name) = my_map.get("name") {
+        println!("Name: {}", name);
+    }
+
+    // Iterating over key-value pairs
+    for (key, value) in &my_map {
+        println!("{}: {}", key, value);
+    }
+}
+```
+
+``` Tuple ```
+```rs
+# Creating a tuple
+my_tuple = (1, 'hello', 3.14, True)
+
+# Accessing elements
+first_element = my_tuple[0]
+second_element = my_tuple[1]
+
+# Iterating through the tuple
+for element in my_tuple:
+    print(element)
+
+# Concatenating tuples
+combined_tuple = my_tuple + ('world', 42)
+
+# Repeating a tuple
+repeated_tuple = my_tuple * 2
+
+# Finding the length of a tuple
+tuple_length = len(my_tuple)
+
+# Checking if an element is present in a tuple
+is_present = 'hello' in my_tuple
+
+# Unpacking a tuple into variables
+first, second, third, fourth = my_tuple
+
+# Returning multiple values from a function
+def get_coordinates():
+    return (4, 7)
+
+x, y = get_coordinates()
+
+# Tuple methods
+count_of_hello = my_tuple.count('hello')
+index_of_3_14 = my_tuple.index(3.14)
+
+# Displaying results
+print("Original Tuple:", my_tuple)
+print("Accessing Elements:", first_element, second_element)
+print("Iterating through Tuple:")
+for element in my_tuple:
+    print(element)
+print("Concatenated Tuple:", combined_tuple)
+print("Repeated Tuple:", repeated_tuple)
+print("Length of Tuple:", tuple_length)
+print("'hello' Present in Tuple:", is_present)
+print("Unpacked Tuple:", first, second, third)
+print("Coordinates from Function:", x, y)
+print("Count of 'hello':", count_of_hello)
+print("Index of 3.14:", index_of_3_14)
 
 ```
 
-``` ```
+``` Vector ```
 ```rs
+fn main() {
+    // Creating a vector with initial values
+    let mut numbers: Vec<i32> = vec![1, 2, 3, 4, 5];
+
+    // Adding elements to the vector
+    numbers.push(6);
+    numbers.push(7);
+
+    // Accessing individual elements
+    let first_element = numbers[0];
+    let second_element = numbers[1];
+
+    // Iterating through the vector
+    for &num in &numbers {
+        println!("{}", num);
+    }
+
+    // Updating an element
+    numbers[2] = 10;
+
+    // Removing an element by value
+    if let Some(index) = numbers.iter().position(|&x| x == 4) {
+        numbers.remove(index);
+    }
+
+    // Finding the length and capacity of the vector
+    let length = numbers.len();
+    let capacity = numbers.capacity();
+
+    // Checking if the vector is empty
+    let is_empty = numbers.is_empty();
+
+    // Cloning the vector
+    let cloned_vector = numbers.clone();
+
+    // Slicing a vector
+    let slice = &numbers[1..4];
+
+    // Displaying results
+    println!("Original Vector: {:?}", numbers);
+    println!("First Element: {}", first_element);
+    println!("Second Element: {}", second_element);
+    println!("Updated Vector: {:?}", numbers);
+    println!("Length: {}", length);
+    println!("Capacity: {}", capacity);
+    println!("Is Empty: {}", is_empty);
+    println!("Cloned Vector: {:?}", cloned_vector);
+    println!("Sliced Vector: {:?}", slice);
+}
 
 ```
 
-``` ```
+#### Loop
+```loop ```
 ```rs
+loop {
+    // Code to be executed indefinitely
+    // Use `break` to exit the loop when a condition is met
+    if some_condition {
+        break;
+    }
+}
+```
+
+``` Iterator Methods ```
+```rs
+let numbers = vec![1, 2, 3, 4, 5];
+
+// Using iterator methods
+numbers.iter().for_each(|&num| {
+    // Code to be executed for each element
+});
 
 ```
-``` ```
-```rs
 
+``` for ```
+```rs
+for i in 0..5 {
+    // Code to be executed for each value in the range [0, 5)
+}
+
+let numbers = vec![1, 2, 3, 4, 5];
+
+for num in &numbers {
+    // Code to be executed for each element in the collection
+}
+```
+
+``` while ```
+```rs
+let mut i = 0;
+
+while i < 5 {
+    // Code to be executed while the condition is true
+    i += 1;
+}
 ```
 
 
