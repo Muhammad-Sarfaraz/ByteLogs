@@ -1,5 +1,13 @@
 ## Rust
 
+#### Cargo
+```bash
+cargo new <project_name> #create new project (binary)
+cargo build #compile and check
+cargo run #compile(if-not) and run the binary program
+```
+
+
 #### Return types
 ```rs
 fn run() -> i32 {
