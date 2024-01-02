@@ -40,6 +40,16 @@ match some_u8_value {
 }
 ```
 
+#### wrap / unwrap_or_else
+```rs
+// unwrap or else.
+let some_value: Option<i32> = Some(42);
+let unwrapped_value = some_value.unwrap_or_else(|| {
+    println!("Value is absent!");
+    0
+});
+```
+
 #### Return types
 ```rs
 fn run() -> i32 {
