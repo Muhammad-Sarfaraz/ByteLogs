@@ -497,6 +497,18 @@ fn main() {
 }
 
 ```
+```rs
+
+// if ret return Result<(),setError) debug it like this.
+ match ret {
+    Err(ret_err) => {
+        dbg!(&ret_err);
+    }
+    Ok(ret_ok) => {
+        dbg!(&ret_ok);
+    }
+}
+```
 
 #### Import handling
 
