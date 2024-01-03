@@ -1,5 +1,8 @@
 ## Rust
 
+#### Links
+https://practice.rs/why-exercise.html
+
 #### Cargo
 ```bash
 cargo new <project_name> #create new project (binary)
