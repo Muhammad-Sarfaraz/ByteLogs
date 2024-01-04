@@ -2,6 +2,7 @@
 
 #### Links
 https://practice.rs/why-exercise.html
+https://www.microsoft.com/en-US/Download/confirmation.aspx?id=48145
 
 #### Cargo
 ```bash
