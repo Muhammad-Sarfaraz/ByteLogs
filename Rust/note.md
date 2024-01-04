@@ -242,6 +242,25 @@ let replaced_greeting = greeting.replace("World", "Universe");
 ```
 
 #### File
+``` Save to specific drive ```
+```rs
+let mut drive_letter = "C:".to_string();
+if let Ok(sys_drive_letter) = std::env::var("SystemDrive") {
+    drive_letter = sys_drive_letter;
+}
+
+let mut avt = PathBuf::new();
+avt.push(drive_letter.clone());
+avt.push("\\ProgramData\\test_folder\\");
+avt.push("about.rm");
+
+let program_list = String::from_utf8_lossy(&output.stdout);
+
+let mut store_avt = File::create(avt).expect("Failed to create file");
+store_avt.write_all("Foo bar".as_bytes()).expect("Failed to write to file");
+```
+
+
 ``` Example of file handling ```
 ```rs
 use std::fs::{File, read_to_string, write};
