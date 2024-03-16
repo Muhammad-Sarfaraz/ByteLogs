@@ -1,4 +1,4 @@
-List Of Common Algorithm:
+# List Of Common Algorithm:
 
 1. **Sorting Algorithms:**
    - Bubble Sort
