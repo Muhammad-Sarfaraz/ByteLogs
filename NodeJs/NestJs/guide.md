@@ -1,5 +1,7 @@
 # NestJs
 
+## Decorator
+Nest is built around a language feature called decorators. 
 
 ## Validation
 
