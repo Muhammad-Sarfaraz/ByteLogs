@@ -18,6 +18,6 @@ git remote -v
 
 #### Update SSH URL
 ```bash
-git remote set-url origin git@github.com:rumatarpin/Sarpin.git
+git remote set-url origin git@github.com:example/example.git
 
 ```
