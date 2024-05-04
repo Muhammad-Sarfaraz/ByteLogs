@@ -90,4 +90,154 @@ CSS:
 }
 ```
 
+# Margin vs Padding
+
+- Padding: Use it when you want space inside the box, around the content.
+```csss
+padding: top right bottom left;
+padding: 10px; /* Applies 10px padding to all sides */
+padding: 10px 20px; /* Applies 10px padding to top and bottom, and 20px padding to right and left */
+padding: 10px 20px 15px; /* Applies 10px padding to top, 20px padding to right and left, and 15px padding to bottom */
+padding: 10px 20px 15px 5px; /* Applies 10px padding to top, 20px padding to right, 15px padding to bottom, and 5px padding to left */
+```
+
+- Margin: Use it when you want space outside the box, around the element.
+
+
+```css
+margin: top right bottom left;
+margin: 10px; /* Applies 10px margin to all sides */
+margin: 10px 20px; /* Applies 10px margin to top and bottom, and 20px margin to right and left */
+margin: 10px 20px 15px; /* Applies 10px margin to top, 20px margin to right and left, and 15px margin to bottom */
+margin: 10px 20px 15px 5px; /* Applies 10px margin to top, 20px margin to right, 15px margin to bottom, and 5px margin to left */
+
+```
+
 # Layout
+- Box Model:
+Basic layout method for simple spacing and sizing.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      padding: 20px;
+      border: 2px solid black;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">Box Model</div>
+</body>
+</html>
+
+```
+
+- Table Layout: Primarily for tabular data, not recommended for general layout.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Layout</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+    <tr>
+      <td>Data 1</td>
+      <td>Data 2</td>
+    </tr>
+  </table>
+</body>
+</html>
+
+```
+
+
+- Flexbox: Ideal for flexible and responsive layouts with easy alignment.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+    }
+    .flex-item {
+      width: 100px;
+      height: 100px;
+      background-color: #f0f0f0;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+</body>
+</html>
+
+```
+
+- Grid Layout:  Best for complex, grid-based designs requiring precise control.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .grid-item {
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+  </div>
+</body>
+</html>
+
+```
