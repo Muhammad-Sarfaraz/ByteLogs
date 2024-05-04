@@ -89,6 +89,46 @@ CSS:
   max-height: 100%;
 }
 ```
+# Absulate vs Relative
+- Absolute positioning: It's like sticking a sticker on a moving object, it stays where you put it. (bsolute" (abs), it stays fixed where you put it)
+
+- Relative positioning: It's like moving a toy block from its original spot, but it still knows where it came from. (you can move it from where it would normally be)
+
+```html
+
+<style>
+.container {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+}
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: lightblue;
+  border: 1px solid blue;
+}
+.abs {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.rel {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+</style>
+<div class="container">
+  <div class="box abs">Absolute</div>
+  <div class="box rel">Relative</div>
+</div>
+
+
+```
+
 
 # Margin vs Padding
 
