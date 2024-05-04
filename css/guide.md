@@ -91,8 +91,10 @@ CSS:
 ```
 # Absulate vs Relative
 - Absolute positioning: It's like sticking a sticker on a moving object, it stays where you put it. (bsolute" (abs), it stays fixed where you put it)
+Element will be positioned relative to the ancestor.
 
 - Relative positioning: It's like moving a toy block from its original spot, but it still knows where it came from. (you can move it from where it would normally be)
+Element will be positioned relative to it's original position.
 
 ```html
 
