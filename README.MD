@@ -28,6 +28,7 @@ The repository currently includes notes for the following programming languages:
 - React
 - Mysql
 - Go
+- Rust
 
 Each language folder contains separate Markdown files with explanations, code samples, and tips specific to that language.
 
