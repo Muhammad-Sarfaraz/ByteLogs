@@ -1,5 +1,36 @@
 # NestJs
 
+## Rate Limiting:
+Install the ``` @nestjs/throttler ``` into the application.
+```Bash
+npm install --save @nestjs/throttler
+```
+``` AppModule.ts ```
+```typescript
+import { ThrottlerModule } from '@nestjs/throttler';
+
+@Module({
+  imports: [
+    ThrottlerModule.forRoot({
+      ttl: 60,
+      limit: 100,
+    }),
+  ],
+  controllers: [AppController],
+  providers: [AppService],
+})
+export class AppModule {}
+```
+``` BooksController.ts ```
+```typescript
+@Controller('books')
+@UseGuards(ThrottlerGuard)
+export class BookssController {
+  // Code Here...
+}
+
+```
+
 ## Decorator
 Nest is built around a language feature called decorators. 
 
