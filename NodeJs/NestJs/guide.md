@@ -30,6 +30,15 @@ export class BookssController {
 }
 
 ```
+Override default configuration for Rate limiting and duration.
+```typescript
+  @UseGuards(ThrottlerGuard)
+  @Throttle({ default: { limit: 3, ttl: 60000 } })
+  @Get('books')
+  sayHello(): string {
+    return this.appService.books();
+  }
+```
 
 ## Decorator
 Nest is built around a language feature called decorators. 
