@@ -20,4 +20,5 @@ it remains within predefined limits. This is often used to prevent server overlo
 - Policy-based Routing (PBR)
 - Dynamic Host Configuration Protocol (DHCP) Snooping
 
+Nginx Load Balancing 
 Resource Calculation 
