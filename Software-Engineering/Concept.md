@@ -9,9 +9,8 @@ it remains within predefined limits. This is often used to prevent server overlo
 - Bandwidth
 - Traffic Management
 - Quality of Service (QoS)
-- Rate Limiting
-- Throttling
 - Congestion Control
+Congestion Control is a mechanism that controls the entry of data packets into the network, enabling a better use of a shared network infrastructure and avoiding congestive collapse. Congestive-Avoidance Algorithms (CAA) are implemented at the TCP layer as the mechanism to avoid congestive collapse in a network.
 - Flow Control
 - Packet Filtering
 - Load Balancing
