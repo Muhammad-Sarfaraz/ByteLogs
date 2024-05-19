@@ -25,6 +25,24 @@
 - What are lazy collections?
 - What are SQL Injections?
 
+Js
+- What is Hoisting
+- What is the currying function
+- What is memoization
+- What is a service worker
+- What is a callback hell
+- What is promise chaining
+- What is null value
+- 	What is event bubbling
+- 	What is same-origin policy
+- 	What is a polyfill
+- 	What is tree shaking
+- 	What is a freeze method
+- 	What is a WeakSet
+- 	What is a WeakMap
+- 	What is an Intl object
+- 	What is debouncing?
+
 MYSQL
 - Is the Mysql query case-sensitive?
 - What is database Normalization?
