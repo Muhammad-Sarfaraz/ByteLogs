@@ -19,6 +19,11 @@
 - How many type of debenency injection we have?
 - What is PSR?
 - Is HTTP protocol stateless or stateful?
+- Diffrence between SOAP API and REST API & GraphQL ?
+- What is Maintenance mode?
+- What is Method Spoofing in Laravel?
+- What are lazy collections?
+- What are SQL Injections?
 
 MYSQL
 - Is the Mysql query case-sensitive?
