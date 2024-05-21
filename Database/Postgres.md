@@ -7,6 +7,7 @@ In Relational Database
       WHERE A.city="New York"
 ```
 In Object Relational Database
+
 ```
 The same query in an object–relational database appears more simply:
 
