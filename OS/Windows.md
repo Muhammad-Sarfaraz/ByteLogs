@@ -11,6 +11,12 @@
 #### Disk Scheduling
 
 
+#### Interrupts in OS
+
+- Introduction to Interrupts in OS
+- Interrupt Handling
+- Context Switching in OS
+
 
 #### Process Creation And System Calls
 - Inter Process Communication (IPC)
