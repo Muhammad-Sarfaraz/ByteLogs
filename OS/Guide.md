@@ -1,5 +1,24 @@
-# OS
+# Operating System
 
+- Study point of views about operating systems
+- Linux, Open source and free software
+- History: Minix and others operating systems
+- PC startup sequence, kernel, service levels and bootloaders
+- Kernel Types: Monolytic, Microkernel, hybrid, modular,
+- Unikernel, Exokernel
+- Extended Machine study point
+- Virtualization history
+- Virtualization Types
+- Hypervisors
+- Cloud Computing
+- Cloud Services
+- Cloud classification
+- Operating systems level virtualization
+- Docker, containers and orchestrator
+- Kubernetes
+- Cloud Native
+- Cloud Computing and Providers
+- Serverless
 - Process concept
 - Process states diagram
 - Process Control Block(PCB)
@@ -15,3 +34,17 @@
 - Dekker algorithms
 - Producer-consumer
 - Parallel programming languages
+- Concurrency problems
+- Load balancing algoritms
+- Map Reduce and NoSQL
+- Raft Algorithm
+- Distribute systems
+- Containers orquestration
+- Process Monitoring
+- Observability, Telemetry and Monitoring
+- Service Meshes
+- IO Blocking
+- Brokers
+- Streaming
+- Websockets
+- Social Network Architectures
