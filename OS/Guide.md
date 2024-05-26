@@ -1,5 +1,7 @@
 # Operating System
 
+27 May 2024 - 31 May 2024
+
 - Study point of views about operating systems
 - Linux, Open source and free software
 - History: Minix and others operating systems
