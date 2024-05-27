@@ -7,7 +7,17 @@
 - History: Minix and others operating systems
 - PC startup sequence, kernel, service levels and bootloaders
 - Kernel Types: Monolytic, Microkernel, hybrid, modular,
+  - Power On → POST → BIOS/UEFI → Bootloader (like GRUB or Windows Boot Manager).
+Bootloader → Load Kernel → Kernel Manages System Resources.
+Kernel Initializes System → Runlevel is Set (determines the services to start).
+System Ready for User Interaction.
+
 - Unikernel, Exokernel
+  - Exokernel: Definition: A minimalistic kernel that gives applications direct access to hardware resources, avoiding abstraction layers.
+Key Points: Highly flexible, allows applications to manage resources directly for maximum performance.
+  - Unikernel: Definition: A minimalistic, single-purpose operating system that combines only the necessary parts of the OS with the application into one executable, running directly on hardware or a hypervisor.
+Key Points: Highly efficient, secure, and optimized for specific applications.
+
 - Extended Machine study point
 - Virtualization history
 - Virtualization Types
