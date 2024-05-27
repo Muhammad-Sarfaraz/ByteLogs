@@ -32,17 +32,26 @@ Key Points: Highly efficient, secure, and optimized for specific applications.
 - Cloud Computing and Providers
 - Serverless
 - Process concept
-- Process states diagram
+  - Process: A process is a program in execution, which includes the program code and its current activity.
 - Process Control Block(PCB)
+  - A data structure in the operating system kernel containing the information needed to manage a particular process.
 - Process memory segmentations
+  - Process memory segmentation is a way to divide a process's memory into different segments, each serving a specific purpose. 
 - Process management
+  - 
 - Mutual Exclution
+  - Mutual exclusion ensures that only one process or thread can access a shared resource at any given time, preventing conflicts and ensuring data integrity in concurrent programs.
 - Deadlock
+  - Deadlock occurs when two or more processes are unable to proceed because each is waiting for the other to release a resource.
 - Inter Process Communication(Semaphores, shared memory, queues and sockets)
+  - Inter-process communication (IPC) methods include semaphores, shared memory, message queues, and sockets. They enable communication and synchronization between processes running on a system.
 - Threads and tasks
+  - Threads and tasks are units of execution in a program. Threads are lightweight processes within a single process, sharing memory space, while tasks typically refer to higher-level units of work managed by a scheduler or executor.
 - Concurrency and Parallelism
+  - Concurrency involves multiple tasks making progress over overlapping time periods, often on a single processor. Parallelism, on the other hand, involves executing multiple tasks simultaneously, typically across multiple processors or cores, to achieve faster execution.
 - Scheduler disciplines
 - Corutines
+  - Coroutines are lightweight concurrency primitives that enable cooperative multitasking within a single thread.
 - Dekker algorithms
 - Producer-consumer
 - Parallel programming languages
