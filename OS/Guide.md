@@ -69,3 +69,9 @@ Key Points: Highly efficient, secure, and optimized for specific applications.
 - Streaming
 - Websockets
 - Social Network Architectures
+
+# Create Bootloader
+
+# Kernel in C
+
+# Tiny Os in C
