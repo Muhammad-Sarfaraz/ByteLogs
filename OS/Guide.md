@@ -70,6 +70,9 @@ Key Points: Highly efficient, secure, and optimized for specific applications.
 - Websockets
 - Social Network Architectures
 
+# Resources
+https://wiki.osdev.org/Main_Page
+
 # Create Bootloader
 
 # Kernel in C
