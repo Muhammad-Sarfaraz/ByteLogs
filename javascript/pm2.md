@@ -22,3 +22,10 @@ To dig in older logs:
 $ pm2 logs --lines 200
 ```
 
+
+#### Terminal Based Dashboard
+Here is a realtime dashboard that fits directly into your terminal:
+
+```
+$ pm2 monit
+```
