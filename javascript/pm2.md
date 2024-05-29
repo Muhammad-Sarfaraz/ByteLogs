@@ -29,3 +29,12 @@ Here is a realtime dashboard that fits directly into your terminal:
 ```
 $ pm2 monit
 ```
+
+#### Cluster mode
+For Node.js applications, PM2 includes an automatic load balancer that will share all HTTP[s]/Websocket/TCP/UDP connections between each spawned processes.
+
+To start an application in Cluster mode:
+
+```
+$ pm2 start app.js -i max
+```
