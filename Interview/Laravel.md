@@ -55,3 +55,7 @@ Git
 - What is the git rebase?
 - What is the git stash?
 - What is the git reset?
+
+OOP
+Does Abstract class have constructor?
+Method Overloading & Overriding
