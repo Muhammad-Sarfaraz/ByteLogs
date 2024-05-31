@@ -75,6 +75,9 @@ https://wiki.osdev.org/Main_Page
 
 # Create Bootloader
 
+What does a bootloader do?
+A boot loader is a critical piece of software running on any system. Whenever a computing system is initially powered on, the first piece of code to be loaded and run is the boot loader. It provides an interface for the user to load.
+
 # Kernel in C
 
 # Tiny Os in C
