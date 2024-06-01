@@ -16,3 +16,6 @@ Time complexity is a way to express how the running time of an algorithm grows a
 #### Rating
 https://codeforces.com/blog/entry/81882
 https://codeforces.com/blog/entry/68288
+
+#### Resources
+https://codeforces.com/blog/entry/13141
