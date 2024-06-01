@@ -13,6 +13,12 @@ Time complexity is a way to express how the running time of an algorithm grows a
 
 * O(2^n): Exponential time complexity. The running time doubles with each increase in the input size, often seen in inefficient recursive algorithms
 
+#### Tips
+- If you find a problem is good and can be applied many times. You can do it 3 times
+  - First time is for understanding problem + editorial
+  - Second time is for doing it + high-ranker's code
+  - Third time is for doing faster + search for more problems similiar to it
+
 #### Rating
 https://codeforces.com/blog/entry/81882
 https://codeforces.com/blog/entry/68288
