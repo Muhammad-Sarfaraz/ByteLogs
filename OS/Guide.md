@@ -70,28 +70,7 @@ Key Points: Highly efficient, secure, and optimized for specific applications.
 - Websockets
 - Social Network Architectures
 
-# Networking
 
-#### Client-Server
-
-
-#### Sockets, 
-
-#### DNS, 
-
-#### TCP/IP, 
-
-#### Web Server, 
-
-#### Ping, 
-
-#### Traceroute, 
-
-#### Web Server, 
-
-#### Routing, 
-
-#### Top-Down Layered Model.
 
 
 # Create Bootloader
