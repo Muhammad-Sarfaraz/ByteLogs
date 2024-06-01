@@ -128,14 +128,171 @@ In the context of operating systems (OS), streaming refers to the continuous and
   - LRU? implement LRU in your program language! (How about multi-thread?)
   - How to migrate Cache stampede?
 
+# EVERYTHING IS LOOP
+
+# BIOS
+BIOS (Basic Input/Output System) initializes hardware and boots the operating system, crucial for system startup and hardware communication. It shows system information, performs hardware checks, and loads the OS from storage.
+```asm
+ORG 0x7C00  ; Set origin to boot sector address
+
+start:
+    ; Display BIOS message
+    mov si, message
+    call print_string
+
+    ; Perform hardware initialization
+    call initialize_hardware
+
+    ; Load operating system from disk
+    call load_os
+
+    ; Transfer control to operating system
+    jmp 0x7E00  ; Jump to operating system start address
+
+; Function to print a null-terminated string
+print_string:
+    mov ah, 0x0E  ; BIOS function to print character
+.loop:
+    lodsb  ; Load next character from SI into AL
+    cmp al, 0  ; Check for null terminator
+    je .done  ; If null terminator, exit loop
+    int 0x10  ; Call BIOS interrupt to print character
+    jmp .loop  ; Repeat for next character
+.done:
+    ret
+
+; Function to initialize hardware
+initialize_hardware:
+    ; Perform hardware initialization routines here
+    ret
+
+; Function to load operating system from disk
+load_os:
+    ; Disk loading routine here (e.g., INT 0x13)
+    ret
+
+message db "Welcome to Tiny BIOS!", 0
+
+TIMES 510 - ($ - $$) db 0  ; Fill rest of boot sector with zeros
+DW 0xAA55  ; Boot signature
+
+```
+
 # Create Bootloader
 
 What does a bootloader do?
 A boot loader is a critical piece of software running on any system. Whenever a computing system is initially powered on, the first piece of code to be loaded and run is the boot loader. It provides an interface for the user to load.
+```asm
+BITS 16        ; Set code to 16-bit mode
+
+ORG 0x7C00     ; Set origin to boot sector address
+
+start:
+    jmp main    ; Jump to the main bootloader code
+
+; Define a simple message to be printed
+message db 'Hello, World!', 0
+
+main:
+    ; Set up segment registers
+    xor ax, ax  ; Clear AX register
+    mov ds, ax  ; Set DS segment register to 0
+    mov es, ax  ; Set ES segment register to 0
+
+    ; Print the message
+    mov si, message ; Load address of message into SI
+    call print_string ; Call print_string subroutine
+
+    ; Infinite loop to prevent bootloader from exiting
+    jmp $       ; Jump back to current instruction indefinitely
+
+; Subroutine to print a null-terminated string
+print_string:
+    lodsb       ; Load next byte from SI into AL
+    or al, al   ; Check if AL is zero (end of string)
+    jz .done    ; If zero, exit subroutine
+    mov ah, 0x0E ; Set AH to BIOS teletype output function
+    int 0x10    ; Call BIOS interrupt to print character
+    jmp print_string ; Repeat for next character
+.done:
+    ret         ; Return from subroutine
+
+TIMES 510 - ($ - $$) db 0 ; Fill rest of boot sector with zeros
+DW 0xAA55       ; Boot signature
+
+```
 
 # Kernel in C
+Kernel is  basically acts as an interface between user applications and hardware.
+```c
+// Entry point of the kernel
+void kernel_main() {
+    // Call initialization function
+    initialize_kernel();
+    
+    // Enter infinite loop to keep the kernel running
+    while(1) {
+        // Kernel idle loop
+    }
+}
+
+// Function to initialize the kernel
+void initialize_kernel() {
+    // Initialize hardware
+    initialize_hardware();
+    
+    // Enable interrupts
+    enable_interrupts();
+    
+    // Load additional OS components into memory
+    load_os_components();
+    
+    // Start scheduler
+    start_scheduler();
+}
+
+// Function to initialize hardware
+void initialize_hardware() {
+    // Code to initialize hardware components
+}
+
+// Function to enable interrupts
+void enable_interrupts() {
+    // Code to enable interrupts for handling hardware events
+}
+
+// Function to load additional OS components into memory
+void load_os_components() {
+    // Code to load additional components of the operating system into memory
+}
+
+// Function to start scheduler
+void start_scheduler() {
+    // Code to initialize task scheduler for managing processes and threads
+}
+
+```
 
 # Tiny Os in C
+An Operating System (OS) is an interface between a computer user and computer hardware
+
+```c
+#include <stdio.h>
+
+// Entry point of the operating system
+int main() {
+    // Print a welcome message
+    printf("Welcome to TinyOS!\n");
+    
+    // Enter an infinite loop to keep the OS running
+    while(1) {
+        // OS idle loop
+    }
+    
+    return 0;
+}
+
+```
 
 # Resources
 https://wiki.osdev.org/Main_Page
