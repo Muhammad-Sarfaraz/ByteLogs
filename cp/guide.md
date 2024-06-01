@@ -12,3 +12,7 @@ Time complexity is a way to express how the running time of an algorithm grows a
 * O(n^2): Quadratic time complexity. Common in algorithms with nested loops.
 
 * O(2^n): Exponential time complexity. The running time doubles with each increase in the input size, often seen in inefficient recursive algorithms
+
+#### Rating
+https://codeforces.com/blog/entry/81882
+https://codeforces.com/blog/entry/68288
