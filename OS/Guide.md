@@ -5,6 +5,8 @@
 - Study point of views about operating systems
 - Linux, Open source and free software
 - History: Minix and others operating systems
+- Kernel
+  - Kernel is the core of every operating system. It connects applications to the actual processing of data. It also manages all communications between software and hardware components to ensure usability and reliability.
 - PC startup sequence, kernel, service levels and bootloaders
 - Kernel Types: Monolytic, Microkernel, hybrid, modular,
   - Power On → POST → BIOS/UEFI → Bootloader (like GRUB or Windows Boot Manager).
@@ -46,6 +48,7 @@ Key Points: Highly efficient, secure, and optimized for specific applications.
 - Inter Process Communication(Semaphores, shared memory, queues and sockets)
   - Inter-process communication (IPC) methods include semaphores, shared memory, message queues, and sockets. They enable communication and synchronization between processes running on a system.
 - Threads and tasks
+  - A thread is a basic unit of CPU utilization. In general, a thread is composed of a thread ID, program counter, register set and the stack. 
   - Threads and tasks are units of execution in a program. Threads are lightweight processes within a single process, sharing memory space, while tasks typically refer to higher-level units of work managed by a scheduler or executor.
 - Concurrency and Parallelism
   - Concurrency involves multiple tasks making progress over overlapping time periods, often on a single processor. Parallelism, on the other hand, involves executing multiple tasks simultaneously, typically across multiple processors or cores, to achieve faster execution.
@@ -81,8 +84,49 @@ In the context of operating systems (OS), streaming refers to the continuous and
   - 
 - Social Network Architectures
 
+- Assembler?
+  - An assembler acts as a translator for low level language. Assembly codes, written using mnemonic commands are translated by the Assembler into machine language.
 
+- Concurrency vs Parallels? (in case single CPU core and multiple CPU cores)
+  - What is critical zone?
+  - What is race condition and how to handle this case?
+  - What is locking mechanism? mutex? semaphore? spinlock? read lock vs write lock?
+  - What is deadlock and how to avoid deadlock?
 
+- How does memory is managed in the OS?
+
+  - What is virtual memory? Why do we need it? How does it work?
+  - How large virtual memory is?
+  - What is paging?
+  - Can 2 processes map to the same physical address? How and in which case?
+  - What is heap space and stack space?
+  - What will happen with memory when you open an application?
+  - What will happen you call another function (with parameters) or return from a function?
+  - What will happen with stack? (why we do not use heap here?)?
+  - What will happen with registers?
+  - What causes stack overflow?
+  - What is dynamic allocating? How does it work?
+  - How does deallocation work?
+  - What happens when your computer is full of memory?
+  - Why you do not need to "deallocate" local variable?
+  - How does Garbage Collection work? When it will be triggered?
+  - What is a pointer? What difference between pass by value and pass by reference?
+  - Where global variable will be saved?
+
+- Why in Linux everything is "file"?
+  - How does mouse/keyboard/monitor... communicate with your computer?
+  - What is file descriptor?
+  - What is buffer? Why do we need buffer?
+  - What will happen if 2 processes read/write to the same file?
+  - What is system call (syscal)?
+
+- How to do a syscal?
+  - What happens with CPU when we execute a syscal?
+  - What is user space and kernel space?
+- Caching:
+  - What is in-memory cache? (memcached/redis)
+  - LRU? implement LRU in your program language! (How about multi-thread?)
+  - How to migrate Cache stampede?
 
 # Create Bootloader
 
