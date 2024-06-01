@@ -60,14 +60,25 @@ Key Points: Highly efficient, secure, and optimized for specific applications.
 - Map Reduce and NoSQL
 - Raft Algorithm
 - Distribute systems
+  - A distributed System is a collection of autonomous computer systems that are physically separated but are connected by a centralized computer network that is equipped with distributed system software. The autonomous computers will communicate among each system by sharing resources and files and performing the tasks assigned to them.
 - Containers orquestration
 - Process Monitoring
+  - Process monitoring is the practice of overseeing and managing the activities and performance of running processes on a computer system to ensure efficient operation, troubleshoot issues, and maintain system stability.
 - Observability, Telemetry and Monitoring
 - Service Meshes
+  - Service Meshes are a dedicated infrastructure layer built to handle service-to-service communication within distributed applications. They provide capabilities like service discovery, load balancing, encryption, authentication, and monitoring. By abstracting away complex networking concerns, Service Meshes enable developers to focus on building and deploying applications without worrying about the underlying network infrastructure. Popular implementations include Istio, Linkerd, and Consul Connect.
 - IO Blocking
+  - I/O blocking occurs when a program is paused while waiting for input/output operations to complete, typically during file reading/writing or network communication. This synchronous process temporarily halts program execution until the I/O operation finishes, potentially causing inefficiencies in resource utilization and impacting system performance.
 - Brokers
+  - Brokers in operating systems act as middlemen, helping different parts of a system talk to each other smoothly. They're crucial for managing communication, resources, and services in complex setups like cloud systems or microservices. For example, message brokers ensure messages get where they need to be, service brokers help find and set up services on the fly, and resource brokers keep everything running smoothly by managing computing resources. Overall, brokers make sure everything works together seamlessly in modern computing environments.
 - Streaming
-- Websockets
+  - 
+In the context of operating systems (OS), streaming refers to the continuous and real-time transfer of data, such as audio and video, between devices or applications. The OS manages this by buffering data to ensure smooth playback, handling network resources to maintain quality, and using protocols like RTP, RTSP, and HLS for data transmission. Streaming allows for immediate processing and playback of data as it is received, which is essential for services like Netflix, YouTube, Spotify, and live broadcasting applications like Zoom and Twitch.
+- Websockets 
+  - A socket is an endpoint for sending and receiving data across a network. It is used to establish a connection between two devices, allowing them to communicate over a network using standard protocols like TCP (Transmission Control Protocol) or UDP (User Datagram Protocol).
+  - Protocols: TCP, UDP, and others.
+  - WebSocket is a protocol providing full-duplex communication channels over a single TCP connection. It is designed for real-time communication between a client (typically a web browser) and a server.
+  - 
 - Social Network Architectures
 
 
