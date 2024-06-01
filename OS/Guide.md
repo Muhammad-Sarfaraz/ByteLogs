@@ -70,8 +70,29 @@ Key Points: Highly efficient, secure, and optimized for specific applications.
 - Websockets
 - Social Network Architectures
 
-# Resources
-https://wiki.osdev.org/Main_Page
+# Networking
+
+#### Client-Server
+
+
+#### Sockets, 
+
+#### DNS, 
+
+#### TCP/IP, 
+
+#### Web Server, 
+
+#### Ping, 
+
+#### Traceroute, 
+
+#### Web Server, 
+
+#### Routing, 
+
+#### Top-Down Layered Model.
+
 
 # Create Bootloader
 
@@ -81,3 +102,6 @@ A boot loader is a critical piece of software running on any system. Whenever a 
 # Kernel in C
 
 # Tiny Os in C
+
+# Resources
+https://wiki.osdev.org/Main_Page
