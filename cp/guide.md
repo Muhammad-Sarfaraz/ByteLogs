@@ -26,5 +26,8 @@ https://codeforces.com/blog/entry/68288
 #### Resources
 https://codeforces.com/blog/entry/13141
 
+- Tutorial and tips to reach Master.
+ - https://codeforces.com/blog/entry/97654
+
 - Github
  - Massive Repo for DS-AlgoImplementationn: https://github.com/MAZHARMIK/Interview_DS_Algo
