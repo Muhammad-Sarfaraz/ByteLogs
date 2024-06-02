@@ -25,7 +25,7 @@
 - What are lazy collections?
 - What are SQL Injections?
 
-Js
+# Js
 - What is Hoisting
 - What is the currying function
 - What is memoization
@@ -43,7 +43,7 @@ Js
 - 	What is an Intl object
 - 	What is debouncing?
 
-MYSQL
+# MYSQL
 - Is the Mysql query case-sensitive?
 - What is database Normalization?
 - What are the TRIGGERS in MySQL?
@@ -51,16 +51,17 @@ MYSQL
 - If I want to write-only to a database, what is better engine for that?
 - How indexing works in MySQL?
 
-Git
+# Git
 - What is the git rebase?
 - What is the git stash?
 - What is the git reset?
 
-OOP
+# OOP
 Does Abstract class have constructor?
 Method Overloading & Overriding
 
 #### Resources
+https://github.com/saadali18/OOP-interview-questions
 https://github.com/tamhoang1412/backend-swe-interview-questions
 https://stackoverflow.com/questions/3329641/how-do-multiple-clients-connect-simultaneously-to-one-port-say-80-on-a-server
 https://github.com/DopplerHQ/awesome-interview-questions?tab=readme-ov-file#vuejs
