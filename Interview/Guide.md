@@ -61,6 +61,7 @@ Does Abstract class have constructor?
 Method Overloading & Overriding
 
 #### Resources
+https://gist.github.com/josethz00/618d1b9f9eacaf233925490877a8a6a3
 https://github.com/saadali18/OOP-interview-questions
 https://github.com/tamhoang1412/backend-swe-interview-questions
 https://stackoverflow.com/questions/3329641/how-do-multiple-clients-connect-simultaneously-to-one-port-say-80-on-a-server
