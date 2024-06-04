@@ -3,6 +3,25 @@
 ### Problem Solving Strategies
 The two main problem-solving strategies are backward reasoning (goal reduction) and forward reasoning, also known as top-down and bottom-up reasoning, respectively.
 
+#### Forward Reasoning
+Forward Reasoning: Start from the input and solve step-by-step to get the output.
+Example: To find the sum of numbers in a list:
+- Start with the list.
+- Initialize sum to 0.
+- Add each number to the sum.
+- Output the sum.
+
+#### Backward Reasoning: Start from the desired output and think backward to the input.
+Example: To find the sum of numbers in a list:
+- Start with the needed sum.
+- Realize you need to add all numbers.
+- Think of iterating through the list.
+- Start with an empty sum and add each number.
+
+#### Short Summary
+- Forward Reasoning: Step-by-step from start to finish. [Input to Output]
+- Backward Reasoning: Step-by-step from finish to start. [Output to Input]
+
 #### Time-complexity
 Time complexity is a way to express how the running time of an algorithm grows as the size of the input increases.
 
