@@ -1,5 +1,8 @@
 # Competitive Programming
 
+### Problem Solving Strategies
+The two main problem-solving strategies are backward reasoning (goal reduction) and forward reasoning, also known as top-down and bottom-up reasoning, respectively.
+
 #### Time-complexity
 Time complexity is a way to express how the running time of an algorithm grows as the size of the input increases.
 
