@@ -5,6 +5,10 @@
 
 #### Meta Programming
 
+#### Control theory
+
+#### Reasoning system
+
 #### Concurrent logic programming
 
 # Computional Logic
