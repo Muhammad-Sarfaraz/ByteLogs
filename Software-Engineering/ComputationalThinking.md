@@ -1,6 +1,11 @@
 # Computational Thinking
 
 
+#### Extensible programming
+
+#### Meta Programming
+
+#### Concurrent logic programming
 
 # Computional Logic
 
