@@ -1,5 +1,27 @@
 # Script
 
+#### Length Aware Pagination
+
+``` Blade ```
+
+```blade
+{{ $posts->appends(request()->query())->links() }}
+```
+
+``` Controller ```
+```php
+ $perPage = 32;
+ $page = $request->input('page', 1);
+ $paginatedPosts = $posts->forPage($page, $perPage);
+
+ $paginatedPosts = new \Illuminate\Pagination\LengthAwarePaginator(
+     $paginatedPosts,
+     $posts->count(),
+     $perPage,
+     $page,
+     ['path' => url()->current(), 'query' => $request->query()]
+ );
+```
 
 #### Example of Try & Catch
 
