@@ -1,5 +1,23 @@
 # Script
 
+#### Spreadsheet
+
+Insert data into sheets
+```php
+$validatedData = $request->validate([
+    'first_name' => 'required|string|max:255',
+    'last_name' => 'required|string|max:255',
+    'dob' => 'required|date',
+    'marital_status' => 'required|string',
+]);
+
+$values = array_values($validatedData);
+$sheets = Sheets::spreadsheet(config('sheets.post_spreadsheet_id'));
+$sheets->sheet('Finance Application')->append([$values]);
+
+return response()->json(['message' => 'Data appended successfully'], 200);
+```
+
 #### Length Aware Pagination
 
 ``` Blade ```
