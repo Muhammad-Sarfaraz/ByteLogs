@@ -32,6 +32,10 @@ The repository currently includes notes for the following programming languages:
 
 Each language folder contains separate Markdown files with explanations, code samples, and tips specific to that language.
 
+## 📊 Activity
+
+![Alt](https://repobeats.axiom.co/api/embed/914b8dd8857acb6d4d9dae1169ffe3d1065eb3cf.svg "Repobeats analytics image")
+
 ## Contributing
 
 Contributions to ByteLogs are welcome! If you would like to add or improve the existing language notes, feel free to fork the repository and submit a pull request. Please follow the established folder structure and keep the notes organized and concise.
