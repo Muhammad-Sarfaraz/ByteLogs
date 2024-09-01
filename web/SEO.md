@@ -1,5 +1,7 @@
 # SEO
 
+Control your snippets
+Below the title link, a search result typically has a description of the target page to help users decide whether they should click the search result. This is called a snippet.
 
 #### Reference
 https://github.com/marcobiedermann/search-engine-optimization
