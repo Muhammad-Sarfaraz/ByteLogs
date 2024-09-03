@@ -1,5 +1,31 @@
 # Chrome Extension
 
+#### Implement Sidebar
+
+``` content_scripts.js ```
+```js
+ chrome.runtime.sendMessage({ type: "open_side_panel",context:"ACTIVE_SIDEBAR" });
+```
+
+``` background.js ```
+```js
+ (async () => {
+      try {
+        const tabId = sender?.tab?.id ?? 0;
+
+        await (chrome as any).sidePanel.open({ tabId });
+        await (chrome as any).sidePanel.setOptions({
+          tabId,
+          path: 'sidebar.html',
+          enabled: true
+        });
+  
+      } catch (error) {
+        console.error('Error interacting with the side panel:', error);
+      }
+    })();
+```
+
 #### External Communication
 ```js
 
