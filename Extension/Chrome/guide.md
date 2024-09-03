@@ -1,5 +1,34 @@
 # Chrome Extension
 
+#### External Communication
+```js
+
+```
+```js
+chrome.runtime.onMessageExternal.addListener((message, sender, sendResponse) => {
+
+  console.log("message",message)
+
+  if(message.type === BrowserExtensionEnum.BROWSER_EXTENSION__SET_API_CREDENTIALS) {
+    (async () => {
+      try {
+        await setStorageItem("apiKey", message.user.apiKey);
+        await setStorageItem("user", message.user);
+        await loggedIn();
+      } catch (error) {
+        console.error('Error handling storage operations:', error);
+      }
+    })();
+  }
+
+  sendResponse({ 
+    type: BrowserExtensionEnum.BROWSER_EXTENSION__DATA_RECEIVED, 
+    state: message.state,
+    message: BrowserExtensionEnum.BROWSER_EXTENSION__DATA_RECEIVED
+   });
+})
+```
+
 #### Execute custom style from background js in active tab
 
 ```content_scripts.js```
