@@ -1,5 +1,45 @@
 # NestJs
 
+# Buffer save to disk & Upload to AWS
+```typescript
+private async saveImageToDiskAndS3(imageUrl) {
+    try {
+      // Fetch the image as a buffer
+      const response = await axios.get(imageUrl, { responseType: 'arraybuffer' });
+      const imageBuffer = Buffer.from(response.data, 'binary');
+
+      if (imageBuffer.length === 0) {
+        throw new Error('Image buffer is empty');
+      }
+
+     const url = await this.awsService.uploadFile({ originalname: 'image.png', buffer: imageBuffer, mimetype: 'image/png' });
+     console.log(url.Location)
+
+
+      // Define the directory path
+      const imagesDir = path.join(process.cwd(), 'public', 'images');
+
+      // Create the directory if it doesn't exist
+      if (!fs.existsSync(imagesDir)) {
+        fs.mkdirSync(imagesDir, { recursive: true });
+      }
+
+      // Create the file name and full path
+      const fileName = `image-${Date.now()}.png`;
+      const filePath = path.join(imagesDir, fileName);
+
+      // Save the image buffer to the file
+      fs.writeFileSync(filePath, imageBuffer);
+
+      console.log(`Image saved successfully at ${filePath}`);
+      return filePath; // Return path or URL if needed
+    } catch (error) {
+      console.error('An error occurred while saving the image:', error);
+      throw new InternalServerErrorException('Could not save image');
+    }
+  }
+```
+
 ## Rate Limiting:
 Install the ``` @nestjs/throttler ``` into the application.
 ```Bash
