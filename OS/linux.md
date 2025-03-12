@@ -1,5 +1,16 @@
 # Linux
 
+#### Get Current Dir Size
+```sh
+du -sh .
+```
+
+#### Clean All Files Inside a Dir
+```sh
+rm -rf ./*
+```
+
+
 #### Get Storage Information
 ```sh
 df -h
