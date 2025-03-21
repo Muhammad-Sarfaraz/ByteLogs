@@ -21,3 +21,8 @@ git remote -v
 git remote set-url origin git@github.com:example/example.git
 
 ```
+
+#### Clone All Repositories
+```bash
+gh repo list OasisUrban --limit 1000 --json sshUrl -q '.[].sshUrl' | xargs -n1 git clone
+```
