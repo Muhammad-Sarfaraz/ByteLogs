@@ -11,7 +11,7 @@ rm -rf ./*
 ```
 
 
-#### Get Storage Information
+#### Get Storage Information (Disk)
 ```sh
 df -h
 ```
