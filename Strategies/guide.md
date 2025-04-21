@@ -1,5 +1,9 @@
 # Strategies
 
+# Debt snowball method
+
+# Debt avalanche
+
 #### Preemptive Completion
 "Preemptive Completion" is finishing a task before the expected time, exceeding expectations and showing proactive efficiency.
 
