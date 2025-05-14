@@ -5,6 +5,7 @@
 - Facade
 - Transfomer
 - Service
+- Service Decomposition (SRP=Single Responsibility Pattern)
 
 ## Types
 * Behavioral
