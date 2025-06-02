@@ -20,6 +20,18 @@ git remote -v
 ```bash
 git remote set-url origin git@github.com:example/example.git
 
+
+
+# Mac
+ls ~/.ssh
+
+ssh-keygen -t ed25519 -C "email"
+eval "${ssh-agent -s}"
+ssh-add ~/.ssh/id_ed25519
+pbcopy < ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+
+
 ```
 
 #### Clone All Repositories
