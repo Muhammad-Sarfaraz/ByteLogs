@@ -6,9 +6,16 @@ ssh-keygen -t rsa -b 4096 -C "<your_email@example.com>"
 cat ~/.ssh/id_rsa.pub
 ```
 #### Set User Information
+- Global
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
+```
+
+- Local Repo
+```bash
+git config user.name "Your Name"
+git config user.email "your_email@example.com"
 ```
 
 #### Check Remote Branch
