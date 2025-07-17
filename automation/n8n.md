@@ -1,6 +1,18 @@
 # n8n
 
-#### Run with Docker
+## Create Custom Node
+- Clone ``` https://github.com/n8n-io/n8n-nodes-starter ```
+```bash
+npm i
+npm run build
+npm link
+```
+- Env Linking with n8n (Windows)
+```js
+setx N8N_CUSTOM_EXTENSIONS "C:\folder\n8n\n8n-nodes-starter"
+```
+
+## Run with Docker
 
 ```bash
 docker exec -it n8n sh
@@ -18,7 +30,7 @@ docker run -d \
   -v ~/.n8n:/home/node/.n8n \
   n8nio/n8n
 ```
-#### Production
+## Make it to Production
 - Include cert auto-renewal
 ```bash
 sudo certbot --nginx -d n8n.xyz.com
