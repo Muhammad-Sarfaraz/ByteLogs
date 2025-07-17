@@ -75,9 +75,6 @@ server {
 - Go to **APIs & Services** → **Credentials**
 - Click **Create Credentials** → **OAuth 2.0 Client ID**
 
-## OAuth Consent Screen
-- Set up the consent screen (choose **External** or **Internal** based on your use case)
-
 ## Configure OAuth2 Client
 - **Application Type**: Web Application
 - **Authorized redirect URIs**:
@@ -86,7 +83,6 @@ server {
   ```
 
 #### 2. Add Credentials in n8n
-
 - Open your **n8n** instance
 - Go to: `Credentials` → `Google OAuth2`
 - Click **Create New**
@@ -98,3 +94,4 @@ server {
   ```
   https://your-n8n-domain.com/oauth2-redirect
   ```
+  Then, sign with gmail will pop-up.
