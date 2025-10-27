@@ -50,7 +50,9 @@
 
 
 ### S3 (Simple Storage Service)
-S3 (Simple Storage Service) is AWS’s object storage service.
+S3 (Simple Storage Service) is AWS’s object storage service. 
+
+Alternative: S3 Glacier / Glacier Deep Archive
 
 Each object has:
 - Data: raw file bytes → stored in distributed storage across multiple AWS data centers / Availability Zones (AZs).
