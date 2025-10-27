@@ -78,3 +78,28 @@ Object = [Key + Data (your file bytes) + Metadata]
 AWS uses the Key to locate Data and Metadata when accessed
 ```
 
+### EBS (Elastic Block Store)
+EBS (Elastic Block Store) = AWS’s block-level storage service,Think of it as a virtual hard drive in the cloud, Designed to attach to EC2 instances, Even if EC2 stops, data on EBS can persist.
+
+Multiple Volume Types
+- General Purpose SSD (gp3/gp2) → everyday workloads
+- Provisioned IOPS SSD (io2/io2 Block Express) → high-performance DBs
+- Magnetic / Cold HDD → infrequent access or throughput-oriented workloads
+
+```
+[EC2 Instance]
+       |
+       v
+  +----------------+
+  |    EBS Volume  |
+  |----------------|
+  | Raw Block Data |
+  | Replicated in |
+  | 1 AZ          |
+  +----------------+
+       |
+       v
+     Persistent Storage (even if EC2 stops)
+
+```
+
