@@ -294,5 +294,11 @@ int main() {
 
 ```
 
+### What is Mounting?
+
+Mounting = making a storage device (disk, volume, or file system) accessible at a certain path on your operating system.
+
+When you mount a file system, your OS links it into your directory tree so you can read/write files like normal.
+
 # Resources
 https://wiki.osdev.org/Main_Page
