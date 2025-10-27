@@ -105,3 +105,14 @@ Multiple Volume Types
 
 ```
 
+### Amazon EFS (Elastic File System)
+Amazon EFS = managed, scalable, cloud-native file storage,Provides a file system accessible via NFS (Network File System) protocol.
+
+```[EC2 Instance 1]  [EC2 Instance 2] ...  
+        |               |  
+        v               v  
+   +----------------------------+  
+   |       EFS File System       | <-- replicated across AZs  
+   |  /mnt/data/... files ...    |  
+   +----------------------------+  
+```
