@@ -48,3 +48,33 @@
                 v
             Internet / AWS Services
 
+
+### S3 (Simple Storage Service)
+S3 (Simple Storage Service) is AWS’s object storage service.
+
+Each object has:
+- Data: raw file bytes → stored in distributed storage across multiple AWS data centers / Availability Zones (AZs).
+- Key: unique identifier for the object → stored in AWS’s internal indexing system, not inside the file itself.
+- Metadata: system metadata (content-type, size) + user-defined metadata → also stored in AWS’s internal system, separately from the raw bytes.
+
+```
+Object = [Key + Data (your file bytes) + Metadata]
+
+[Your File Upload]
+       |
+       v
+  +-----------------------+
+  |       S3 Bucket       |
+  |-----------------------|
+  | Key: myfile.exe       |  <-- stored in AWS index
+  | Data: raw file bytes  |  <-- stored in distributed storage
+  | Metadata:             |  <-- stored in AWS internal metadata store
+  |  - Content-Type       |
+  |  - Size               |
+  |  - User-defined tags  |
+  +-----------------------+
+       |
+       v
+AWS uses the Key to locate Data and Metadata when accessed
+```
+
