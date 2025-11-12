@@ -39,7 +39,6 @@ Purpose:
 
 
 
-
 ### What is What: Delivered vs Deliverable
 
 **Deliverable:** This is what we are supposed to produce. It’s a planned output in the project scope. Think of it as the goal or item we need to finish.
