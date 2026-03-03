@@ -41,6 +41,12 @@ ssh -T git@github.com
 
 ```
 
+#### Windows
+```
+Get-Content C:\Users\User\.ssh\id_ed25519.pub
+```
+
+
 #### Clone All Repositories
 ```bash
 gh repo list ORG_NAME --limit 1000 --json sshUrl -q '.[].sshUrl' | xargs -n1 git clone
