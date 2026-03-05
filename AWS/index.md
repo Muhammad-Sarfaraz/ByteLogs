@@ -116,3 +116,12 @@ Amazon EFS = managed, scalable, cloud-native file storage,Provides a file system
    |  /mnt/data/... files ...    |  
    +----------------------------+  
 ```
+
+#### Increase Storage and Expand the Disk
+After increasing the storage from the AWS console, you need to expand it on the EC2 instance.
+```
+df -h
+lsblk
+sudo growpart /dev/xvda 1
+sudo resize2fs /dev/xvda1
+```
