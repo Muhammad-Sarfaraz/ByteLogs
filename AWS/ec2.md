@@ -1,3 +1,5 @@
+# EC2
+
 EC2 Storage Increase
 
 To expand the root partition after increasing the EC2 volume size:
